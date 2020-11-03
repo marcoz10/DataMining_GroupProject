@@ -1,0 +1,1729 @@
+buying,maint,doors,persons,lug_boot,safety,target
+vhigh,very expensive,2-door,2-person,small,low safety,unacc
+vhigh,very expensive,2-door,2-person,small,medium safety,unacc
+vhigh,very expensive,2-door,2-person,small,high safety,unacc
+vhigh,very expensive,2-door,2-person,med,low safety,unacc
+vhigh,very expensive,2-door,2-person,med,medium safety,unacc
+vhigh,very expensive,2-door,2-person,med,high safety,unacc
+vhigh,very expensive,2-door,2-person,big,low safety,unacc
+vhigh,very expensive,2-door,2-person,big,medium safety,unacc
+vhigh,very expensive,2-door,2-person,big,high safety,unacc
+vhigh,very expensive,2-door,4-person,small,low safety,unacc
+vhigh,very expensive,2-door,4-person,small,medium safety,unacc
+vhigh,very expensive,2-door,4-person,small,high safety,unacc
+vhigh,very expensive,2-door,4-person,med,low safety,unacc
+vhigh,very expensive,2-door,4-person,med,medium safety,unacc
+vhigh,very expensive,2-door,4-person,med,high safety,unacc
+vhigh,very expensive,2-door,4-person,big,low safety,unacc
+vhigh,very expensive,2-door,4-person,big,medium safety,unacc
+vhigh,very expensive,2-door,4-person,big,high safety,unacc
+vhigh,very expensive,2-door,more than 4,small,low safety,unacc
+vhigh,very expensive,2-door,more than 4,small,medium safety,unacc
+vhigh,very expensive,2-door,more than 4,small,high safety,unacc
+vhigh,very expensive,2-door,more than 4,med,low safety,unacc
+vhigh,very expensive,2-door,more than 4,med,medium safety,unacc
+vhigh,very expensive,2-door,more than 4,med,high safety,unacc
+vhigh,very expensive,2-door,more than 4,big,low safety,unacc
+vhigh,very expensive,2-door,more than 4,big,medium safety,unacc
+vhigh,very expensive,2-door,more than 4,big,high safety,unacc
+vhigh,very expensive,3-door,2-person,small,low safety,unacc
+vhigh,very expensive,3-door,2-person,small,medium safety,unacc
+vhigh,very expensive,3-door,2-person,small,high safety,unacc
+vhigh,very expensive,3-door,2-person,med,low safety,unacc
+vhigh,very expensive,3-door,2-person,med,medium safety,unacc
+vhigh,very expensive,3-door,2-person,med,high safety,unacc
+vhigh,very expensive,3-door,2-person,big,low safety,unacc
+vhigh,very expensive,3-door,2-person,big,medium safety,unacc
+vhigh,very expensive,3-door,2-person,big,high safety,unacc
+vhigh,very expensive,3-door,4-person,small,low safety,unacc
+vhigh,very expensive,3-door,4-person,small,medium safety,unacc
+vhigh,very expensive,3-door,4-person,small,high safety,unacc
+vhigh,very expensive,3-door,4-person,med,low safety,unacc
+vhigh,very expensive,3-door,4-person,med,medium safety,unacc
+vhigh,very expensive,3-door,4-person,med,high safety,unacc
+vhigh,very expensive,3-door,4-person,big,low safety,unacc
+vhigh,very expensive,3-door,4-person,big,medium safety,unacc
+vhigh,very expensive,3-door,4-person,big,high safety,unacc
+vhigh,very expensive,3-door,more than 4,small,low safety,unacc
+vhigh,very expensive,3-door,more than 4,small,medium safety,unacc
+vhigh,very expensive,3-door,more than 4,small,high safety,unacc
+vhigh,very expensive,3-door,more than 4,med,low safety,unacc
+vhigh,very expensive,3-door,more than 4,med,medium safety,unacc
+vhigh,very expensive,3-door,more than 4,med,high safety,unacc
+vhigh,very expensive,3-door,more than 4,big,low safety,unacc
+vhigh,very expensive,3-door,more than 4,big,medium safety,unacc
+vhigh,very expensive,3-door,more than 4,big,high safety,unacc
+vhigh,very expensive,4-door,2-person,small,low safety,unacc
+vhigh,very expensive,4-door,2-person,small,medium safety,unacc
+vhigh,very expensive,4-door,2-person,small,high safety,unacc
+vhigh,very expensive,4-door,2-person,med,low safety,unacc
+vhigh,very expensive,4-door,2-person,med,medium safety,unacc
+vhigh,very expensive,4-door,2-person,med,high safety,unacc
+vhigh,very expensive,4-door,2-person,big,low safety,unacc
+vhigh,very expensive,4-door,2-person,big,medium safety,unacc
+vhigh,very expensive,4-door,2-person,big,high safety,unacc
+vhigh,very expensive,4-door,4-person,small,low safety,unacc
+vhigh,very expensive,4-door,4-person,small,medium safety,unacc
+vhigh,very expensive,4-door,4-person,small,high safety,unacc
+vhigh,very expensive,4-door,4-person,med,low safety,unacc
+vhigh,very expensive,4-door,4-person,med,medium safety,unacc
+vhigh,very expensive,4-door,4-person,med,high safety,unacc
+vhigh,very expensive,4-door,4-person,big,low safety,unacc
+vhigh,very expensive,4-door,4-person,big,medium safety,unacc
+vhigh,very expensive,4-door,4-person,big,high safety,unacc
+vhigh,very expensive,4-door,more than 4,small,low safety,unacc
+vhigh,very expensive,4-door,more than 4,small,medium safety,unacc
+vhigh,very expensive,4-door,more than 4,small,high safety,unacc
+vhigh,very expensive,4-door,more than 4,med,low safety,unacc
+vhigh,very expensive,4-door,more than 4,med,medium safety,unacc
+vhigh,very expensive,4-door,more than 4,med,high safety,unacc
+vhigh,very expensive,4-door,more than 4,big,low safety,unacc
+vhigh,very expensive,4-door,more than 4,big,medium safety,unacc
+vhigh,very expensive,4-door,more than 4,big,high safety,unacc
+vhigh,very expensive,5 or more,2-person,small,low safety,unacc
+vhigh,very expensive,5 or more,2-person,small,medium safety,unacc
+vhigh,very expensive,5 or more,2-person,small,high safety,unacc
+vhigh,very expensive,5 or more,2-person,med,low safety,unacc
+vhigh,very expensive,5 or more,2-person,med,medium safety,unacc
+vhigh,very expensive,5 or more,2-person,med,high safety,unacc
+vhigh,very expensive,5 or more,2-person,big,low safety,unacc
+vhigh,very expensive,5 or more,2-person,big,medium safety,unacc
+vhigh,very expensive,5 or more,2-person,big,high safety,unacc
+vhigh,very expensive,5 or more,4-person,small,low safety,unacc
+vhigh,very expensive,5 or more,4-person,small,medium safety,unacc
+vhigh,very expensive,5 or more,4-person,small,high safety,unacc
+vhigh,very expensive,5 or more,4-person,med,low safety,unacc
+vhigh,very expensive,5 or more,4-person,med,medium safety,unacc
+vhigh,very expensive,5 or more,4-person,med,high safety,unacc
+vhigh,very expensive,5 or more,4-person,big,low safety,unacc
+vhigh,very expensive,5 or more,4-person,big,medium safety,unacc
+vhigh,very expensive,5 or more,4-person,big,high safety,unacc
+vhigh,very expensive,5 or more,more than 4,small,low safety,unacc
+vhigh,very expensive,5 or more,more than 4,small,medium safety,unacc
+vhigh,very expensive,5 or more,more than 4,small,high safety,unacc
+vhigh,very expensive,5 or more,more than 4,med,low safety,unacc
+vhigh,very expensive,5 or more,more than 4,med,medium safety,unacc
+vhigh,very expensive,5 or more,more than 4,med,high safety,unacc
+vhigh,very expensive,5 or more,more than 4,big,low safety,unacc
+vhigh,very expensive,5 or more,more than 4,big,medium safety,unacc
+vhigh,very expensive,5 or more,more than 4,big,high safety,unacc
+vhigh,expensive,2-door,2-person,small,low safety,unacc
+vhigh,expensive,2-door,2-person,small,medium safety,unacc
+vhigh,expensive,2-door,2-person,small,high safety,unacc
+vhigh,expensive,2-door,2-person,med,low safety,unacc
+vhigh,expensive,2-door,2-person,med,medium safety,unacc
+vhigh,expensive,2-door,2-person,med,high safety,unacc
+vhigh,expensive,2-door,2-person,big,low safety,unacc
+vhigh,expensive,2-door,2-person,big,medium safety,unacc
+vhigh,expensive,2-door,2-person,big,high safety,unacc
+vhigh,expensive,2-door,4-person,small,low safety,unacc
+vhigh,expensive,2-door,4-person,small,medium safety,unacc
+vhigh,expensive,2-door,4-person,small,high safety,unacc
+vhigh,expensive,2-door,4-person,med,low safety,unacc
+vhigh,expensive,2-door,4-person,med,medium safety,unacc
+vhigh,expensive,2-door,4-person,med,high safety,unacc
+vhigh,expensive,2-door,4-person,big,low safety,unacc
+vhigh,expensive,2-door,4-person,big,medium safety,unacc
+vhigh,expensive,2-door,4-person,big,high safety,unacc
+vhigh,expensive,2-door,more than 4,small,low safety,unacc
+vhigh,expensive,2-door,more than 4,small,medium safety,unacc
+vhigh,expensive,2-door,more than 4,small,high safety,unacc
+vhigh,expensive,2-door,more than 4,med,low safety,unacc
+vhigh,expensive,2-door,more than 4,med,medium safety,unacc
+vhigh,expensive,2-door,more than 4,med,high safety,unacc
+vhigh,expensive,2-door,more than 4,big,low safety,unacc
+vhigh,expensive,2-door,more than 4,big,medium safety,unacc
+vhigh,expensive,2-door,more than 4,big,high safety,unacc
+vhigh,expensive,3-door,2-person,small,low safety,unacc
+vhigh,expensive,3-door,2-person,small,medium safety,unacc
+vhigh,expensive,3-door,2-person,small,high safety,unacc
+vhigh,expensive,3-door,2-person,med,low safety,unacc
+vhigh,expensive,3-door,2-person,med,medium safety,unacc
+vhigh,expensive,3-door,2-person,med,high safety,unacc
+vhigh,expensive,3-door,2-person,big,low safety,unacc
+vhigh,expensive,3-door,2-person,big,medium safety,unacc
+vhigh,expensive,3-door,2-person,big,high safety,unacc
+vhigh,expensive,3-door,4-person,small,low safety,unacc
+vhigh,expensive,3-door,4-person,small,medium safety,unacc
+vhigh,expensive,3-door,4-person,small,high safety,unacc
+vhigh,expensive,3-door,4-person,med,low safety,unacc
+vhigh,expensive,3-door,4-person,med,medium safety,unacc
+vhigh,expensive,3-door,4-person,med,high safety,unacc
+vhigh,expensive,3-door,4-person,big,low safety,unacc
+vhigh,expensive,3-door,4-person,big,medium safety,unacc
+vhigh,expensive,3-door,4-person,big,high safety,unacc
+vhigh,expensive,3-door,more than 4,small,low safety,unacc
+vhigh,expensive,3-door,more than 4,small,medium safety,unacc
+vhigh,expensive,3-door,more than 4,small,high safety,unacc
+vhigh,expensive,3-door,more than 4,med,low safety,unacc
+vhigh,expensive,3-door,more than 4,med,medium safety,unacc
+vhigh,expensive,3-door,more than 4,med,high safety,unacc
+vhigh,expensive,3-door,more than 4,big,low safety,unacc
+vhigh,expensive,3-door,more than 4,big,medium safety,unacc
+vhigh,expensive,3-door,more than 4,big,high safety,unacc
+vhigh,expensive,4-door,2-person,small,low safety,unacc
+vhigh,expensive,4-door,2-person,small,medium safety,unacc
+vhigh,expensive,4-door,2-person,small,high safety,unacc
+vhigh,expensive,4-door,2-person,med,low safety,unacc
+vhigh,expensive,4-door,2-person,med,medium safety,unacc
+vhigh,expensive,4-door,2-person,med,high safety,unacc
+vhigh,expensive,4-door,2-person,big,low safety,unacc
+vhigh,expensive,4-door,2-person,big,medium safety,unacc
+vhigh,expensive,4-door,2-person,big,high safety,unacc
+vhigh,expensive,4-door,4-person,small,low safety,unacc
+vhigh,expensive,4-door,4-person,small,medium safety,unacc
+vhigh,expensive,4-door,4-person,small,high safety,unacc
+vhigh,expensive,4-door,4-person,med,low safety,unacc
+vhigh,expensive,4-door,4-person,med,medium safety,unacc
+vhigh,expensive,4-door,4-person,med,high safety,unacc
+vhigh,expensive,4-door,4-person,big,low safety,unacc
+vhigh,expensive,4-door,4-person,big,medium safety,unacc
+vhigh,expensive,4-door,4-person,big,high safety,unacc
+vhigh,expensive,4-door,more than 4,small,low safety,unacc
+vhigh,expensive,4-door,more than 4,small,medium safety,unacc
+vhigh,expensive,4-door,more than 4,small,high safety,unacc
+vhigh,expensive,4-door,more than 4,med,low safety,unacc
+vhigh,expensive,4-door,more than 4,med,medium safety,unacc
+vhigh,expensive,4-door,more than 4,med,high safety,unacc
+vhigh,expensive,4-door,more than 4,big,low safety,unacc
+vhigh,expensive,4-door,more than 4,big,medium safety,unacc
+vhigh,expensive,4-door,more than 4,big,high safety,unacc
+vhigh,expensive,5 or more,2-person,small,low safety,unacc
+vhigh,expensive,5 or more,2-person,small,medium safety,unacc
+vhigh,expensive,5 or more,2-person,small,high safety,unacc
+vhigh,expensive,5 or more,2-person,med,low safety,unacc
+vhigh,expensive,5 or more,2-person,med,medium safety,unacc
+vhigh,expensive,5 or more,2-person,med,high safety,unacc
+vhigh,expensive,5 or more,2-person,big,low safety,unacc
+vhigh,expensive,5 or more,2-person,big,medium safety,unacc
+vhigh,expensive,5 or more,2-person,big,high safety,unacc
+vhigh,expensive,5 or more,4-person,small,low safety,unacc
+vhigh,expensive,5 or more,4-person,small,medium safety,unacc
+vhigh,expensive,5 or more,4-person,small,high safety,unacc
+vhigh,expensive,5 or more,4-person,med,low safety,unacc
+vhigh,expensive,5 or more,4-person,med,medium safety,unacc
+vhigh,expensive,5 or more,4-person,med,high safety,unacc
+vhigh,expensive,5 or more,4-person,big,low safety,unacc
+vhigh,expensive,5 or more,4-person,big,medium safety,unacc
+vhigh,expensive,5 or more,4-person,big,high safety,unacc
+vhigh,expensive,5 or more,more than 4,small,low safety,unacc
+vhigh,expensive,5 or more,more than 4,small,medium safety,unacc
+vhigh,expensive,5 or more,more than 4,small,high safety,unacc
+vhigh,expensive,5 or more,more than 4,med,low safety,unacc
+vhigh,expensive,5 or more,more than 4,med,medium safety,unacc
+vhigh,expensive,5 or more,more than 4,med,high safety,unacc
+vhigh,expensive,5 or more,more than 4,big,low safety,unacc
+vhigh,expensive,5 or more,more than 4,big,medium safety,unacc
+vhigh,expensive,5 or more,more than 4,big,high safety,unacc
+vhigh,moderately expensive,2-door,2-person,small,low safety,unacc
+vhigh,moderately expensive,2-door,2-person,small,medium safety,unacc
+vhigh,moderately expensive,2-door,2-person,small,high safety,unacc
+vhigh,moderately expensive,2-door,2-person,med,low safety,unacc
+vhigh,moderately expensive,2-door,2-person,med,medium safety,unacc
+vhigh,moderately expensive,2-door,2-person,med,high safety,unacc
+vhigh,moderately expensive,2-door,2-person,big,low safety,unacc
+vhigh,moderately expensive,2-door,2-person,big,medium safety,unacc
+vhigh,moderately expensive,2-door,2-person,big,high safety,unacc
+vhigh,moderately expensive,2-door,4-person,small,low safety,unacc
+vhigh,moderately expensive,2-door,4-person,small,medium safety,unacc
+vhigh,moderately expensive,2-door,4-person,small,high safety,acc
+vhigh,moderately expensive,2-door,4-person,med,low safety,unacc
+vhigh,moderately expensive,2-door,4-person,med,medium safety,unacc
+vhigh,moderately expensive,2-door,4-person,med,high safety,acc
+vhigh,moderately expensive,2-door,4-person,big,low safety,unacc
+vhigh,moderately expensive,2-door,4-person,big,medium safety,acc
+vhigh,moderately expensive,2-door,4-person,big,high safety,acc
+vhigh,moderately expensive,2-door,more than 4,small,low safety,unacc
+vhigh,moderately expensive,2-door,more than 4,small,medium safety,unacc
+vhigh,moderately expensive,2-door,more than 4,small,high safety,unacc
+vhigh,moderately expensive,2-door,more than 4,med,low safety,unacc
+vhigh,moderately expensive,2-door,more than 4,med,medium safety,unacc
+vhigh,moderately expensive,2-door,more than 4,med,high safety,acc
+vhigh,moderately expensive,2-door,more than 4,big,low safety,unacc
+vhigh,moderately expensive,2-door,more than 4,big,medium safety,acc
+vhigh,moderately expensive,2-door,more than 4,big,high safety,acc
+vhigh,moderately expensive,3-door,2-person,small,low safety,unacc
+vhigh,moderately expensive,3-door,2-person,small,medium safety,unacc
+vhigh,moderately expensive,3-door,2-person,small,high safety,unacc
+vhigh,moderately expensive,3-door,2-person,med,low safety,unacc
+vhigh,moderately expensive,3-door,2-person,med,medium safety,unacc
+vhigh,moderately expensive,3-door,2-person,med,high safety,unacc
+vhigh,moderately expensive,3-door,2-person,big,low safety,unacc
+vhigh,moderately expensive,3-door,2-person,big,medium safety,unacc
+vhigh,moderately expensive,3-door,2-person,big,high safety,unacc
+vhigh,moderately expensive,3-door,4-person,small,low safety,unacc
+vhigh,moderately expensive,3-door,4-person,small,medium safety,unacc
+vhigh,moderately expensive,3-door,4-person,small,high safety,acc
+vhigh,moderately expensive,3-door,4-person,med,low safety,unacc
+vhigh,moderately expensive,3-door,4-person,med,medium safety,unacc
+vhigh,moderately expensive,3-door,4-person,med,high safety,acc
+vhigh,moderately expensive,3-door,4-person,big,low safety,unacc
+vhigh,moderately expensive,3-door,4-person,big,medium safety,acc
+vhigh,moderately expensive,3-door,4-person,big,high safety,acc
+vhigh,moderately expensive,3-door,more than 4,small,low safety,unacc
+vhigh,moderately expensive,3-door,more than 4,small,medium safety,unacc
+vhigh,moderately expensive,3-door,more than 4,small,high safety,acc
+vhigh,moderately expensive,3-door,more than 4,med,low safety,unacc
+vhigh,moderately expensive,3-door,more than 4,med,medium safety,acc
+vhigh,moderately expensive,3-door,more than 4,med,high safety,acc
+vhigh,moderately expensive,3-door,more than 4,big,low safety,unacc
+vhigh,moderately expensive,3-door,more than 4,big,medium safety,acc
+vhigh,moderately expensive,3-door,more than 4,big,high safety,acc
+vhigh,moderately expensive,4-door,2-person,small,low safety,unacc
+vhigh,moderately expensive,4-door,2-person,small,medium safety,unacc
+vhigh,moderately expensive,4-door,2-person,small,high safety,unacc
+vhigh,moderately expensive,4-door,2-person,med,low safety,unacc
+vhigh,moderately expensive,4-door,2-person,med,medium safety,unacc
+vhigh,moderately expensive,4-door,2-person,med,high safety,unacc
+vhigh,moderately expensive,4-door,2-person,big,low safety,unacc
+vhigh,moderately expensive,4-door,2-person,big,medium safety,unacc
+vhigh,moderately expensive,4-door,2-person,big,high safety,unacc
+vhigh,moderately expensive,4-door,4-person,small,low safety,unacc
+vhigh,moderately expensive,4-door,4-person,small,medium safety,unacc
+vhigh,moderately expensive,4-door,4-person,small,high safety,acc
+vhigh,moderately expensive,4-door,4-person,med,low safety,unacc
+vhigh,moderately expensive,4-door,4-person,med,medium safety,acc
+vhigh,moderately expensive,4-door,4-person,med,high safety,acc
+vhigh,moderately expensive,4-door,4-person,big,low safety,unacc
+vhigh,moderately expensive,4-door,4-person,big,medium safety,acc
+vhigh,moderately expensive,4-door,4-person,big,high safety,acc
+vhigh,moderately expensive,4-door,more than 4,small,low safety,unacc
+vhigh,moderately expensive,4-door,more than 4,small,medium safety,unacc
+vhigh,moderately expensive,4-door,more than 4,small,high safety,acc
+vhigh,moderately expensive,4-door,more than 4,med,low safety,unacc
+vhigh,moderately expensive,4-door,more than 4,med,medium safety,acc
+vhigh,moderately expensive,4-door,more than 4,med,high safety,acc
+vhigh,moderately expensive,4-door,more than 4,big,low safety,unacc
+vhigh,moderately expensive,4-door,more than 4,big,medium safety,acc
+vhigh,moderately expensive,4-door,more than 4,big,high safety,acc
+vhigh,moderately expensive,5 or more,2-person,small,low safety,unacc
+vhigh,moderately expensive,5 or more,2-person,small,medium safety,unacc
+vhigh,moderately expensive,5 or more,2-person,small,high safety,unacc
+vhigh,moderately expensive,5 or more,2-person,med,low safety,unacc
+vhigh,moderately expensive,5 or more,2-person,med,medium safety,unacc
+vhigh,moderately expensive,5 or more,2-person,med,high safety,unacc
+vhigh,moderately expensive,5 or more,2-person,big,low safety,unacc
+vhigh,moderately expensive,5 or more,2-person,big,medium safety,unacc
+vhigh,moderately expensive,5 or more,2-person,big,high safety,unacc
+vhigh,moderately expensive,5 or more,4-person,small,low safety,unacc
+vhigh,moderately expensive,5 or more,4-person,small,medium safety,unacc
+vhigh,moderately expensive,5 or more,4-person,small,high safety,acc
+vhigh,moderately expensive,5 or more,4-person,med,low safety,unacc
+vhigh,moderately expensive,5 or more,4-person,med,medium safety,acc
+vhigh,moderately expensive,5 or more,4-person,med,high safety,acc
+vhigh,moderately expensive,5 or more,4-person,big,low safety,unacc
+vhigh,moderately expensive,5 or more,4-person,big,medium safety,acc
+vhigh,moderately expensive,5 or more,4-person,big,high safety,acc
+vhigh,moderately expensive,5 or more,more than 4,small,low safety,unacc
+vhigh,moderately expensive,5 or more,more than 4,small,medium safety,unacc
+vhigh,moderately expensive,5 or more,more than 4,small,high safety,acc
+vhigh,moderately expensive,5 or more,more than 4,med,low safety,unacc
+vhigh,moderately expensive,5 or more,more than 4,med,medium safety,acc
+vhigh,moderately expensive,5 or more,more than 4,med,high safety,acc
+vhigh,moderately expensive,5 or more,more than 4,big,low safety,unacc
+vhigh,moderately expensive,5 or more,more than 4,big,medium safety,acc
+vhigh,moderately expensive,5 or more,more than 4,big,high safety,acc
+vhigh,inexpensive,2-door,2-person,small,low safety,unacc
+vhigh,inexpensive,2-door,2-person,small,medium safety,unacc
+vhigh,inexpensive,2-door,2-person,small,high safety,unacc
+vhigh,inexpensive,2-door,2-person,med,low safety,unacc
+vhigh,inexpensive,2-door,2-person,med,medium safety,unacc
+vhigh,inexpensive,2-door,2-person,med,high safety,unacc
+vhigh,inexpensive,2-door,2-person,big,low safety,unacc
+vhigh,inexpensive,2-door,2-person,big,medium safety,unacc
+vhigh,inexpensive,2-door,2-person,big,high safety,unacc
+vhigh,inexpensive,2-door,4-person,small,low safety,unacc
+vhigh,inexpensive,2-door,4-person,small,medium safety,unacc
+vhigh,inexpensive,2-door,4-person,small,high safety,acc
+vhigh,inexpensive,2-door,4-person,med,low safety,unacc
+vhigh,inexpensive,2-door,4-person,med,medium safety,unacc
+vhigh,inexpensive,2-door,4-person,med,high safety,acc
+vhigh,inexpensive,2-door,4-person,big,low safety,unacc
+vhigh,inexpensive,2-door,4-person,big,medium safety,acc
+vhigh,inexpensive,2-door,4-person,big,high safety,acc
+vhigh,inexpensive,2-door,more than 4,small,low safety,unacc
+vhigh,inexpensive,2-door,more than 4,small,medium safety,unacc
+vhigh,inexpensive,2-door,more than 4,small,high safety,unacc
+vhigh,inexpensive,2-door,more than 4,med,low safety,unacc
+vhigh,inexpensive,2-door,more than 4,med,medium safety,unacc
+vhigh,inexpensive,2-door,more than 4,med,high safety,acc
+vhigh,inexpensive,2-door,more than 4,big,low safety,unacc
+vhigh,inexpensive,2-door,more than 4,big,medium safety,acc
+vhigh,inexpensive,2-door,more than 4,big,high safety,acc
+vhigh,inexpensive,3-door,2-person,small,low safety,unacc
+vhigh,inexpensive,3-door,2-person,small,medium safety,unacc
+vhigh,inexpensive,3-door,2-person,small,high safety,unacc
+vhigh,inexpensive,3-door,2-person,med,low safety,unacc
+vhigh,inexpensive,3-door,2-person,med,medium safety,unacc
+vhigh,inexpensive,3-door,2-person,med,high safety,unacc
+vhigh,inexpensive,3-door,2-person,big,low safety,unacc
+vhigh,inexpensive,3-door,2-person,big,medium safety,unacc
+vhigh,inexpensive,3-door,2-person,big,high safety,unacc
+vhigh,inexpensive,3-door,4-person,small,low safety,unacc
+vhigh,inexpensive,3-door,4-person,small,medium safety,unacc
+vhigh,inexpensive,3-door,4-person,small,high safety,acc
+vhigh,inexpensive,3-door,4-person,med,low safety,unacc
+vhigh,inexpensive,3-door,4-person,med,medium safety,unacc
+vhigh,inexpensive,3-door,4-person,med,high safety,acc
+vhigh,inexpensive,3-door,4-person,big,low safety,unacc
+vhigh,inexpensive,3-door,4-person,big,medium safety,acc
+vhigh,inexpensive,3-door,4-person,big,high safety,acc
+vhigh,inexpensive,3-door,more than 4,small,low safety,unacc
+vhigh,inexpensive,3-door,more than 4,small,medium safety,unacc
+vhigh,inexpensive,3-door,more than 4,small,high safety,acc
+vhigh,inexpensive,3-door,more than 4,med,low safety,unacc
+vhigh,inexpensive,3-door,more than 4,med,medium safety,acc
+vhigh,inexpensive,3-door,more than 4,med,high safety,acc
+vhigh,inexpensive,3-door,more than 4,big,low safety,unacc
+vhigh,inexpensive,3-door,more than 4,big,medium safety,acc
+vhigh,inexpensive,3-door,more than 4,big,high safety,acc
+vhigh,inexpensive,4-door,2-person,small,low safety,unacc
+vhigh,inexpensive,4-door,2-person,small,medium safety,unacc
+vhigh,inexpensive,4-door,2-person,small,high safety,unacc
+vhigh,inexpensive,4-door,2-person,med,low safety,unacc
+vhigh,inexpensive,4-door,2-person,med,medium safety,unacc
+vhigh,inexpensive,4-door,2-person,med,high safety,unacc
+vhigh,inexpensive,4-door,2-person,big,low safety,unacc
+vhigh,inexpensive,4-door,2-person,big,medium safety,unacc
+vhigh,inexpensive,4-door,2-person,big,high safety,unacc
+vhigh,inexpensive,4-door,4-person,small,low safety,unacc
+vhigh,inexpensive,4-door,4-person,small,medium safety,unacc
+vhigh,inexpensive,4-door,4-person,small,high safety,acc
+vhigh,inexpensive,4-door,4-person,med,low safety,unacc
+vhigh,inexpensive,4-door,4-person,med,medium safety,acc
+vhigh,inexpensive,4-door,4-person,med,high safety,acc
+vhigh,inexpensive,4-door,4-person,big,low safety,unacc
+vhigh,inexpensive,4-door,4-person,big,medium safety,acc
+vhigh,inexpensive,4-door,4-person,big,high safety,acc
+vhigh,inexpensive,4-door,more than 4,small,low safety,unacc
+vhigh,inexpensive,4-door,more than 4,small,medium safety,unacc
+vhigh,inexpensive,4-door,more than 4,small,high safety,acc
+vhigh,inexpensive,4-door,more than 4,med,low safety,unacc
+vhigh,inexpensive,4-door,more than 4,med,medium safety,acc
+vhigh,inexpensive,4-door,more than 4,med,high safety,acc
+vhigh,inexpensive,4-door,more than 4,big,low safety,unacc
+vhigh,inexpensive,4-door,more than 4,big,medium safety,acc
+vhigh,inexpensive,4-door,more than 4,big,high safety,acc
+vhigh,inexpensive,5 or more,2-person,small,low safety,unacc
+vhigh,inexpensive,5 or more,2-person,small,medium safety,unacc
+vhigh,inexpensive,5 or more,2-person,small,high safety,unacc
+vhigh,inexpensive,5 or more,2-person,med,low safety,unacc
+vhigh,inexpensive,5 or more,2-person,med,medium safety,unacc
+vhigh,inexpensive,5 or more,2-person,med,high safety,unacc
+vhigh,inexpensive,5 or more,2-person,big,low safety,unacc
+vhigh,inexpensive,5 or more,2-person,big,medium safety,unacc
+vhigh,inexpensive,5 or more,2-person,big,high safety,unacc
+vhigh,inexpensive,5 or more,4-person,small,low safety,unacc
+vhigh,inexpensive,5 or more,4-person,small,medium safety,unacc
+vhigh,inexpensive,5 or more,4-person,small,high safety,acc
+vhigh,inexpensive,5 or more,4-person,med,low safety,unacc
+vhigh,inexpensive,5 or more,4-person,med,medium safety,acc
+vhigh,inexpensive,5 or more,4-person,med,high safety,acc
+vhigh,inexpensive,5 or more,4-person,big,low safety,unacc
+vhigh,inexpensive,5 or more,4-person,big,medium safety,acc
+vhigh,inexpensive,5 or more,4-person,big,high safety,acc
+vhigh,inexpensive,5 or more,more than 4,small,low safety,unacc
+vhigh,inexpensive,5 or more,more than 4,small,medium safety,unacc
+vhigh,inexpensive,5 or more,more than 4,small,high safety,acc
+vhigh,inexpensive,5 or more,more than 4,med,low safety,unacc
+vhigh,inexpensive,5 or more,more than 4,med,medium safety,acc
+vhigh,inexpensive,5 or more,more than 4,med,high safety,acc
+vhigh,inexpensive,5 or more,more than 4,big,low safety,unacc
+vhigh,inexpensive,5 or more,more than 4,big,medium safety,acc
+vhigh,inexpensive,5 or more,more than 4,big,high safety,acc
+high,very expensive,2-door,2-person,small,low safety,unacc
+high,very expensive,2-door,2-person,small,medium safety,unacc
+high,very expensive,2-door,2-person,small,high safety,unacc
+high,very expensive,2-door,2-person,med,low safety,unacc
+high,very expensive,2-door,2-person,med,medium safety,unacc
+high,very expensive,2-door,2-person,med,high safety,unacc
+high,very expensive,2-door,2-person,big,low safety,unacc
+high,very expensive,2-door,2-person,big,medium safety,unacc
+high,very expensive,2-door,2-person,big,high safety,unacc
+high,very expensive,2-door,4-person,small,low safety,unacc
+high,very expensive,2-door,4-person,small,medium safety,unacc
+high,very expensive,2-door,4-person,small,high safety,unacc
+high,very expensive,2-door,4-person,med,low safety,unacc
+high,very expensive,2-door,4-person,med,medium safety,unacc
+high,very expensive,2-door,4-person,med,high safety,unacc
+high,very expensive,2-door,4-person,big,low safety,unacc
+high,very expensive,2-door,4-person,big,medium safety,unacc
+high,very expensive,2-door,4-person,big,high safety,unacc
+high,very expensive,2-door,more than 4,small,low safety,unacc
+high,very expensive,2-door,more than 4,small,medium safety,unacc
+high,very expensive,2-door,more than 4,small,high safety,unacc
+high,very expensive,2-door,more than 4,med,low safety,unacc
+high,very expensive,2-door,more than 4,med,medium safety,unacc
+high,very expensive,2-door,more than 4,med,high safety,unacc
+high,very expensive,2-door,more than 4,big,low safety,unacc
+high,very expensive,2-door,more than 4,big,medium safety,unacc
+high,very expensive,2-door,more than 4,big,high safety,unacc
+high,very expensive,3-door,2-person,small,low safety,unacc
+high,very expensive,3-door,2-person,small,medium safety,unacc
+high,very expensive,3-door,2-person,small,high safety,unacc
+high,very expensive,3-door,2-person,med,low safety,unacc
+high,very expensive,3-door,2-person,med,medium safety,unacc
+high,very expensive,3-door,2-person,med,high safety,unacc
+high,very expensive,3-door,2-person,big,low safety,unacc
+high,very expensive,3-door,2-person,big,medium safety,unacc
+high,very expensive,3-door,2-person,big,high safety,unacc
+high,very expensive,3-door,4-person,small,low safety,unacc
+high,very expensive,3-door,4-person,small,medium safety,unacc
+high,very expensive,3-door,4-person,small,high safety,unacc
+high,very expensive,3-door,4-person,med,low safety,unacc
+high,very expensive,3-door,4-person,med,medium safety,unacc
+high,very expensive,3-door,4-person,med,high safety,unacc
+high,very expensive,3-door,4-person,big,low safety,unacc
+high,very expensive,3-door,4-person,big,medium safety,unacc
+high,very expensive,3-door,4-person,big,high safety,unacc
+high,very expensive,3-door,more than 4,small,low safety,unacc
+high,very expensive,3-door,more than 4,small,medium safety,unacc
+high,very expensive,3-door,more than 4,small,high safety,unacc
+high,very expensive,3-door,more than 4,med,low safety,unacc
+high,very expensive,3-door,more than 4,med,medium safety,unacc
+high,very expensive,3-door,more than 4,med,high safety,unacc
+high,very expensive,3-door,more than 4,big,low safety,unacc
+high,very expensive,3-door,more than 4,big,medium safety,unacc
+high,very expensive,3-door,more than 4,big,high safety,unacc
+high,very expensive,4-door,2-person,small,low safety,unacc
+high,very expensive,4-door,2-person,small,medium safety,unacc
+high,very expensive,4-door,2-person,small,high safety,unacc
+high,very expensive,4-door,2-person,med,low safety,unacc
+high,very expensive,4-door,2-person,med,medium safety,unacc
+high,very expensive,4-door,2-person,med,high safety,unacc
+high,very expensive,4-door,2-person,big,low safety,unacc
+high,very expensive,4-door,2-person,big,medium safety,unacc
+high,very expensive,4-door,2-person,big,high safety,unacc
+high,very expensive,4-door,4-person,small,low safety,unacc
+high,very expensive,4-door,4-person,small,medium safety,unacc
+high,very expensive,4-door,4-person,small,high safety,unacc
+high,very expensive,4-door,4-person,med,low safety,unacc
+high,very expensive,4-door,4-person,med,medium safety,unacc
+high,very expensive,4-door,4-person,med,high safety,unacc
+high,very expensive,4-door,4-person,big,low safety,unacc
+high,very expensive,4-door,4-person,big,medium safety,unacc
+high,very expensive,4-door,4-person,big,high safety,unacc
+high,very expensive,4-door,more than 4,small,low safety,unacc
+high,very expensive,4-door,more than 4,small,medium safety,unacc
+high,very expensive,4-door,more than 4,small,high safety,unacc
+high,very expensive,4-door,more than 4,med,low safety,unacc
+high,very expensive,4-door,more than 4,med,medium safety,unacc
+high,very expensive,4-door,more than 4,med,high safety,unacc
+high,very expensive,4-door,more than 4,big,low safety,unacc
+high,very expensive,4-door,more than 4,big,medium safety,unacc
+high,very expensive,4-door,more than 4,big,high safety,unacc
+high,very expensive,5 or more,2-person,small,low safety,unacc
+high,very expensive,5 or more,2-person,small,medium safety,unacc
+high,very expensive,5 or more,2-person,small,high safety,unacc
+high,very expensive,5 or more,2-person,med,low safety,unacc
+high,very expensive,5 or more,2-person,med,medium safety,unacc
+high,very expensive,5 or more,2-person,med,high safety,unacc
+high,very expensive,5 or more,2-person,big,low safety,unacc
+high,very expensive,5 or more,2-person,big,medium safety,unacc
+high,very expensive,5 or more,2-person,big,high safety,unacc
+high,very expensive,5 or more,4-person,small,low safety,unacc
+high,very expensive,5 or more,4-person,small,medium safety,unacc
+high,very expensive,5 or more,4-person,small,high safety,unacc
+high,very expensive,5 or more,4-person,med,low safety,unacc
+high,very expensive,5 or more,4-person,med,medium safety,unacc
+high,very expensive,5 or more,4-person,med,high safety,unacc
+high,very expensive,5 or more,4-person,big,low safety,unacc
+high,very expensive,5 or more,4-person,big,medium safety,unacc
+high,very expensive,5 or more,4-person,big,high safety,unacc
+high,very expensive,5 or more,more than 4,small,low safety,unacc
+high,very expensive,5 or more,more than 4,small,medium safety,unacc
+high,very expensive,5 or more,more than 4,small,high safety,unacc
+high,very expensive,5 or more,more than 4,med,low safety,unacc
+high,very expensive,5 or more,more than 4,med,medium safety,unacc
+high,very expensive,5 or more,more than 4,med,high safety,unacc
+high,very expensive,5 or more,more than 4,big,low safety,unacc
+high,very expensive,5 or more,more than 4,big,medium safety,unacc
+high,very expensive,5 or more,more than 4,big,high safety,unacc
+high,expensive,2-door,2-person,small,low safety,unacc
+high,expensive,2-door,2-person,small,medium safety,unacc
+high,expensive,2-door,2-person,small,high safety,unacc
+high,expensive,2-door,2-person,med,low safety,unacc
+high,expensive,2-door,2-person,med,medium safety,unacc
+high,expensive,2-door,2-person,med,high safety,unacc
+high,expensive,2-door,2-person,big,low safety,unacc
+high,expensive,2-door,2-person,big,medium safety,unacc
+high,expensive,2-door,2-person,big,high safety,unacc
+high,expensive,2-door,4-person,small,low safety,unacc
+high,expensive,2-door,4-person,small,medium safety,unacc
+high,expensive,2-door,4-person,small,high safety,acc
+high,expensive,2-door,4-person,med,low safety,unacc
+high,expensive,2-door,4-person,med,medium safety,unacc
+high,expensive,2-door,4-person,med,high safety,acc
+high,expensive,2-door,4-person,big,low safety,unacc
+high,expensive,2-door,4-person,big,medium safety,acc
+high,expensive,2-door,4-person,big,high safety,acc
+high,expensive,2-door,more than 4,small,low safety,unacc
+high,expensive,2-door,more than 4,small,medium safety,unacc
+high,expensive,2-door,more than 4,small,high safety,unacc
+high,expensive,2-door,more than 4,med,low safety,unacc
+high,expensive,2-door,more than 4,med,medium safety,unacc
+high,expensive,2-door,more than 4,med,high safety,acc
+high,expensive,2-door,more than 4,big,low safety,unacc
+high,expensive,2-door,more than 4,big,medium safety,acc
+high,expensive,2-door,more than 4,big,high safety,acc
+high,expensive,3-door,2-person,small,low safety,unacc
+high,expensive,3-door,2-person,small,medium safety,unacc
+high,expensive,3-door,2-person,small,high safety,unacc
+high,expensive,3-door,2-person,med,low safety,unacc
+high,expensive,3-door,2-person,med,medium safety,unacc
+high,expensive,3-door,2-person,med,high safety,unacc
+high,expensive,3-door,2-person,big,low safety,unacc
+high,expensive,3-door,2-person,big,medium safety,unacc
+high,expensive,3-door,2-person,big,high safety,unacc
+high,expensive,3-door,4-person,small,low safety,unacc
+high,expensive,3-door,4-person,small,medium safety,unacc
+high,expensive,3-door,4-person,small,high safety,acc
+high,expensive,3-door,4-person,med,low safety,unacc
+high,expensive,3-door,4-person,med,medium safety,unacc
+high,expensive,3-door,4-person,med,high safety,acc
+high,expensive,3-door,4-person,big,low safety,unacc
+high,expensive,3-door,4-person,big,medium safety,acc
+high,expensive,3-door,4-person,big,high safety,acc
+high,expensive,3-door,more than 4,small,low safety,unacc
+high,expensive,3-door,more than 4,small,medium safety,unacc
+high,expensive,3-door,more than 4,small,high safety,acc
+high,expensive,3-door,more than 4,med,low safety,unacc
+high,expensive,3-door,more than 4,med,medium safety,acc
+high,expensive,3-door,more than 4,med,high safety,acc
+high,expensive,3-door,more than 4,big,low safety,unacc
+high,expensive,3-door,more than 4,big,medium safety,acc
+high,expensive,3-door,more than 4,big,high safety,acc
+high,expensive,4-door,2-person,small,low safety,unacc
+high,expensive,4-door,2-person,small,medium safety,unacc
+high,expensive,4-door,2-person,small,high safety,unacc
+high,expensive,4-door,2-person,med,low safety,unacc
+high,expensive,4-door,2-person,med,medium safety,unacc
+high,expensive,4-door,2-person,med,high safety,unacc
+high,expensive,4-door,2-person,big,low safety,unacc
+high,expensive,4-door,2-person,big,medium safety,unacc
+high,expensive,4-door,2-person,big,high safety,unacc
+high,expensive,4-door,4-person,small,low safety,unacc
+high,expensive,4-door,4-person,small,medium safety,unacc
+high,expensive,4-door,4-person,small,high safety,acc
+high,expensive,4-door,4-person,med,low safety,unacc
+high,expensive,4-door,4-person,med,medium safety,acc
+high,expensive,4-door,4-person,med,high safety,acc
+high,expensive,4-door,4-person,big,low safety,unacc
+high,expensive,4-door,4-person,big,medium safety,acc
+high,expensive,4-door,4-person,big,high safety,acc
+high,expensive,4-door,more than 4,small,low safety,unacc
+high,expensive,4-door,more than 4,small,medium safety,unacc
+high,expensive,4-door,more than 4,small,high safety,acc
+high,expensive,4-door,more than 4,med,low safety,unacc
+high,expensive,4-door,more than 4,med,medium safety,acc
+high,expensive,4-door,more than 4,med,high safety,acc
+high,expensive,4-door,more than 4,big,low safety,unacc
+high,expensive,4-door,more than 4,big,medium safety,acc
+high,expensive,4-door,more than 4,big,high safety,acc
+high,expensive,5 or more,2-person,small,low safety,unacc
+high,expensive,5 or more,2-person,small,medium safety,unacc
+high,expensive,5 or more,2-person,small,high safety,unacc
+high,expensive,5 or more,2-person,med,low safety,unacc
+high,expensive,5 or more,2-person,med,medium safety,unacc
+high,expensive,5 or more,2-person,med,high safety,unacc
+high,expensive,5 or more,2-person,big,low safety,unacc
+high,expensive,5 or more,2-person,big,medium safety,unacc
+high,expensive,5 or more,2-person,big,high safety,unacc
+high,expensive,5 or more,4-person,small,low safety,unacc
+high,expensive,5 or more,4-person,small,medium safety,unacc
+high,expensive,5 or more,4-person,small,high safety,acc
+high,expensive,5 or more,4-person,med,low safety,unacc
+high,expensive,5 or more,4-person,med,medium safety,acc
+high,expensive,5 or more,4-person,med,high safety,acc
+high,expensive,5 or more,4-person,big,low safety,unacc
+high,expensive,5 or more,4-person,big,medium safety,acc
+high,expensive,5 or more,4-person,big,high safety,acc
+high,expensive,5 or more,more than 4,small,low safety,unacc
+high,expensive,5 or more,more than 4,small,medium safety,unacc
+high,expensive,5 or more,more than 4,small,high safety,acc
+high,expensive,5 or more,more than 4,med,low safety,unacc
+high,expensive,5 or more,more than 4,med,medium safety,acc
+high,expensive,5 or more,more than 4,med,high safety,acc
+high,expensive,5 or more,more than 4,big,low safety,unacc
+high,expensive,5 or more,more than 4,big,medium safety,acc
+high,expensive,5 or more,more than 4,big,high safety,acc
+high,moderately expensive,2-door,2-person,small,low safety,unacc
+high,moderately expensive,2-door,2-person,small,medium safety,unacc
+high,moderately expensive,2-door,2-person,small,high safety,unacc
+high,moderately expensive,2-door,2-person,med,low safety,unacc
+high,moderately expensive,2-door,2-person,med,medium safety,unacc
+high,moderately expensive,2-door,2-person,med,high safety,unacc
+high,moderately expensive,2-door,2-person,big,low safety,unacc
+high,moderately expensive,2-door,2-person,big,medium safety,unacc
+high,moderately expensive,2-door,2-person,big,high safety,unacc
+high,moderately expensive,2-door,4-person,small,low safety,unacc
+high,moderately expensive,2-door,4-person,small,medium safety,unacc
+high,moderately expensive,2-door,4-person,small,high safety,acc
+high,moderately expensive,2-door,4-person,med,low safety,unacc
+high,moderately expensive,2-door,4-person,med,medium safety,unacc
+high,moderately expensive,2-door,4-person,med,high safety,acc
+high,moderately expensive,2-door,4-person,big,low safety,unacc
+high,moderately expensive,2-door,4-person,big,medium safety,acc
+high,moderately expensive,2-door,4-person,big,high safety,acc
+high,moderately expensive,2-door,more than 4,small,low safety,unacc
+high,moderately expensive,2-door,more than 4,small,medium safety,unacc
+high,moderately expensive,2-door,more than 4,small,high safety,unacc
+high,moderately expensive,2-door,more than 4,med,low safety,unacc
+high,moderately expensive,2-door,more than 4,med,medium safety,unacc
+high,moderately expensive,2-door,more than 4,med,high safety,acc
+high,moderately expensive,2-door,more than 4,big,low safety,unacc
+high,moderately expensive,2-door,more than 4,big,medium safety,acc
+high,moderately expensive,2-door,more than 4,big,high safety,acc
+high,moderately expensive,3-door,2-person,small,low safety,unacc
+high,moderately expensive,3-door,2-person,small,medium safety,unacc
+high,moderately expensive,3-door,2-person,small,high safety,unacc
+high,moderately expensive,3-door,2-person,med,low safety,unacc
+high,moderately expensive,3-door,2-person,med,medium safety,unacc
+high,moderately expensive,3-door,2-person,med,high safety,unacc
+high,moderately expensive,3-door,2-person,big,low safety,unacc
+high,moderately expensive,3-door,2-person,big,medium safety,unacc
+high,moderately expensive,3-door,2-person,big,high safety,unacc
+high,moderately expensive,3-door,4-person,small,low safety,unacc
+high,moderately expensive,3-door,4-person,small,medium safety,unacc
+high,moderately expensive,3-door,4-person,small,high safety,acc
+high,moderately expensive,3-door,4-person,med,low safety,unacc
+high,moderately expensive,3-door,4-person,med,medium safety,unacc
+high,moderately expensive,3-door,4-person,med,high safety,acc
+high,moderately expensive,3-door,4-person,big,low safety,unacc
+high,moderately expensive,3-door,4-person,big,medium safety,acc
+high,moderately expensive,3-door,4-person,big,high safety,acc
+high,moderately expensive,3-door,more than 4,small,low safety,unacc
+high,moderately expensive,3-door,more than 4,small,medium safety,unacc
+high,moderately expensive,3-door,more than 4,small,high safety,acc
+high,moderately expensive,3-door,more than 4,med,low safety,unacc
+high,moderately expensive,3-door,more than 4,med,medium safety,acc
+high,moderately expensive,3-door,more than 4,med,high safety,acc
+high,moderately expensive,3-door,more than 4,big,low safety,unacc
+high,moderately expensive,3-door,more than 4,big,medium safety,acc
+high,moderately expensive,3-door,more than 4,big,high safety,acc
+high,moderately expensive,4-door,2-person,small,low safety,unacc
+high,moderately expensive,4-door,2-person,small,medium safety,unacc
+high,moderately expensive,4-door,2-person,small,high safety,unacc
+high,moderately expensive,4-door,2-person,med,low safety,unacc
+high,moderately expensive,4-door,2-person,med,medium safety,unacc
+high,moderately expensive,4-door,2-person,med,high safety,unacc
+high,moderately expensive,4-door,2-person,big,low safety,unacc
+high,moderately expensive,4-door,2-person,big,medium safety,unacc
+high,moderately expensive,4-door,2-person,big,high safety,unacc
+high,moderately expensive,4-door,4-person,small,low safety,unacc
+high,moderately expensive,4-door,4-person,small,medium safety,unacc
+high,moderately expensive,4-door,4-person,small,high safety,acc
+high,moderately expensive,4-door,4-person,med,low safety,unacc
+high,moderately expensive,4-door,4-person,med,medium safety,acc
+high,moderately expensive,4-door,4-person,med,high safety,acc
+high,moderately expensive,4-door,4-person,big,low safety,unacc
+high,moderately expensive,4-door,4-person,big,medium safety,acc
+high,moderately expensive,4-door,4-person,big,high safety,acc
+high,moderately expensive,4-door,more than 4,small,low safety,unacc
+high,moderately expensive,4-door,more than 4,small,medium safety,unacc
+high,moderately expensive,4-door,more than 4,small,high safety,acc
+high,moderately expensive,4-door,more than 4,med,low safety,unacc
+high,moderately expensive,4-door,more than 4,med,medium safety,acc
+high,moderately expensive,4-door,more than 4,med,high safety,acc
+high,moderately expensive,4-door,more than 4,big,low safety,unacc
+high,moderately expensive,4-door,more than 4,big,medium safety,acc
+high,moderately expensive,4-door,more than 4,big,high safety,acc
+high,moderately expensive,5 or more,2-person,small,low safety,unacc
+high,moderately expensive,5 or more,2-person,small,medium safety,unacc
+high,moderately expensive,5 or more,2-person,small,high safety,unacc
+high,moderately expensive,5 or more,2-person,med,low safety,unacc
+high,moderately expensive,5 or more,2-person,med,medium safety,unacc
+high,moderately expensive,5 or more,2-person,med,high safety,unacc
+high,moderately expensive,5 or more,2-person,big,low safety,unacc
+high,moderately expensive,5 or more,2-person,big,medium safety,unacc
+high,moderately expensive,5 or more,2-person,big,high safety,unacc
+high,moderately expensive,5 or more,4-person,small,low safety,unacc
+high,moderately expensive,5 or more,4-person,small,medium safety,unacc
+high,moderately expensive,5 or more,4-person,small,high safety,acc
+high,moderately expensive,5 or more,4-person,med,low safety,unacc
+high,moderately expensive,5 or more,4-person,med,medium safety,acc
+high,moderately expensive,5 or more,4-person,med,high safety,acc
+high,moderately expensive,5 or more,4-person,big,low safety,unacc
+high,moderately expensive,5 or more,4-person,big,medium safety,acc
+high,moderately expensive,5 or more,4-person,big,high safety,acc
+high,moderately expensive,5 or more,more than 4,small,low safety,unacc
+high,moderately expensive,5 or more,more than 4,small,medium safety,unacc
+high,moderately expensive,5 or more,more than 4,small,high safety,acc
+high,moderately expensive,5 or more,more than 4,med,low safety,unacc
+high,moderately expensive,5 or more,more than 4,med,medium safety,acc
+high,moderately expensive,5 or more,more than 4,med,high safety,acc
+high,moderately expensive,5 or more,more than 4,big,low safety,unacc
+high,moderately expensive,5 or more,more than 4,big,medium safety,acc
+high,moderately expensive,5 or more,more than 4,big,high safety,acc
+high,inexpensive,2-door,2-person,small,low safety,unacc
+high,inexpensive,2-door,2-person,small,medium safety,unacc
+high,inexpensive,2-door,2-person,small,high safety,unacc
+high,inexpensive,2-door,2-person,med,low safety,unacc
+high,inexpensive,2-door,2-person,med,medium safety,unacc
+high,inexpensive,2-door,2-person,med,high safety,unacc
+high,inexpensive,2-door,2-person,big,low safety,unacc
+high,inexpensive,2-door,2-person,big,medium safety,unacc
+high,inexpensive,2-door,2-person,big,high safety,unacc
+high,inexpensive,2-door,4-person,small,low safety,unacc
+high,inexpensive,2-door,4-person,small,medium safety,unacc
+high,inexpensive,2-door,4-person,small,high safety,acc
+high,inexpensive,2-door,4-person,med,low safety,unacc
+high,inexpensive,2-door,4-person,med,medium safety,unacc
+high,inexpensive,2-door,4-person,med,high safety,acc
+high,inexpensive,2-door,4-person,big,low safety,unacc
+high,inexpensive,2-door,4-person,big,medium safety,acc
+high,inexpensive,2-door,4-person,big,high safety,acc
+high,inexpensive,2-door,more than 4,small,low safety,unacc
+high,inexpensive,2-door,more than 4,small,medium safety,unacc
+high,inexpensive,2-door,more than 4,small,high safety,unacc
+high,inexpensive,2-door,more than 4,med,low safety,unacc
+high,inexpensive,2-door,more than 4,med,medium safety,unacc
+high,inexpensive,2-door,more than 4,med,high safety,acc
+high,inexpensive,2-door,more than 4,big,low safety,unacc
+high,inexpensive,2-door,more than 4,big,medium safety,acc
+high,inexpensive,2-door,more than 4,big,high safety,acc
+high,inexpensive,3-door,2-person,small,low safety,unacc
+high,inexpensive,3-door,2-person,small,medium safety,unacc
+high,inexpensive,3-door,2-person,small,high safety,unacc
+high,inexpensive,3-door,2-person,med,low safety,unacc
+high,inexpensive,3-door,2-person,med,medium safety,unacc
+high,inexpensive,3-door,2-person,med,high safety,unacc
+high,inexpensive,3-door,2-person,big,low safety,unacc
+high,inexpensive,3-door,2-person,big,medium safety,unacc
+high,inexpensive,3-door,2-person,big,high safety,unacc
+high,inexpensive,3-door,4-person,small,low safety,unacc
+high,inexpensive,3-door,4-person,small,medium safety,unacc
+high,inexpensive,3-door,4-person,small,high safety,acc
+high,inexpensive,3-door,4-person,med,low safety,unacc
+high,inexpensive,3-door,4-person,med,medium safety,unacc
+high,inexpensive,3-door,4-person,med,high safety,acc
+high,inexpensive,3-door,4-person,big,low safety,unacc
+high,inexpensive,3-door,4-person,big,medium safety,acc
+high,inexpensive,3-door,4-person,big,high safety,acc
+high,inexpensive,3-door,more than 4,small,low safety,unacc
+high,inexpensive,3-door,more than 4,small,medium safety,unacc
+high,inexpensive,3-door,more than 4,small,high safety,acc
+high,inexpensive,3-door,more than 4,med,low safety,unacc
+high,inexpensive,3-door,more than 4,med,medium safety,acc
+high,inexpensive,3-door,more than 4,med,high safety,acc
+high,inexpensive,3-door,more than 4,big,low safety,unacc
+high,inexpensive,3-door,more than 4,big,medium safety,acc
+high,inexpensive,3-door,more than 4,big,high safety,acc
+high,inexpensive,4-door,2-person,small,low safety,unacc
+high,inexpensive,4-door,2-person,small,medium safety,unacc
+high,inexpensive,4-door,2-person,small,high safety,unacc
+high,inexpensive,4-door,2-person,med,low safety,unacc
+high,inexpensive,4-door,2-person,med,medium safety,unacc
+high,inexpensive,4-door,2-person,med,high safety,unacc
+high,inexpensive,4-door,2-person,big,low safety,unacc
+high,inexpensive,4-door,2-person,big,medium safety,unacc
+high,inexpensive,4-door,2-person,big,high safety,unacc
+high,inexpensive,4-door,4-person,small,low safety,unacc
+high,inexpensive,4-door,4-person,small,medium safety,unacc
+high,inexpensive,4-door,4-person,small,high safety,acc
+high,inexpensive,4-door,4-person,med,low safety,unacc
+high,inexpensive,4-door,4-person,med,medium safety,acc
+high,inexpensive,4-door,4-person,med,high safety,acc
+high,inexpensive,4-door,4-person,big,low safety,unacc
+high,inexpensive,4-door,4-person,big,medium safety,acc
+high,inexpensive,4-door,4-person,big,high safety,acc
+high,inexpensive,4-door,more than 4,small,low safety,unacc
+high,inexpensive,4-door,more than 4,small,medium safety,unacc
+high,inexpensive,4-door,more than 4,small,high safety,acc
+high,inexpensive,4-door,more than 4,med,low safety,unacc
+high,inexpensive,4-door,more than 4,med,medium safety,acc
+high,inexpensive,4-door,more than 4,med,high safety,acc
+high,inexpensive,4-door,more than 4,big,low safety,unacc
+high,inexpensive,4-door,more than 4,big,medium safety,acc
+high,inexpensive,4-door,more than 4,big,high safety,acc
+high,inexpensive,5 or more,2-person,small,low safety,unacc
+high,inexpensive,5 or more,2-person,small,medium safety,unacc
+high,inexpensive,5 or more,2-person,small,high safety,unacc
+high,inexpensive,5 or more,2-person,med,low safety,unacc
+high,inexpensive,5 or more,2-person,med,medium safety,unacc
+high,inexpensive,5 or more,2-person,med,high safety,unacc
+high,inexpensive,5 or more,2-person,big,low safety,unacc
+high,inexpensive,5 or more,2-person,big,medium safety,unacc
+high,inexpensive,5 or more,2-person,big,high safety,unacc
+high,inexpensive,5 or more,4-person,small,low safety,unacc
+high,inexpensive,5 or more,4-person,small,medium safety,unacc
+high,inexpensive,5 or more,4-person,small,high safety,acc
+high,inexpensive,5 or more,4-person,med,low safety,unacc
+high,inexpensive,5 or more,4-person,med,medium safety,acc
+high,inexpensive,5 or more,4-person,med,high safety,acc
+high,inexpensive,5 or more,4-person,big,low safety,unacc
+high,inexpensive,5 or more,4-person,big,medium safety,acc
+high,inexpensive,5 or more,4-person,big,high safety,acc
+high,inexpensive,5 or more,more than 4,small,low safety,unacc
+high,inexpensive,5 or more,more than 4,small,medium safety,unacc
+high,inexpensive,5 or more,more than 4,small,high safety,acc
+high,inexpensive,5 or more,more than 4,med,low safety,unacc
+high,inexpensive,5 or more,more than 4,med,medium safety,acc
+high,inexpensive,5 or more,more than 4,med,high safety,acc
+high,inexpensive,5 or more,more than 4,big,low safety,unacc
+high,inexpensive,5 or more,more than 4,big,medium safety,acc
+high,inexpensive,5 or more,more than 4,big,high safety,acc
+med,very expensive,2-door,2-person,small,low safety,unacc
+med,very expensive,2-door,2-person,small,medium safety,unacc
+med,very expensive,2-door,2-person,small,high safety,unacc
+med,very expensive,2-door,2-person,med,low safety,unacc
+med,very expensive,2-door,2-person,med,medium safety,unacc
+med,very expensive,2-door,2-person,med,high safety,unacc
+med,very expensive,2-door,2-person,big,low safety,unacc
+med,very expensive,2-door,2-person,big,medium safety,unacc
+med,very expensive,2-door,2-person,big,high safety,unacc
+med,very expensive,2-door,4-person,small,low safety,unacc
+med,very expensive,2-door,4-person,small,medium safety,unacc
+med,very expensive,2-door,4-person,small,high safety,acc
+med,very expensive,2-door,4-person,med,low safety,unacc
+med,very expensive,2-door,4-person,med,medium safety,unacc
+med,very expensive,2-door,4-person,med,high safety,acc
+med,very expensive,2-door,4-person,big,low safety,unacc
+med,very expensive,2-door,4-person,big,medium safety,acc
+med,very expensive,2-door,4-person,big,high safety,acc
+med,very expensive,2-door,more than 4,small,low safety,unacc
+med,very expensive,2-door,more than 4,small,medium safety,unacc
+med,very expensive,2-door,more than 4,small,high safety,unacc
+med,very expensive,2-door,more than 4,med,low safety,unacc
+med,very expensive,2-door,more than 4,med,medium safety,unacc
+med,very expensive,2-door,more than 4,med,high safety,acc
+med,very expensive,2-door,more than 4,big,low safety,unacc
+med,very expensive,2-door,more than 4,big,medium safety,acc
+med,very expensive,2-door,more than 4,big,high safety,acc
+med,very expensive,3-door,2-person,small,low safety,unacc
+med,very expensive,3-door,2-person,small,medium safety,unacc
+med,very expensive,3-door,2-person,small,high safety,unacc
+med,very expensive,3-door,2-person,med,low safety,unacc
+med,very expensive,3-door,2-person,med,medium safety,unacc
+med,very expensive,3-door,2-person,med,high safety,unacc
+med,very expensive,3-door,2-person,big,low safety,unacc
+med,very expensive,3-door,2-person,big,medium safety,unacc
+med,very expensive,3-door,2-person,big,high safety,unacc
+med,very expensive,3-door,4-person,small,low safety,unacc
+med,very expensive,3-door,4-person,small,medium safety,unacc
+med,very expensive,3-door,4-person,small,high safety,acc
+med,very expensive,3-door,4-person,med,low safety,unacc
+med,very expensive,3-door,4-person,med,medium safety,unacc
+med,very expensive,3-door,4-person,med,high safety,acc
+med,very expensive,3-door,4-person,big,low safety,unacc
+med,very expensive,3-door,4-person,big,medium safety,acc
+med,very expensive,3-door,4-person,big,high safety,acc
+med,very expensive,3-door,more than 4,small,low safety,unacc
+med,very expensive,3-door,more than 4,small,medium safety,unacc
+med,very expensive,3-door,more than 4,small,high safety,acc
+med,very expensive,3-door,more than 4,med,low safety,unacc
+med,very expensive,3-door,more than 4,med,medium safety,acc
+med,very expensive,3-door,more than 4,med,high safety,acc
+med,very expensive,3-door,more than 4,big,low safety,unacc
+med,very expensive,3-door,more than 4,big,medium safety,acc
+med,very expensive,3-door,more than 4,big,high safety,acc
+med,very expensive,4-door,2-person,small,low safety,unacc
+med,very expensive,4-door,2-person,small,medium safety,unacc
+med,very expensive,4-door,2-person,small,high safety,unacc
+med,very expensive,4-door,2-person,med,low safety,unacc
+med,very expensive,4-door,2-person,med,medium safety,unacc
+med,very expensive,4-door,2-person,med,high safety,unacc
+med,very expensive,4-door,2-person,big,low safety,unacc
+med,very expensive,4-door,2-person,big,medium safety,unacc
+med,very expensive,4-door,2-person,big,high safety,unacc
+med,very expensive,4-door,4-person,small,low safety,unacc
+med,very expensive,4-door,4-person,small,medium safety,unacc
+med,very expensive,4-door,4-person,small,high safety,acc
+med,very expensive,4-door,4-person,med,low safety,unacc
+med,very expensive,4-door,4-person,med,medium safety,acc
+med,very expensive,4-door,4-person,med,high safety,acc
+med,very expensive,4-door,4-person,big,low safety,unacc
+med,very expensive,4-door,4-person,big,medium safety,acc
+med,very expensive,4-door,4-person,big,high safety,acc
+med,very expensive,4-door,more than 4,small,low safety,unacc
+med,very expensive,4-door,more than 4,small,medium safety,unacc
+med,very expensive,4-door,more than 4,small,high safety,acc
+med,very expensive,4-door,more than 4,med,low safety,unacc
+med,very expensive,4-door,more than 4,med,medium safety,acc
+med,very expensive,4-door,more than 4,med,high safety,acc
+med,very expensive,4-door,more than 4,big,low safety,unacc
+med,very expensive,4-door,more than 4,big,medium safety,acc
+med,very expensive,4-door,more than 4,big,high safety,acc
+med,very expensive,5 or more,2-person,small,low safety,unacc
+med,very expensive,5 or more,2-person,small,medium safety,unacc
+med,very expensive,5 or more,2-person,small,high safety,unacc
+med,very expensive,5 or more,2-person,med,low safety,unacc
+med,very expensive,5 or more,2-person,med,medium safety,unacc
+med,very expensive,5 or more,2-person,med,high safety,unacc
+med,very expensive,5 or more,2-person,big,low safety,unacc
+med,very expensive,5 or more,2-person,big,medium safety,unacc
+med,very expensive,5 or more,2-person,big,high safety,unacc
+med,very expensive,5 or more,4-person,small,low safety,unacc
+med,very expensive,5 or more,4-person,small,medium safety,unacc
+med,very expensive,5 or more,4-person,small,high safety,acc
+med,very expensive,5 or more,4-person,med,low safety,unacc
+med,very expensive,5 or more,4-person,med,medium safety,acc
+med,very expensive,5 or more,4-person,med,high safety,acc
+med,very expensive,5 or more,4-person,big,low safety,unacc
+med,very expensive,5 or more,4-person,big,medium safety,acc
+med,very expensive,5 or more,4-person,big,high safety,acc
+med,very expensive,5 or more,more than 4,small,low safety,unacc
+med,very expensive,5 or more,more than 4,small,medium safety,unacc
+med,very expensive,5 or more,more than 4,small,high safety,acc
+med,very expensive,5 or more,more than 4,med,low safety,unacc
+med,very expensive,5 or more,more than 4,med,medium safety,acc
+med,very expensive,5 or more,more than 4,med,high safety,acc
+med,very expensive,5 or more,more than 4,big,low safety,unacc
+med,very expensive,5 or more,more than 4,big,medium safety,acc
+med,very expensive,5 or more,more than 4,big,high safety,acc
+med,expensive,2-door,2-person,small,low safety,unacc
+med,expensive,2-door,2-person,small,medium safety,unacc
+med,expensive,2-door,2-person,small,high safety,unacc
+med,expensive,2-door,2-person,med,low safety,unacc
+med,expensive,2-door,2-person,med,medium safety,unacc
+med,expensive,2-door,2-person,med,high safety,unacc
+med,expensive,2-door,2-person,big,low safety,unacc
+med,expensive,2-door,2-person,big,medium safety,unacc
+med,expensive,2-door,2-person,big,high safety,unacc
+med,expensive,2-door,4-person,small,low safety,unacc
+med,expensive,2-door,4-person,small,medium safety,unacc
+med,expensive,2-door,4-person,small,high safety,acc
+med,expensive,2-door,4-person,med,low safety,unacc
+med,expensive,2-door,4-person,med,medium safety,unacc
+med,expensive,2-door,4-person,med,high safety,acc
+med,expensive,2-door,4-person,big,low safety,unacc
+med,expensive,2-door,4-person,big,medium safety,acc
+med,expensive,2-door,4-person,big,high safety,acc
+med,expensive,2-door,more than 4,small,low safety,unacc
+med,expensive,2-door,more than 4,small,medium safety,unacc
+med,expensive,2-door,more than 4,small,high safety,unacc
+med,expensive,2-door,more than 4,med,low safety,unacc
+med,expensive,2-door,more than 4,med,medium safety,unacc
+med,expensive,2-door,more than 4,med,high safety,acc
+med,expensive,2-door,more than 4,big,low safety,unacc
+med,expensive,2-door,more than 4,big,medium safety,acc
+med,expensive,2-door,more than 4,big,high safety,acc
+med,expensive,3-door,2-person,small,low safety,unacc
+med,expensive,3-door,2-person,small,medium safety,unacc
+med,expensive,3-door,2-person,small,high safety,unacc
+med,expensive,3-door,2-person,med,low safety,unacc
+med,expensive,3-door,2-person,med,medium safety,unacc
+med,expensive,3-door,2-person,med,high safety,unacc
+med,expensive,3-door,2-person,big,low safety,unacc
+med,expensive,3-door,2-person,big,medium safety,unacc
+med,expensive,3-door,2-person,big,high safety,unacc
+med,expensive,3-door,4-person,small,low safety,unacc
+med,expensive,3-door,4-person,small,medium safety,unacc
+med,expensive,3-door,4-person,small,high safety,acc
+med,expensive,3-door,4-person,med,low safety,unacc
+med,expensive,3-door,4-person,med,medium safety,unacc
+med,expensive,3-door,4-person,med,high safety,acc
+med,expensive,3-door,4-person,big,low safety,unacc
+med,expensive,3-door,4-person,big,medium safety,acc
+med,expensive,3-door,4-person,big,high safety,acc
+med,expensive,3-door,more than 4,small,low safety,unacc
+med,expensive,3-door,more than 4,small,medium safety,unacc
+med,expensive,3-door,more than 4,small,high safety,acc
+med,expensive,3-door,more than 4,med,low safety,unacc
+med,expensive,3-door,more than 4,med,medium safety,acc
+med,expensive,3-door,more than 4,med,high safety,acc
+med,expensive,3-door,more than 4,big,low safety,unacc
+med,expensive,3-door,more than 4,big,medium safety,acc
+med,expensive,3-door,more than 4,big,high safety,acc
+med,expensive,4-door,2-person,small,low safety,unacc
+med,expensive,4-door,2-person,small,medium safety,unacc
+med,expensive,4-door,2-person,small,high safety,unacc
+med,expensive,4-door,2-person,med,low safety,unacc
+med,expensive,4-door,2-person,med,medium safety,unacc
+med,expensive,4-door,2-person,med,high safety,unacc
+med,expensive,4-door,2-person,big,low safety,unacc
+med,expensive,4-door,2-person,big,medium safety,unacc
+med,expensive,4-door,2-person,big,high safety,unacc
+med,expensive,4-door,4-person,small,low safety,unacc
+med,expensive,4-door,4-person,small,medium safety,unacc
+med,expensive,4-door,4-person,small,high safety,acc
+med,expensive,4-door,4-person,med,low safety,unacc
+med,expensive,4-door,4-person,med,medium safety,acc
+med,expensive,4-door,4-person,med,high safety,acc
+med,expensive,4-door,4-person,big,low safety,unacc
+med,expensive,4-door,4-person,big,medium safety,acc
+med,expensive,4-door,4-person,big,high safety,acc
+med,expensive,4-door,more than 4,small,low safety,unacc
+med,expensive,4-door,more than 4,small,medium safety,unacc
+med,expensive,4-door,more than 4,small,high safety,acc
+med,expensive,4-door,more than 4,med,low safety,unacc
+med,expensive,4-door,more than 4,med,medium safety,acc
+med,expensive,4-door,more than 4,med,high safety,acc
+med,expensive,4-door,more than 4,big,low safety,unacc
+med,expensive,4-door,more than 4,big,medium safety,acc
+med,expensive,4-door,more than 4,big,high safety,acc
+med,expensive,5 or more,2-person,small,low safety,unacc
+med,expensive,5 or more,2-person,small,medium safety,unacc
+med,expensive,5 or more,2-person,small,high safety,unacc
+med,expensive,5 or more,2-person,med,low safety,unacc
+med,expensive,5 or more,2-person,med,medium safety,unacc
+med,expensive,5 or more,2-person,med,high safety,unacc
+med,expensive,5 or more,2-person,big,low safety,unacc
+med,expensive,5 or more,2-person,big,medium safety,unacc
+med,expensive,5 or more,2-person,big,high safety,unacc
+med,expensive,5 or more,4-person,small,low safety,unacc
+med,expensive,5 or more,4-person,small,medium safety,unacc
+med,expensive,5 or more,4-person,small,high safety,acc
+med,expensive,5 or more,4-person,med,low safety,unacc
+med,expensive,5 or more,4-person,med,medium safety,acc
+med,expensive,5 or more,4-person,med,high safety,acc
+med,expensive,5 or more,4-person,big,low safety,unacc
+med,expensive,5 or more,4-person,big,medium safety,acc
+med,expensive,5 or more,4-person,big,high safety,acc
+med,expensive,5 or more,more than 4,small,low safety,unacc
+med,expensive,5 or more,more than 4,small,medium safety,unacc
+med,expensive,5 or more,more than 4,small,high safety,acc
+med,expensive,5 or more,more than 4,med,low safety,unacc
+med,expensive,5 or more,more than 4,med,medium safety,acc
+med,expensive,5 or more,more than 4,med,high safety,acc
+med,expensive,5 or more,more than 4,big,low safety,unacc
+med,expensive,5 or more,more than 4,big,medium safety,acc
+med,expensive,5 or more,more than 4,big,high safety,acc
+med,moderately expensive,2-door,2-person,small,low safety,unacc
+med,moderately expensive,2-door,2-person,small,medium safety,unacc
+med,moderately expensive,2-door,2-person,small,high safety,unacc
+med,moderately expensive,2-door,2-person,med,low safety,unacc
+med,moderately expensive,2-door,2-person,med,medium safety,unacc
+med,moderately expensive,2-door,2-person,med,high safety,unacc
+med,moderately expensive,2-door,2-person,big,low safety,unacc
+med,moderately expensive,2-door,2-person,big,medium safety,unacc
+med,moderately expensive,2-door,2-person,big,high safety,unacc
+med,moderately expensive,2-door,4-person,small,low safety,unacc
+med,moderately expensive,2-door,4-person,small,medium safety,acc
+med,moderately expensive,2-door,4-person,small,high safety,acc
+med,moderately expensive,2-door,4-person,med,low safety,unacc
+med,moderately expensive,2-door,4-person,med,medium safety,acc
+med,moderately expensive,2-door,4-person,med,high safety,acc
+med,moderately expensive,2-door,4-person,big,low safety,unacc
+med,moderately expensive,2-door,4-person,big,medium safety,acc
+med,moderately expensive,2-door,4-person,big,high safety,acc
+med,moderately expensive,2-door,more than 4,small,low safety,unacc
+med,moderately expensive,2-door,more than 4,small,medium safety,unacc
+med,moderately expensive,2-door,more than 4,small,high safety,unacc
+med,moderately expensive,2-door,more than 4,med,low safety,unacc
+med,moderately expensive,2-door,more than 4,med,medium safety,acc
+med,moderately expensive,2-door,more than 4,med,high safety,acc
+med,moderately expensive,2-door,more than 4,big,low safety,unacc
+med,moderately expensive,2-door,more than 4,big,medium safety,acc
+med,moderately expensive,2-door,more than 4,big,high safety,acc
+med,moderately expensive,3-door,2-person,small,low safety,unacc
+med,moderately expensive,3-door,2-person,small,medium safety,unacc
+med,moderately expensive,3-door,2-person,small,high safety,unacc
+med,moderately expensive,3-door,2-person,med,low safety,unacc
+med,moderately expensive,3-door,2-person,med,medium safety,unacc
+med,moderately expensive,3-door,2-person,med,high safety,unacc
+med,moderately expensive,3-door,2-person,big,low safety,unacc
+med,moderately expensive,3-door,2-person,big,medium safety,unacc
+med,moderately expensive,3-door,2-person,big,high safety,unacc
+med,moderately expensive,3-door,4-person,small,low safety,unacc
+med,moderately expensive,3-door,4-person,small,medium safety,acc
+med,moderately expensive,3-door,4-person,small,high safety,acc
+med,moderately expensive,3-door,4-person,med,low safety,unacc
+med,moderately expensive,3-door,4-person,med,medium safety,acc
+med,moderately expensive,3-door,4-person,med,high safety,acc
+med,moderately expensive,3-door,4-person,big,low safety,unacc
+med,moderately expensive,3-door,4-person,big,medium safety,acc
+med,moderately expensive,3-door,4-person,big,high safety,acc
+med,moderately expensive,3-door,more than 4,small,low safety,unacc
+med,moderately expensive,3-door,more than 4,small,medium safety,acc
+med,moderately expensive,3-door,more than 4,small,high safety,acc
+med,moderately expensive,3-door,more than 4,med,low safety,unacc
+med,moderately expensive,3-door,more than 4,med,medium safety,acc
+med,moderately expensive,3-door,more than 4,med,high safety,acc
+med,moderately expensive,3-door,more than 4,big,low safety,unacc
+med,moderately expensive,3-door,more than 4,big,medium safety,acc
+med,moderately expensive,3-door,more than 4,big,high safety,acc
+med,moderately expensive,4-door,2-person,small,low safety,unacc
+med,moderately expensive,4-door,2-person,small,medium safety,unacc
+med,moderately expensive,4-door,2-person,small,high safety,unacc
+med,moderately expensive,4-door,2-person,med,low safety,unacc
+med,moderately expensive,4-door,2-person,med,medium safety,unacc
+med,moderately expensive,4-door,2-person,med,high safety,unacc
+med,moderately expensive,4-door,2-person,big,low safety,unacc
+med,moderately expensive,4-door,2-person,big,medium safety,unacc
+med,moderately expensive,4-door,2-person,big,high safety,unacc
+med,moderately expensive,4-door,4-person,small,low safety,unacc
+med,moderately expensive,4-door,4-person,small,medium safety,acc
+med,moderately expensive,4-door,4-person,small,high safety,acc
+med,moderately expensive,4-door,4-person,med,low safety,unacc
+med,moderately expensive,4-door,4-person,med,medium safety,acc
+med,moderately expensive,4-door,4-person,med,high safety,acc
+med,moderately expensive,4-door,4-person,big,low safety,unacc
+med,moderately expensive,4-door,4-person,big,medium safety,acc
+med,moderately expensive,4-door,4-person,big,high safety,acc
+med,moderately expensive,4-door,more than 4,small,low safety,unacc
+med,moderately expensive,4-door,more than 4,small,medium safety,acc
+med,moderately expensive,4-door,more than 4,small,high safety,acc
+med,moderately expensive,4-door,more than 4,med,low safety,unacc
+med,moderately expensive,4-door,more than 4,med,medium safety,acc
+med,moderately expensive,4-door,more than 4,med,high safety,acc
+med,moderately expensive,4-door,more than 4,big,low safety,unacc
+med,moderately expensive,4-door,more than 4,big,medium safety,acc
+med,moderately expensive,4-door,more than 4,big,high safety,acc
+med,moderately expensive,5 or more,2-person,small,low safety,unacc
+med,moderately expensive,5 or more,2-person,small,medium safety,unacc
+med,moderately expensive,5 or more,2-person,small,high safety,unacc
+med,moderately expensive,5 or more,2-person,med,low safety,unacc
+med,moderately expensive,5 or more,2-person,med,medium safety,unacc
+med,moderately expensive,5 or more,2-person,med,high safety,unacc
+med,moderately expensive,5 or more,2-person,big,low safety,unacc
+med,moderately expensive,5 or more,2-person,big,medium safety,unacc
+med,moderately expensive,5 or more,2-person,big,high safety,unacc
+med,moderately expensive,5 or more,4-person,small,low safety,unacc
+med,moderately expensive,5 or more,4-person,small,medium safety,acc
+med,moderately expensive,5 or more,4-person,small,high safety,acc
+med,moderately expensive,5 or more,4-person,med,low safety,unacc
+med,moderately expensive,5 or more,4-person,med,medium safety,acc
+med,moderately expensive,5 or more,4-person,med,high safety,acc
+med,moderately expensive,5 or more,4-person,big,low safety,unacc
+med,moderately expensive,5 or more,4-person,big,medium safety,acc
+med,moderately expensive,5 or more,4-person,big,high safety,acc
+med,moderately expensive,5 or more,more than 4,small,low safety,unacc
+med,moderately expensive,5 or more,more than 4,small,medium safety,acc
+med,moderately expensive,5 or more,more than 4,small,high safety,acc
+med,moderately expensive,5 or more,more than 4,med,low safety,unacc
+med,moderately expensive,5 or more,more than 4,med,medium safety,acc
+med,moderately expensive,5 or more,more than 4,med,high safety,acc
+med,moderately expensive,5 or more,more than 4,big,low safety,unacc
+med,moderately expensive,5 or more,more than 4,big,medium safety,acc
+med,moderately expensive,5 or more,more than 4,big,high safety,acc
+med,inexpensive,2-door,2-person,small,low safety,unacc
+med,inexpensive,2-door,2-person,small,medium safety,unacc
+med,inexpensive,2-door,2-person,small,high safety,unacc
+med,inexpensive,2-door,2-person,med,low safety,unacc
+med,inexpensive,2-door,2-person,med,medium safety,unacc
+med,inexpensive,2-door,2-person,med,high safety,unacc
+med,inexpensive,2-door,2-person,big,low safety,unacc
+med,inexpensive,2-door,2-person,big,medium safety,unacc
+med,inexpensive,2-door,2-person,big,high safety,unacc
+med,inexpensive,2-door,4-person,small,low safety,unacc
+med,inexpensive,2-door,4-person,small,medium safety,acc
+med,inexpensive,2-door,4-person,small,high safety,acc
+med,inexpensive,2-door,4-person,med,low safety,unacc
+med,inexpensive,2-door,4-person,med,medium safety,acc
+med,inexpensive,2-door,4-person,med,high safety,acc
+med,inexpensive,2-door,4-person,big,low safety,unacc
+med,inexpensive,2-door,4-person,big,medium safety,acc
+med,inexpensive,2-door,4-person,big,high safety,acc
+med,inexpensive,2-door,more than 4,small,low safety,unacc
+med,inexpensive,2-door,more than 4,small,medium safety,unacc
+med,inexpensive,2-door,more than 4,small,high safety,unacc
+med,inexpensive,2-door,more than 4,med,low safety,unacc
+med,inexpensive,2-door,more than 4,med,medium safety,acc
+med,inexpensive,2-door,more than 4,med,high safety,acc
+med,inexpensive,2-door,more than 4,big,low safety,unacc
+med,inexpensive,2-door,more than 4,big,medium safety,acc
+med,inexpensive,2-door,more than 4,big,high safety,acc
+med,inexpensive,3-door,2-person,small,low safety,unacc
+med,inexpensive,3-door,2-person,small,medium safety,unacc
+med,inexpensive,3-door,2-person,small,high safety,unacc
+med,inexpensive,3-door,2-person,med,low safety,unacc
+med,inexpensive,3-door,2-person,med,medium safety,unacc
+med,inexpensive,3-door,2-person,med,high safety,unacc
+med,inexpensive,3-door,2-person,big,low safety,unacc
+med,inexpensive,3-door,2-person,big,medium safety,unacc
+med,inexpensive,3-door,2-person,big,high safety,unacc
+med,inexpensive,3-door,4-person,small,low safety,unacc
+med,inexpensive,3-door,4-person,small,medium safety,acc
+med,inexpensive,3-door,4-person,small,high safety,acc
+med,inexpensive,3-door,4-person,med,low safety,unacc
+med,inexpensive,3-door,4-person,med,medium safety,acc
+med,inexpensive,3-door,4-person,med,high safety,acc
+med,inexpensive,3-door,4-person,big,low safety,unacc
+med,inexpensive,3-door,4-person,big,medium safety,acc
+med,inexpensive,3-door,4-person,big,high safety,acc
+med,inexpensive,3-door,more than 4,small,low safety,unacc
+med,inexpensive,3-door,more than 4,small,medium safety,acc
+med,inexpensive,3-door,more than 4,small,high safety,acc
+med,inexpensive,3-door,more than 4,med,low safety,unacc
+med,inexpensive,3-door,more than 4,med,medium safety,acc
+med,inexpensive,3-door,more than 4,med,high safety,acc
+med,inexpensive,3-door,more than 4,big,low safety,unacc
+med,inexpensive,3-door,more than 4,big,medium safety,acc
+med,inexpensive,3-door,more than 4,big,high safety,acc
+med,inexpensive,4-door,2-person,small,low safety,unacc
+med,inexpensive,4-door,2-person,small,medium safety,unacc
+med,inexpensive,4-door,2-person,small,high safety,unacc
+med,inexpensive,4-door,2-person,med,low safety,unacc
+med,inexpensive,4-door,2-person,med,medium safety,unacc
+med,inexpensive,4-door,2-person,med,high safety,unacc
+med,inexpensive,4-door,2-person,big,low safety,unacc
+med,inexpensive,4-door,2-person,big,medium safety,unacc
+med,inexpensive,4-door,2-person,big,high safety,unacc
+med,inexpensive,4-door,4-person,small,low safety,unacc
+med,inexpensive,4-door,4-person,small,medium safety,acc
+med,inexpensive,4-door,4-person,small,high safety,acc
+med,inexpensive,4-door,4-person,med,low safety,unacc
+med,inexpensive,4-door,4-person,med,medium safety,acc
+med,inexpensive,4-door,4-person,med,high safety,acc
+med,inexpensive,4-door,4-person,big,low safety,unacc
+med,inexpensive,4-door,4-person,big,medium safety,acc
+med,inexpensive,4-door,4-person,big,high safety,acc
+med,inexpensive,4-door,more than 4,small,low safety,unacc
+med,inexpensive,4-door,more than 4,small,medium safety,acc
+med,inexpensive,4-door,more than 4,small,high safety,acc
+med,inexpensive,4-door,more than 4,med,low safety,unacc
+med,inexpensive,4-door,more than 4,med,medium safety,acc
+med,inexpensive,4-door,more than 4,med,high safety,acc
+med,inexpensive,4-door,more than 4,big,low safety,unacc
+med,inexpensive,4-door,more than 4,big,medium safety,acc
+med,inexpensive,4-door,more than 4,big,high safety,acc
+med,inexpensive,5 or more,2-person,small,low safety,unacc
+med,inexpensive,5 or more,2-person,small,medium safety,unacc
+med,inexpensive,5 or more,2-person,small,high safety,unacc
+med,inexpensive,5 or more,2-person,med,low safety,unacc
+med,inexpensive,5 or more,2-person,med,medium safety,unacc
+med,inexpensive,5 or more,2-person,med,high safety,unacc
+med,inexpensive,5 or more,2-person,big,low safety,unacc
+med,inexpensive,5 or more,2-person,big,medium safety,unacc
+med,inexpensive,5 or more,2-person,big,high safety,unacc
+med,inexpensive,5 or more,4-person,small,low safety,unacc
+med,inexpensive,5 or more,4-person,small,medium safety,acc
+med,inexpensive,5 or more,4-person,small,high safety,acc
+med,inexpensive,5 or more,4-person,med,low safety,unacc
+med,inexpensive,5 or more,4-person,med,medium safety,acc
+med,inexpensive,5 or more,4-person,med,high safety,acc
+med,inexpensive,5 or more,4-person,big,low safety,unacc
+med,inexpensive,5 or more,4-person,big,medium safety,acc
+med,inexpensive,5 or more,4-person,big,high safety,acc
+med,inexpensive,5 or more,more than 4,small,low safety,unacc
+med,inexpensive,5 or more,more than 4,small,medium safety,acc
+med,inexpensive,5 or more,more than 4,small,high safety,acc
+med,inexpensive,5 or more,more than 4,med,low safety,unacc
+med,inexpensive,5 or more,more than 4,med,medium safety,acc
+med,inexpensive,5 or more,more than 4,med,high safety,acc
+med,inexpensive,5 or more,more than 4,big,low safety,unacc
+med,inexpensive,5 or more,more than 4,big,medium safety,acc
+med,inexpensive,5 or more,more than 4,big,high safety,acc
+low,very expensive,2-door,2-person,small,low safety,unacc
+low,very expensive,2-door,2-person,small,medium safety,unacc
+low,very expensive,2-door,2-person,small,high safety,unacc
+low,very expensive,2-door,2-person,med,low safety,unacc
+low,very expensive,2-door,2-person,med,medium safety,unacc
+low,very expensive,2-door,2-person,med,high safety,unacc
+low,very expensive,2-door,2-person,big,low safety,unacc
+low,very expensive,2-door,2-person,big,medium safety,unacc
+low,very expensive,2-door,2-person,big,high safety,unacc
+low,very expensive,2-door,4-person,small,low safety,unacc
+low,very expensive,2-door,4-person,small,medium safety,unacc
+low,very expensive,2-door,4-person,small,high safety,acc
+low,very expensive,2-door,4-person,med,low safety,unacc
+low,very expensive,2-door,4-person,med,medium safety,unacc
+low,very expensive,2-door,4-person,med,high safety,acc
+low,very expensive,2-door,4-person,big,low safety,unacc
+low,very expensive,2-door,4-person,big,medium safety,acc
+low,very expensive,2-door,4-person,big,high safety,acc
+low,very expensive,2-door,more than 4,small,low safety,unacc
+low,very expensive,2-door,more than 4,small,medium safety,unacc
+low,very expensive,2-door,more than 4,small,high safety,unacc
+low,very expensive,2-door,more than 4,med,low safety,unacc
+low,very expensive,2-door,more than 4,med,medium safety,unacc
+low,very expensive,2-door,more than 4,med,high safety,acc
+low,very expensive,2-door,more than 4,big,low safety,unacc
+low,very expensive,2-door,more than 4,big,medium safety,acc
+low,very expensive,2-door,more than 4,big,high safety,acc
+low,very expensive,3-door,2-person,small,low safety,unacc
+low,very expensive,3-door,2-person,small,medium safety,unacc
+low,very expensive,3-door,2-person,small,high safety,unacc
+low,very expensive,3-door,2-person,med,low safety,unacc
+low,very expensive,3-door,2-person,med,medium safety,unacc
+low,very expensive,3-door,2-person,med,high safety,unacc
+low,very expensive,3-door,2-person,big,low safety,unacc
+low,very expensive,3-door,2-person,big,medium safety,unacc
+low,very expensive,3-door,2-person,big,high safety,unacc
+low,very expensive,3-door,4-person,small,low safety,unacc
+low,very expensive,3-door,4-person,small,medium safety,unacc
+low,very expensive,3-door,4-person,small,high safety,acc
+low,very expensive,3-door,4-person,med,low safety,unacc
+low,very expensive,3-door,4-person,med,medium safety,unacc
+low,very expensive,3-door,4-person,med,high safety,acc
+low,very expensive,3-door,4-person,big,low safety,unacc
+low,very expensive,3-door,4-person,big,medium safety,acc
+low,very expensive,3-door,4-person,big,high safety,acc
+low,very expensive,3-door,more than 4,small,low safety,unacc
+low,very expensive,3-door,more than 4,small,medium safety,unacc
+low,very expensive,3-door,more than 4,small,high safety,acc
+low,very expensive,3-door,more than 4,med,low safety,unacc
+low,very expensive,3-door,more than 4,med,medium safety,acc
+low,very expensive,3-door,more than 4,med,high safety,acc
+low,very expensive,3-door,more than 4,big,low safety,unacc
+low,very expensive,3-door,more than 4,big,medium safety,acc
+low,very expensive,3-door,more than 4,big,high safety,acc
+low,very expensive,4-door,2-person,small,low safety,unacc
+low,very expensive,4-door,2-person,small,medium safety,unacc
+low,very expensive,4-door,2-person,small,high safety,unacc
+low,very expensive,4-door,2-person,med,low safety,unacc
+low,very expensive,4-door,2-person,med,medium safety,unacc
+low,very expensive,4-door,2-person,med,high safety,unacc
+low,very expensive,4-door,2-person,big,low safety,unacc
+low,very expensive,4-door,2-person,big,medium safety,unacc
+low,very expensive,4-door,2-person,big,high safety,unacc
+low,very expensive,4-door,4-person,small,low safety,unacc
+low,very expensive,4-door,4-person,small,medium safety,unacc
+low,very expensive,4-door,4-person,small,high safety,acc
+low,very expensive,4-door,4-person,med,low safety,unacc
+low,very expensive,4-door,4-person,med,medium safety,acc
+low,very expensive,4-door,4-person,med,high safety,acc
+low,very expensive,4-door,4-person,big,low safety,unacc
+low,very expensive,4-door,4-person,big,medium safety,acc
+low,very expensive,4-door,4-person,big,high safety,acc
+low,very expensive,4-door,more than 4,small,low safety,unacc
+low,very expensive,4-door,more than 4,small,medium safety,unacc
+low,very expensive,4-door,more than 4,small,high safety,acc
+low,very expensive,4-door,more than 4,med,low safety,unacc
+low,very expensive,4-door,more than 4,med,medium safety,acc
+low,very expensive,4-door,more than 4,med,high safety,acc
+low,very expensive,4-door,more than 4,big,low safety,unacc
+low,very expensive,4-door,more than 4,big,medium safety,acc
+low,very expensive,4-door,more than 4,big,high safety,acc
+low,very expensive,5 or more,2-person,small,low safety,unacc
+low,very expensive,5 or more,2-person,small,medium safety,unacc
+low,very expensive,5 or more,2-person,small,high safety,unacc
+low,very expensive,5 or more,2-person,med,low safety,unacc
+low,very expensive,5 or more,2-person,med,medium safety,unacc
+low,very expensive,5 or more,2-person,med,high safety,unacc
+low,very expensive,5 or more,2-person,big,low safety,unacc
+low,very expensive,5 or more,2-person,big,medium safety,unacc
+low,very expensive,5 or more,2-person,big,high safety,unacc
+low,very expensive,5 or more,4-person,small,low safety,unacc
+low,very expensive,5 or more,4-person,small,medium safety,unacc
+low,very expensive,5 or more,4-person,small,high safety,acc
+low,very expensive,5 or more,4-person,med,low safety,unacc
+low,very expensive,5 or more,4-person,med,medium safety,acc
+low,very expensive,5 or more,4-person,med,high safety,acc
+low,very expensive,5 or more,4-person,big,low safety,unacc
+low,very expensive,5 or more,4-person,big,medium safety,acc
+low,very expensive,5 or more,4-person,big,high safety,acc
+low,very expensive,5 or more,more than 4,small,low safety,unacc
+low,very expensive,5 or more,more than 4,small,medium safety,unacc
+low,very expensive,5 or more,more than 4,small,high safety,acc
+low,very expensive,5 or more,more than 4,med,low safety,unacc
+low,very expensive,5 or more,more than 4,med,medium safety,acc
+low,very expensive,5 or more,more than 4,med,high safety,acc
+low,very expensive,5 or more,more than 4,big,low safety,unacc
+low,very expensive,5 or more,more than 4,big,medium safety,acc
+low,very expensive,5 or more,more than 4,big,high safety,acc
+low,expensive,2-door,2-person,small,low safety,unacc
+low,expensive,2-door,2-person,small,medium safety,unacc
+low,expensive,2-door,2-person,small,high safety,unacc
+low,expensive,2-door,2-person,med,low safety,unacc
+low,expensive,2-door,2-person,med,medium safety,unacc
+low,expensive,2-door,2-person,med,high safety,unacc
+low,expensive,2-door,2-person,big,low safety,unacc
+low,expensive,2-door,2-person,big,medium safety,unacc
+low,expensive,2-door,2-person,big,high safety,unacc
+low,expensive,2-door,4-person,small,low safety,unacc
+low,expensive,2-door,4-person,small,medium safety,acc
+low,expensive,2-door,4-person,small,high safety,acc
+low,expensive,2-door,4-person,med,low safety,unacc
+low,expensive,2-door,4-person,med,medium safety,acc
+low,expensive,2-door,4-person,med,high safety,acc
+low,expensive,2-door,4-person,big,low safety,unacc
+low,expensive,2-door,4-person,big,medium safety,acc
+low,expensive,2-door,4-person,big,high safety,acc
+low,expensive,2-door,more than 4,small,low safety,unacc
+low,expensive,2-door,more than 4,small,medium safety,unacc
+low,expensive,2-door,more than 4,small,high safety,unacc
+low,expensive,2-door,more than 4,med,low safety,unacc
+low,expensive,2-door,more than 4,med,medium safety,acc
+low,expensive,2-door,more than 4,med,high safety,acc
+low,expensive,2-door,more than 4,big,low safety,unacc
+low,expensive,2-door,more than 4,big,medium safety,acc
+low,expensive,2-door,more than 4,big,high safety,acc
+low,expensive,3-door,2-person,small,low safety,unacc
+low,expensive,3-door,2-person,small,medium safety,unacc
+low,expensive,3-door,2-person,small,high safety,unacc
+low,expensive,3-door,2-person,med,low safety,unacc
+low,expensive,3-door,2-person,med,medium safety,unacc
+low,expensive,3-door,2-person,med,high safety,unacc
+low,expensive,3-door,2-person,big,low safety,unacc
+low,expensive,3-door,2-person,big,medium safety,unacc
+low,expensive,3-door,2-person,big,high safety,unacc
+low,expensive,3-door,4-person,small,low safety,unacc
+low,expensive,3-door,4-person,small,medium safety,acc
+low,expensive,3-door,4-person,small,high safety,acc
+low,expensive,3-door,4-person,med,low safety,unacc
+low,expensive,3-door,4-person,med,medium safety,acc
+low,expensive,3-door,4-person,med,high safety,acc
+low,expensive,3-door,4-person,big,low safety,unacc
+low,expensive,3-door,4-person,big,medium safety,acc
+low,expensive,3-door,4-person,big,high safety,acc
+low,expensive,3-door,more than 4,small,low safety,unacc
+low,expensive,3-door,more than 4,small,medium safety,acc
+low,expensive,3-door,more than 4,small,high safety,acc
+low,expensive,3-door,more than 4,med,low safety,unacc
+low,expensive,3-door,more than 4,med,medium safety,acc
+low,expensive,3-door,more than 4,med,high safety,acc
+low,expensive,3-door,more than 4,big,low safety,unacc
+low,expensive,3-door,more than 4,big,medium safety,acc
+low,expensive,3-door,more than 4,big,high safety,acc
+low,expensive,4-door,2-person,small,low safety,unacc
+low,expensive,4-door,2-person,small,medium safety,unacc
+low,expensive,4-door,2-person,small,high safety,unacc
+low,expensive,4-door,2-person,med,low safety,unacc
+low,expensive,4-door,2-person,med,medium safety,unacc
+low,expensive,4-door,2-person,med,high safety,unacc
+low,expensive,4-door,2-person,big,low safety,unacc
+low,expensive,4-door,2-person,big,medium safety,unacc
+low,expensive,4-door,2-person,big,high safety,unacc
+low,expensive,4-door,4-person,small,low safety,unacc
+low,expensive,4-door,4-person,small,medium safety,acc
+low,expensive,4-door,4-person,small,high safety,acc
+low,expensive,4-door,4-person,med,low safety,unacc
+low,expensive,4-door,4-person,med,medium safety,acc
+low,expensive,4-door,4-person,med,high safety,acc
+low,expensive,4-door,4-person,big,low safety,unacc
+low,expensive,4-door,4-person,big,medium safety,acc
+low,expensive,4-door,4-person,big,high safety,acc
+low,expensive,4-door,more than 4,small,low safety,unacc
+low,expensive,4-door,more than 4,small,medium safety,acc
+low,expensive,4-door,more than 4,small,high safety,acc
+low,expensive,4-door,more than 4,med,low safety,unacc
+low,expensive,4-door,more than 4,med,medium safety,acc
+low,expensive,4-door,more than 4,med,high safety,acc
+low,expensive,4-door,more than 4,big,low safety,unacc
+low,expensive,4-door,more than 4,big,medium safety,acc
+low,expensive,4-door,more than 4,big,high safety,acc
+low,expensive,5 or more,2-person,small,low safety,unacc
+low,expensive,5 or more,2-person,small,medium safety,unacc
+low,expensive,5 or more,2-person,small,high safety,unacc
+low,expensive,5 or more,2-person,med,low safety,unacc
+low,expensive,5 or more,2-person,med,medium safety,unacc
+low,expensive,5 or more,2-person,med,high safety,unacc
+low,expensive,5 or more,2-person,big,low safety,unacc
+low,expensive,5 or more,2-person,big,medium safety,unacc
+low,expensive,5 or more,2-person,big,high safety,unacc
+low,expensive,5 or more,4-person,small,low safety,unacc
+low,expensive,5 or more,4-person,small,medium safety,acc
+low,expensive,5 or more,4-person,small,high safety,acc
+low,expensive,5 or more,4-person,med,low safety,unacc
+low,expensive,5 or more,4-person,med,medium safety,acc
+low,expensive,5 or more,4-person,med,high safety,acc
+low,expensive,5 or more,4-person,big,low safety,unacc
+low,expensive,5 or more,4-person,big,medium safety,acc
+low,expensive,5 or more,4-person,big,high safety,acc
+low,expensive,5 or more,more than 4,small,low safety,unacc
+low,expensive,5 or more,more than 4,small,medium safety,acc
+low,expensive,5 or more,more than 4,small,high safety,acc
+low,expensive,5 or more,more than 4,med,low safety,unacc
+low,expensive,5 or more,more than 4,med,medium safety,acc
+low,expensive,5 or more,more than 4,med,high safety,acc
+low,expensive,5 or more,more than 4,big,low safety,unacc
+low,expensive,5 or more,more than 4,big,medium safety,acc
+low,expensive,5 or more,more than 4,big,high safety,acc
+low,moderately expensive,2-door,2-person,small,low safety,unacc
+low,moderately expensive,2-door,2-person,small,medium safety,unacc
+low,moderately expensive,2-door,2-person,small,high safety,unacc
+low,moderately expensive,2-door,2-person,med,low safety,unacc
+low,moderately expensive,2-door,2-person,med,medium safety,unacc
+low,moderately expensive,2-door,2-person,med,high safety,unacc
+low,moderately expensive,2-door,2-person,big,low safety,unacc
+low,moderately expensive,2-door,2-person,big,medium safety,unacc
+low,moderately expensive,2-door,2-person,big,high safety,unacc
+low,moderately expensive,2-door,4-person,small,low safety,unacc
+low,moderately expensive,2-door,4-person,small,medium safety,acc
+low,moderately expensive,2-door,4-person,small,high safety,acc
+low,moderately expensive,2-door,4-person,med,low safety,unacc
+low,moderately expensive,2-door,4-person,med,medium safety,acc
+low,moderately expensive,2-door,4-person,med,high safety,acc
+low,moderately expensive,2-door,4-person,big,low safety,unacc
+low,moderately expensive,2-door,4-person,big,medium safety,acc
+low,moderately expensive,2-door,4-person,big,high safety,acc
+low,moderately expensive,2-door,more than 4,small,low safety,unacc
+low,moderately expensive,2-door,more than 4,small,medium safety,unacc
+low,moderately expensive,2-door,more than 4,small,high safety,unacc
+low,moderately expensive,2-door,more than 4,med,low safety,unacc
+low,moderately expensive,2-door,more than 4,med,medium safety,acc
+low,moderately expensive,2-door,more than 4,med,high safety,acc
+low,moderately expensive,2-door,more than 4,big,low safety,unacc
+low,moderately expensive,2-door,more than 4,big,medium safety,acc
+low,moderately expensive,2-door,more than 4,big,high safety,acc
+low,moderately expensive,3-door,2-person,small,low safety,unacc
+low,moderately expensive,3-door,2-person,small,medium safety,unacc
+low,moderately expensive,3-door,2-person,small,high safety,unacc
+low,moderately expensive,3-door,2-person,med,low safety,unacc
+low,moderately expensive,3-door,2-person,med,medium safety,unacc
+low,moderately expensive,3-door,2-person,med,high safety,unacc
+low,moderately expensive,3-door,2-person,big,low safety,unacc
+low,moderately expensive,3-door,2-person,big,medium safety,unacc
+low,moderately expensive,3-door,2-person,big,high safety,unacc
+low,moderately expensive,3-door,4-person,small,low safety,unacc
+low,moderately expensive,3-door,4-person,small,medium safety,acc
+low,moderately expensive,3-door,4-person,small,high safety,acc
+low,moderately expensive,3-door,4-person,med,low safety,unacc
+low,moderately expensive,3-door,4-person,med,medium safety,acc
+low,moderately expensive,3-door,4-person,med,high safety,acc
+low,moderately expensive,3-door,4-person,big,low safety,unacc
+low,moderately expensive,3-door,4-person,big,medium safety,acc
+low,moderately expensive,3-door,4-person,big,high safety,acc
+low,moderately expensive,3-door,more than 4,small,low safety,unacc
+low,moderately expensive,3-door,more than 4,small,medium safety,acc
+low,moderately expensive,3-door,more than 4,small,high safety,acc
+low,moderately expensive,3-door,more than 4,med,low safety,unacc
+low,moderately expensive,3-door,more than 4,med,medium safety,acc
+low,moderately expensive,3-door,more than 4,med,high safety,acc
+low,moderately expensive,3-door,more than 4,big,low safety,unacc
+low,moderately expensive,3-door,more than 4,big,medium safety,acc
+low,moderately expensive,3-door,more than 4,big,high safety,acc
+low,moderately expensive,4-door,2-person,small,low safety,unacc
+low,moderately expensive,4-door,2-person,small,medium safety,unacc
+low,moderately expensive,4-door,2-person,small,high safety,unacc
+low,moderately expensive,4-door,2-person,med,low safety,unacc
+low,moderately expensive,4-door,2-person,med,medium safety,unacc
+low,moderately expensive,4-door,2-person,med,high safety,unacc
+low,moderately expensive,4-door,2-person,big,low safety,unacc
+low,moderately expensive,4-door,2-person,big,medium safety,unacc
+low,moderately expensive,4-door,2-person,big,high safety,unacc
+low,moderately expensive,4-door,4-person,small,low safety,unacc
+low,moderately expensive,4-door,4-person,small,medium safety,acc
+low,moderately expensive,4-door,4-person,small,high safety,acc
+low,moderately expensive,4-door,4-person,med,low safety,unacc
+low,moderately expensive,4-door,4-person,med,medium safety,acc
+low,moderately expensive,4-door,4-person,med,high safety,acc
+low,moderately expensive,4-door,4-person,big,low safety,unacc
+low,moderately expensive,4-door,4-person,big,medium safety,acc
+low,moderately expensive,4-door,4-person,big,high safety,acc
+low,moderately expensive,4-door,more than 4,small,low safety,unacc
+low,moderately expensive,4-door,more than 4,small,medium safety,acc
+low,moderately expensive,4-door,more than 4,small,high safety,acc
+low,moderately expensive,4-door,more than 4,med,low safety,unacc
+low,moderately expensive,4-door,more than 4,med,medium safety,acc
+low,moderately expensive,4-door,more than 4,med,high safety,acc
+low,moderately expensive,4-door,more than 4,big,low safety,unacc
+low,moderately expensive,4-door,more than 4,big,medium safety,acc
+low,moderately expensive,4-door,more than 4,big,high safety,acc
+low,moderately expensive,5 or more,2-person,small,low safety,unacc
+low,moderately expensive,5 or more,2-person,small,medium safety,unacc
+low,moderately expensive,5 or more,2-person,small,high safety,unacc
+low,moderately expensive,5 or more,2-person,med,low safety,unacc
+low,moderately expensive,5 or more,2-person,med,medium safety,unacc
+low,moderately expensive,5 or more,2-person,med,high safety,unacc
+low,moderately expensive,5 or more,2-person,big,low safety,unacc
+low,moderately expensive,5 or more,2-person,big,medium safety,unacc
+low,moderately expensive,5 or more,2-person,big,high safety,unacc
+low,moderately expensive,5 or more,4-person,small,low safety,unacc
+low,moderately expensive,5 or more,4-person,small,medium safety,acc
+low,moderately expensive,5 or more,4-person,small,high safety,acc
+low,moderately expensive,5 or more,4-person,med,low safety,unacc
+low,moderately expensive,5 or more,4-person,med,medium safety,acc
+low,moderately expensive,5 or more,4-person,med,high safety,acc
+low,moderately expensive,5 or more,4-person,big,low safety,unacc
+low,moderately expensive,5 or more,4-person,big,medium safety,acc
+low,moderately expensive,5 or more,4-person,big,high safety,acc
+low,moderately expensive,5 or more,more than 4,small,low safety,unacc
+low,moderately expensive,5 or more,more than 4,small,medium safety,acc
+low,moderately expensive,5 or more,more than 4,small,high safety,acc
+low,moderately expensive,5 or more,more than 4,med,low safety,unacc
+low,moderately expensive,5 or more,more than 4,med,medium safety,acc
+low,moderately expensive,5 or more,more than 4,med,high safety,acc
+low,moderately expensive,5 or more,more than 4,big,low safety,unacc
+low,moderately expensive,5 or more,more than 4,big,medium safety,acc
+low,moderately expensive,5 or more,more than 4,big,high safety,acc
+low,inexpensive,2-door,2-person,small,low safety,unacc
+low,inexpensive,2-door,2-person,small,medium safety,unacc
+low,inexpensive,2-door,2-person,small,high safety,unacc
+low,inexpensive,2-door,2-person,med,low safety,unacc
+low,inexpensive,2-door,2-person,med,medium safety,unacc
+low,inexpensive,2-door,2-person,med,high safety,unacc
+low,inexpensive,2-door,2-person,big,low safety,unacc
+low,inexpensive,2-door,2-person,big,medium safety,unacc
+low,inexpensive,2-door,2-person,big,high safety,unacc
+low,inexpensive,2-door,4-person,small,low safety,unacc
+low,inexpensive,2-door,4-person,small,medium safety,acc
+low,inexpensive,2-door,4-person,small,high safety,acc
+low,inexpensive,2-door,4-person,med,low safety,unacc
+low,inexpensive,2-door,4-person,med,medium safety,acc
+low,inexpensive,2-door,4-person,med,high safety,acc
+low,inexpensive,2-door,4-person,big,low safety,unacc
+low,inexpensive,2-door,4-person,big,medium safety,acc
+low,inexpensive,2-door,4-person,big,high safety,acc
+low,inexpensive,2-door,more than 4,small,low safety,unacc
+low,inexpensive,2-door,more than 4,small,medium safety,unacc
+low,inexpensive,2-door,more than 4,small,high safety,unacc
+low,inexpensive,2-door,more than 4,med,low safety,unacc
+low,inexpensive,2-door,more than 4,med,medium safety,acc
+low,inexpensive,2-door,more than 4,med,high safety,acc
+low,inexpensive,2-door,more than 4,big,low safety,unacc
+low,inexpensive,2-door,more than 4,big,medium safety,acc
+low,inexpensive,2-door,more than 4,big,high safety,acc
+low,inexpensive,3-door,2-person,small,low safety,unacc
+low,inexpensive,3-door,2-person,small,medium safety,unacc
+low,inexpensive,3-door,2-person,small,high safety,unacc
+low,inexpensive,3-door,2-person,med,low safety,unacc
+low,inexpensive,3-door,2-person,med,medium safety,unacc
+low,inexpensive,3-door,2-person,med,high safety,unacc
+low,inexpensive,3-door,2-person,big,low safety,unacc
+low,inexpensive,3-door,2-person,big,medium safety,unacc
+low,inexpensive,3-door,2-person,big,high safety,unacc
+low,inexpensive,3-door,4-person,small,low safety,unacc
+low,inexpensive,3-door,4-person,small,medium safety,acc
+low,inexpensive,3-door,4-person,small,high safety,acc
+low,inexpensive,3-door,4-person,med,low safety,unacc
+low,inexpensive,3-door,4-person,med,medium safety,acc
+low,inexpensive,3-door,4-person,med,high safety,acc
+low,inexpensive,3-door,4-person,big,low safety,unacc
+low,inexpensive,3-door,4-person,big,medium safety,acc
+low,inexpensive,3-door,4-person,big,high safety,acc
+low,inexpensive,3-door,more than 4,small,low safety,unacc
+low,inexpensive,3-door,more than 4,small,medium safety,acc
+low,inexpensive,3-door,more than 4,small,high safety,acc
+low,inexpensive,3-door,more than 4,med,low safety,unacc
+low,inexpensive,3-door,more than 4,med,medium safety,acc
+low,inexpensive,3-door,more than 4,med,high safety,acc
+low,inexpensive,3-door,more than 4,big,low safety,unacc
+low,inexpensive,3-door,more than 4,big,medium safety,acc
+low,inexpensive,3-door,more than 4,big,high safety,acc
+low,inexpensive,4-door,2-person,small,low safety,unacc
+low,inexpensive,4-door,2-person,small,medium safety,unacc
+low,inexpensive,4-door,2-person,small,high safety,unacc
+low,inexpensive,4-door,2-person,med,low safety,unacc
+low,inexpensive,4-door,2-person,med,medium safety,unacc
+low,inexpensive,4-door,2-person,med,high safety,unacc
+low,inexpensive,4-door,2-person,big,low safety,unacc
+low,inexpensive,4-door,2-person,big,medium safety,unacc
+low,inexpensive,4-door,2-person,big,high safety,unacc
+low,inexpensive,4-door,4-person,small,low safety,unacc
+low,inexpensive,4-door,4-person,small,medium safety,acc
+low,inexpensive,4-door,4-person,small,high safety,acc
+low,inexpensive,4-door,4-person,med,low safety,unacc
+low,inexpensive,4-door,4-person,med,medium safety,acc
+low,inexpensive,4-door,4-person,med,high safety,acc
+low,inexpensive,4-door,4-person,big,low safety,unacc
+low,inexpensive,4-door,4-person,big,medium safety,acc
+low,inexpensive,4-door,4-person,big,high safety,acc
+low,inexpensive,4-door,more than 4,small,low safety,unacc
+low,inexpensive,4-door,more than 4,small,medium safety,acc
+low,inexpensive,4-door,more than 4,small,high safety,acc
+low,inexpensive,4-door,more than 4,med,low safety,unacc
+low,inexpensive,4-door,more than 4,med,medium safety,acc
+low,inexpensive,4-door,more than 4,med,high safety,acc
+low,inexpensive,4-door,more than 4,big,low safety,unacc
+low,inexpensive,4-door,more than 4,big,medium safety,acc
+low,inexpensive,4-door,more than 4,big,high safety,acc
+low,inexpensive,5 or more,2-person,small,low safety,unacc
+low,inexpensive,5 or more,2-person,small,medium safety,unacc
+low,inexpensive,5 or more,2-person,small,high safety,unacc
+low,inexpensive,5 or more,2-person,med,low safety,unacc
+low,inexpensive,5 or more,2-person,med,medium safety,unacc
+low,inexpensive,5 or more,2-person,med,high safety,unacc
+low,inexpensive,5 or more,2-person,big,low safety,unacc
+low,inexpensive,5 or more,2-person,big,medium safety,unacc
+low,inexpensive,5 or more,2-person,big,high safety,unacc
+low,inexpensive,5 or more,4-person,small,low safety,unacc
+low,inexpensive,5 or more,4-person,small,medium safety,acc
+low,inexpensive,5 or more,4-person,small,high safety,acc
+low,inexpensive,5 or more,4-person,med,low safety,unacc
+low,inexpensive,5 or more,4-person,med,medium safety,acc
+low,inexpensive,5 or more,4-person,med,high safety,acc
+low,inexpensive,5 or more,4-person,big,low safety,unacc
+low,inexpensive,5 or more,4-person,big,medium safety,acc
+low,inexpensive,5 or more,4-person,big,high safety,acc
+low,inexpensive,5 or more,more than 4,small,low safety,unacc
+low,inexpensive,5 or more,more than 4,small,medium safety,acc
+low,inexpensive,5 or more,more than 4,small,high safety,acc
+low,inexpensive,5 or more,more than 4,med,low safety,unacc
+low,inexpensive,5 or more,more than 4,med,medium safety,acc
+low,inexpensive,5 or more,more than 4,med,high safety,acc
+low,inexpensive,5 or more,more than 4,big,low safety,unacc
+low,inexpensive,5 or more,more than 4,big,medium safety,acc
+low,inexpensive,5 or more,more than 4,big,high safety,acc
