@@ -18,6 +18,7 @@ X_test = pd.DataFrame()
 y_train = pd.DataFrame() 
 y_test = pd.DataFrame() 
 graph = pydot.Dot(graph_type='graph')
+edges = []
 #-------------------------------
 
 # Decision Tree ----------------------------------------------
@@ -83,7 +84,9 @@ def predict(query,tree,default=1):
 def draw(parent_name,child_name):
     global graph
     edge = pydot.Edge(parent_name,child_name)
-    graph.add_edge(edge)
+    if edge.to_string() not in edges:
+        edges.append(edge.to_string())
+        graph.add_edge(edge)
 
 def visit(node,parent=None):
     for k,v in node.items():
@@ -93,23 +96,27 @@ def visit(node,parent=None):
             visit(v,k)
         else:
             draw(parent,k)
-            draw(k,v)
+            draw(k, k+'_'+v)
 
 
-def test(data,tree):
+def test_accuracy(data,tree):
     queries = data.iloc[:,:-1].to_dict(orient="records")
-    predicted = pd.DataFrame(columns=["predicted"])
-    #for i in range(len(data)):
-        #predicted.loc[i,"predicted"] = predict(queries[i],tree,1.0)
-    #print("Hello")
-    #print("The prediction accuracy is: ", (np.sum(predicted["predicted"])==data["target"])/len(data)*100,'%')
-    get_prediction = {'age':'senior','credit_rating':'fair'}
-    print(predict(get_prediction,tree))    
+    predicted = pd.DataFrame(columns=["target"])
+    for i in range(len(data)):
+        #print(predict(queries[i],tree,1.0))
+        predicted.loc[i,"target"] = predict(queries[i],tree,1.0)
+        #print(i)
+    #print(data["target"])
+    #print(predicted["target"])
+    a = pd.Series(predicted['target'].values)
+    b = pd.Series(data['target'].values)
+    print("The prediction accuracy is: ", (np.sum(a==b))/len(data)*100,'%')  
 # -------------------------------------------------------------
 
 # Function to build the decision tree
 def decision_tree():
     # Call tree build
+    global tree
     tree = create_decision_tree(X_train,X_train,X_train.iloc[:,:-1].columns,y_train.columns[0])
     
     # Did our tree return with data?
@@ -119,39 +126,23 @@ def decision_tree():
     else:
         # We've got a tree, let's offer the user some options
         print("Your decision tree has loaded!")
-        print("Please choose any choice from below -\n") 
-        print("(1) View Graphical Tree") 
-        print("(2) View Text Tree") 
-        print("(3) Return to Main")  
-        choice = int(input())
-        if(choice == 1):
-            # Graphical display of the decision tree
-            global graph
-            graph = pydot.Dot(graph_type='graph')
-            visit(tree)
-            graph.write_png('cs4373_decision_tree.png')
-            img = Image.open('cs4373_decision_tree.png')
-            img.show()
-        elif(choice == 2):
-            # Text based display of the decision tree
-            pprint(tree)
-        elif(choice == 3):
-            # Proceed back to the main menu
-            main()
-        else:
-            main()
-
-    test(X_test,graph)
-
-    # Give the user an opp to continue with the application
-    print("Do you want to perform more operations? (y / n)")
     
-    # Act on the users input
-    choice = input().strip()
-    if choice == "y":
-        main()
-
+    decision_tree_menu()
     
+
+def display_graphical_decision_tree():
+    # Graphical display of the decision tree
+    global graph,tree
+    graph = pydot.Dot(graph_type='graph')
+    visit(tree)
+    graph.write_png('cs4373_decision_tree.png')
+    img = Image.open('cs4373_decision_tree.png')
+    img.show()
+
+def display_text_decision_tree():
+    global tree
+    pprint(tree)
+
 # Function to load a global data frame 
 def load_data():
     # Give instructions to the user 
@@ -196,21 +187,55 @@ def load_data():
     if choice == "y":
         main()
 
+def perform_test():
+    test(X_test,tree)
+
+def decision_tree_menu():
+    print("Please choose any choice from below -\n") 
+    print("(1) View Graphical Tree") 
+    print("(2) View Text Tree") 
+    print("(3) Test the Accuracy of the Tree")
+    print("(4) Return to Main")
+    
+    choice = int(input())
+    
+    choice_dict = {
+        1: display_graphical_decision_tree,
+        2: display_text_decision_tree, 
+        3: test_accuracy,
+        4: main
+	} 
+    choice_dict[choice]()
+
+    # Give the user an opp to continue with the application
+    print("Do you want to perform more decision tree operations? (y / n)")
+    
+    # Act on the users input
+    choice = input().strip()
+    if choice == "y":
+        decision_tree_menu()
+    else:
+        main()
+
+def close_app():
+    quit()
 
 # Main Function for Menu-Driven 
-def main(): 
-	print("Please choose any choice from below -\n") 
-	print("(1) Load Dataset") 
-	print("(2) Decision Tree Induction") 
-
-	choice = int(input()) 
-
-	choice_dict = { 
+def main():
+    print("Please choose any choice from below -\n")
+    print("(1) Load Dataset")
+    print("(2) Decision Tree Induction")
+    print("(5) Exit the Application")
+    choice = int(input())
+    
+    choice_dict = { 
 		1: load_data, 
 		2: decision_tree, 
-	} 
-
-	choice_dict[choice]() 
+        3: perform_test,
+        5: close_app
+	}
+    
+    choice_dict[choice]() 
 
 os.system('cls')
 if __name__ == "__main__": 
