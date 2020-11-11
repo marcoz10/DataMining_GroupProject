@@ -44,39 +44,32 @@ def find_string_columns(dataframe):
 # End of function find_string_columns
 
 '''
-encode_string_columns(dataframe): this function will dataframe that might contain columns that 
+encode_string_columns(dataframe): this function will take dataframe that might contain columns that 
 contain string as data type and will convert it to a numerical categorical data. This is done
 using a Label Encoder that is include in the sklearn library. 
 '''
-def encode_string_columns(dataframe, labeled_test = None):
+def encode_string_columns(dataframe, labeled_test):
     # Create Label Encoder
     labelencoder = LabelEncoder()
 
     # Call find_string_columns. Returns list of columns with string in them
     list_of_string_cols = find_string_columns(dataframe)
     # Check if we were given test data the needs to encode
-    if labeled_test is not None: # TODO: add check for number of columns to check for
-        labeled_test.append(None) # Adding none to the end to replace target value
-        column_names = dataframe.columns.values.tolist()
-        new_row = dict(zip(column_names,labeled_test))
-        # print(new_row)
-        dataframe = dataframe.append(new_row, ignore_index= True)
+
+    labeled_test.append(None) # Adding none to the end to replace target value
+    column_names = dataframe.columns.values.tolist()
+    new_row = dict(zip(column_names,labeled_test))
+    # print(new_row)
+    dataframe = dataframe.append(new_row, ignore_index= True)
         # print(dataframe.tail())
     # Use the list and loop through the columns and encode them
     for col in list_of_string_cols:
         dataframe[col] = labelencoder.fit_transform(dataframe[col])
-    '''
-    If labeled_test is not none we will return the new_test which
-    will be the encoded version of the old test. Otherwise just return
-    the new dataset
-    '''
-    if labeled_test is not None:
-        new_test = dataframe.iloc[-1,:-1].to_numpy()
-        dataframe = dataframe.iloc[:-1,:]
-        # print(new_test)
-        return dataframe, new_test
-    else:
-        return dataframe
+
+    new_test = dataframe.iloc[-1,:-1].to_numpy()
+    dataframe = dataframe.iloc[:-1,:]
+    # print(new_test)
+    return dataframe, new_test
 
 # End of function encode_string_columns
 '''
@@ -112,19 +105,25 @@ def summarize_dataset(dataset):
 summarize_by_class(dataset, labeled_teset=None): this function takes the dataset
  (dataframe) and seperates the rows into different classes that are determined by the
  value of the target value. Then it will run through the classes row by row. In
-each row it will use the summarize_dataset to summaries of each column. 
+each row it will use the summarize_dataset to summaries of each column. Will return 
+as dictionary of seperated and summarized classes. If the given a labeled_test parameter
+it will return a dictionary of seperated and cummarized classes and a encoded test that will 
+be used in the give predict function later on. 
 '''
 def summarize_by_class(dataset, labeled_test = None):
-
+    # Check if labeled test is given. If so send it through
+    # the encode_string_columns function to encode dataset
+    # and test.
     if labeled_test is not None:
         dataset, new_test = encode_string_columns(dataset, labeled_test)
-    else:
-        encode_string_columns(dataset)
 
     separated = separate_by_classes(dataset)
     summaries = dict()
     for class_value, rows in separated.items():
         summaries[class_value] = summarize_dataset(rows)
+
+    # Check if test was given to be encoded. If so return summaries and
+    # a new_test. new_test is the same test but encoded.
     if labeled_test is not None:
         return summaries , new_test
     else:
@@ -172,7 +171,7 @@ def give_predict(summaries, test):
 
 def main(): # TODO: figure out how this will work terminal wise
     # Retrieve Data
-    heart_data = pd.read_csv('./heart.csv')
+    heart_data = pd.read_csv('../data/heart.csv')
     # Test Data for prediction
     test = [60, 1, 0, 130, 283, 0, 0, 108, 1, 1.5, 1, 3, 2]
     model = summarize_by_class(heart_data)
@@ -182,7 +181,7 @@ def main(): # TODO: figure out how this will work terminal wise
     print('Data=%s, Predicted: %s' % (test, label))
 
     # Retrieve data
-    data1 = pd.read_csv("./balloons.csv")
+    data1 = pd.read_csv("../data/balloons.csv")
     '''
     In cases where there is a test that contains categorical
     data we need to give summarize_by_class a second argument.
