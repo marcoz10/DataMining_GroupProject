@@ -52,48 +52,49 @@ def encode_string_columns(dataframe, labeled_test):
     list_of_string_cols = find_string_columns(dataframe)
     # Check if we were given test data the needs to encode
 
-    labeled_test.append(None) # Adding none to the end to replace target value
+    labeled_test.append(None)  # Adding none to the end to replace target value
     column_names = dataframe.columns.values.tolist()
-    new_row = dict(zip(column_names,labeled_test))
+    new_row = dict(zip(column_names, labeled_test))
     # print(new_row)
-    dataframe = dataframe.append(new_row, ignore_index= True)
-        # print(dataframe.tail())
+    dataframe = dataframe.append(new_row, ignore_index=True)
+    # print(dataframe.tail())
     # Use the list and loop through the columns and encode them
     for col in list_of_string_cols:
         dataframe[col] = labelencoder.fit_transform(dataframe[col])
 
-    new_test = dataframe.iloc[-1,:-1].to_numpy()
-    dataframe = dataframe.iloc[:-1,:]
+    new_test = dataframe.iloc[-1, :-1].to_numpy()
+    dataframe = dataframe.iloc[:-1, :]
     # print(new_test)
     return dataframe, new_test
 
 
 def knn_classifer(train_data, test_data, k, encode_data = False):
-    all_distances = {} # Emypy dictionary to store the euclidean distances of the data
 
+    all_distances = {} # Emypy dictionary to store the euclidean distances of the data
 
     # Check if data needs to encode
     if encode_data is True:
         old_test_data = test_data
         train_data, test_data = encode_string_columns(train_data, test_data)
 
+    test_data = pd.DataFrame([test_data])
     length_test = test_data.shape[1]
 
     # Calculate the Euclidean Distance between each row of
     # train_data and test_data
-    for pnt in range(len(length_test)):
-        curr_dist = calculate_euclidean_distance(test_data, train_data.iloc[pnt], length_test)
-        all_distances[pnt] = curr_dist
+    for x in range(length_test):
+        curr_dist = calculate_euclidean_distance(test_data, train_data.iloc[x], length_test)
+        all_distances[x] = curr_dist[0]
 
     # Sort the calculated distances
-    sorted_d = sorted(all_distances.items(), key=operator.itemgetter())
+    sorted_d = sorted(all_distances.items(), key=operator.itemgetter(1))
 
     # Empty list to hold neighbors
     neighbors = []
 
     # Pick out the the first k distances in sorted_dist
-    for neigh in range(k):
-        neighbors.append(sorted_d[neigh][0])
+    for x in range(k):
+        neighbors.append(sorted_d[x][0])
     frequent_classes = {}
     # Calculate the most frequent class
     for x in range(len(neighbors)):
@@ -109,11 +110,32 @@ def knn_classifer(train_data, test_data, k, encode_data = False):
 # End of knn_classifier
 
 def main(): # TODO: Pick up testing here.
-    # test = ['purple','SMALL','STRETCH','CHILD']
-    # test_df = pd.DataFrame(np.array(test))
-    test = [['purple','SMALL','STRETCH','CHILD']]
-    test_df = pd.DataFrame(test)
-    print(test_df)
+    test = ['purple','SMALL','STRETCH','CHILD']
+    data = pd.read_csv('../data/balloons.csv')
+    k = 3
+    result, neighbors = knn_classifer(data, test, k, encode_data=True)
+
+    # test
+    print('\nTest = ' , test)
+    # Number of K
+    print('\nK =', k)
+    # Predicted class
+    print('\nPredicted Class of the datapoint = ', result)
+    # Nearest neighbor
+    print('\nNearest Neighbour of the datapoints = ', neighbors)
+
+    test = [34,1,3,100,202,0,0,174,0,0,2,0,2]
+    data = pd.read_csv('../data/heart.csv')
+    k = 2
+    result, neighbors = knn_classifer(data, test, k)
+    # test
+    print('\nTest = ', test)
+    # Number of k
+    print('\nK = ', k)
+    # Predicted class
+    print('\nPredicted Class of the datapoint = ', result)
+    # Nearest neighbor
+    print('\nNearest Neighbour of the datapoints = ', neighbors)
 
 
 if __name__ == "__main__":
