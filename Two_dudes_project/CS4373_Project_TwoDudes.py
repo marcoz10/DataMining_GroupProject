@@ -10,8 +10,11 @@ from pprint import pprint
 from sklearn.model_selection import train_test_split
 import pydot
 from PIL import Image
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
 
 # Global Variables
+clf_dt = DecisionTreeClassifier(criterion="entropy")
 df = pd.DataFrame()
 X_train  = pd.DataFrame() 
 X_test = pd.DataFrame() 
@@ -29,7 +32,8 @@ def entropy(target_col):
     # Calculate the entropy associated with the unique elements of the feature and the counts there in
     entropy = np.sum([(-counts[i]/np.sum(counts))*np.log2(counts[i]/np.sum(counts)) for i in range(len(elements))])
     return entropy
-    
+
+# Function used to calculate the information gain for each feature
 def info_gain(data, split_attribute_name, target_name="target"):
     # Calculate the total entropy
     total_entropy = entropy(data[target_name])
@@ -41,10 +45,12 @@ def info_gain(data, split_attribute_name, target_name="target"):
     Information_Gain = total_entropy - Weighted_Entropy
     return Information_Gain
 
+# Create the decision tree
 def create_decision_tree(data,originaldata,features,target_attribute_name="target",parent_node_class=None):
+    # For ease of use we are using global variables
+    global clf_dt, X_train, y_train
     # Check for purity if it is 100% pure return the value
     if len(np.unique(data[target_attribute_name])) <= 1:
-        #return np.unique(data[target_attribute_name])
         return np.ndarray.item(np.unique(data[target_attribute_name]))
     # Check the length of the dataset 
     elif len(data) == 0:
@@ -56,26 +62,35 @@ def create_decision_tree(data,originaldata,features,target_attribute_name="targe
     
     item_values = [info_gain(data,feature,data.columns[-1]) for feature in features]
     best_feature_index = np.argmax(item_values)
-    best_feature = features[best_feature_index]    
+    best_feature = features[best_feature_index]  
+    
+    # Create a shell for the tree
     tree = {best_feature:{}}
     
+    # Make a list of all of the rest of the features
     features = [i for i in features if i!= best_feature]
     
     for value in np.unique(data[best_feature]):
         value = value
         sub_data = data.where(data[best_feature] == value).dropna()
+        # Recurse to create subtrees
         subtree = create_decision_tree(sub_data,data,features,target_attribute_name,parent_node_class)
         tree[best_feature][value] = subtree
+    
     return tree
 
+# Perform predictions on the decision tree
 def predict(query,tree,default=1):
+    # iterate through the keys 
     for key in list(query.keys()):
+        # if you find a key in the list of trees proceed
         if key in list(tree.keys()):
             try:
+                # grab the result
                 result = tree[key][query[key]]
             except:
                 return default
-            result = tree[key][query[key]]
+            #result = tree[key][query[key]]
             if isinstance(result, dict):
                 return predict(query,result)
             else:
@@ -103,14 +118,10 @@ def test_accuracy(data,tree):
     queries = data.iloc[:,:-1].to_dict(orient="records")
     predicted = pd.DataFrame(columns=["target"])
     for i in range(len(data)):
-        #print(predict(queries[i],tree,1.0))
         predicted.loc[i,"target"] = predict(queries[i],tree,1.0)
-        #print(i)
-    #print(data["target"])
-    #print(predicted["target"])
     a = pd.Series(predicted['target'].values)
     b = pd.Series(data['target'].values)
-    print("The prediction accuracy is: ", (np.sum(a==b))/len(data)*100,'%')  
+    print("The prediction accuracy is: ", (np.sum(a==b))/len(data)*100,'%')
 # -------------------------------------------------------------
 
 # Function to build the decision tree
@@ -118,7 +129,6 @@ def decision_tree():
     # Call tree build
     global tree
     tree = create_decision_tree(X_train,X_train,X_train.iloc[:,:-1].columns,y_train.columns[0])
-    
     # Did our tree return with data?
     if(not bool(tree)):
         print("The tree did not load properly!")
@@ -126,10 +136,8 @@ def decision_tree():
     else:
         # We've got a tree, let's offer the user some options
         print("Your decision tree has loaded!")
-    
     decision_tree_menu()
     
-
 def display_graphical_decision_tree():
     # Graphical display of the decision tree
     global graph,tree
@@ -188,22 +196,63 @@ def load_data():
         main()
 
 def perform_test():
-    test(X_test,tree)
+    global tree
+    test_accuracy(X_test,tree)
+
+def user_class_prediction():
+    global tree
+    data = [['middle_aged', 'high', 'nope','excellent','yes']]
+    data = pd.DataFrame(data,columns=['age', 'income','student','credit_rating','target'])
+    queries = data.iloc[:,:-1].to_dict(orient="records")
+    result = predict(queries[0],tree)
+    print(result)
+
+def built_in_dtclf():
+    global X_train, X_test, clf_dt
+    df_train = X_train.copy()
+    df_train['age'] = pd.Categorical(df_train['age']).codes
+    df_train['income'] = pd.Categorical(df_train['age']).codes
+    df_train['student'] = pd.Categorical(df_train['student']).codes
+    df_train['credit_rating'] = pd.Categorical(df_train['credit_rating']).codes
+    df_test = X_train.copy()
+    df_test['age'] = pd.Categorical(df_test['age']).codes
+    df_test['income'] = pd.Categorical(df_test['age']).codes
+    df_test['student'] = pd.Categorical(df_test['student']).codes
+    df_test['credit_rating'] = pd.Categorical(df_test['credit_rating']).codes
+
+
+    # Let's copy the classifier 
+    y_train = df_train['target'].copy()
+    y_test = df_test['target'].copy()
+
+    # Let's remove the classifier from the dataset 
+    df_train = df_train.drop(['target'],axis=1)
+    df_test = df_test.drop(['target'],axis=1)
+    clf_dt = clf_dt.fit(df_train,y_train)
+    y_pred = clf_dt.predict(df_test)
+    score = accuracy_score(y_test, y_pred)
+    
+    
+    print(score)
 
 def decision_tree_menu():
     print("Please choose any choice from below -\n") 
     print("(1) View Graphical Tree") 
     print("(2) View Text Tree") 
     print("(3) Test the Accuracy of the Tree")
-    print("(4) Return to Main")
+    print("(4) Generate a prediction based on a tuple")
+    print("(5) Test built in classifier")
+    print("(6) Return to Main")
     
     choice = int(input())
     
     choice_dict = {
         1: display_graphical_decision_tree,
         2: display_text_decision_tree, 
-        3: test_accuracy,
-        4: main
+        3: perform_test,
+        4: user_class_prediction,
+        5: built_in_dtclf,
+        6: main
 	} 
     choice_dict[choice]()
 
@@ -231,7 +280,6 @@ def main():
     choice_dict = { 
 		1: load_data, 
 		2: decision_tree, 
-        3: perform_test,
         5: close_app
 	}
     
