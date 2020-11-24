@@ -48,17 +48,17 @@ encode_string_columns(dataframe): this function will take dataframe that might c
 contain string as data type and will convert it to a numerical categorical data. This is done
 using a Label Encoder that is include in the sklearn library. 
 '''
-def encode_string_columns(dataframe, labeled_test):
+def encode_string_columns(dataframe,user_test):
     # Create Label Encoder
     labelencoder = LabelEncoder()
 
     # Call find_string_columns. Returns list of columns with string in them
     list_of_string_cols = find_string_columns(dataframe)
     # Check if we were given test data the needs to encode
-
-    labeled_test.append(None) # Adding none to the end to replace target value
+    # Adding none to the end to replace target value
+    user_test.append(None)
     column_names = dataframe.columns.values.tolist()
-    new_row = dict(zip(column_names,labeled_test))
+    new_row = dict(zip(column_names,user_test))
     # print(new_row)
     dataframe = dataframe.append(new_row, ignore_index= True)
         # print(dataframe.tail())
@@ -66,10 +66,11 @@ def encode_string_columns(dataframe, labeled_test):
     for col in list_of_string_cols:
         dataframe[col] = labelencoder.fit_transform(dataframe[col])
 
-    new_test = dataframe.iloc[-1,:-1].to_numpy()
+
+    user_test = dataframe.iloc[-1,:-1].to_numpy()
     dataframe = dataframe.iloc[:-1,:]
     # print(new_test)
-    return dataframe, new_test
+    return dataframe, user_test
 
 # End of function encode_string_columns
 '''
@@ -110,12 +111,12 @@ as dictionary of seperated and summarized classes. If the given a labeled_test p
 it will return a dictionary of seperated and cummarized classes and a encoded test that will 
 be used in the give predict function later on. 
 '''
-def summarize_by_class(dataset, labeled_test = None):
+def summarize_by_class(dataset, user_test = None ):
     # Check if labeled test is given. If so send it through
     # the encode_string_columns function to encode dataset
     # and test.
-    if labeled_test is not None:
-        dataset, new_test = encode_string_columns(dataset, labeled_test)
+    if user_test is not None:
+        dataset,new_user_test = encode_string_columns(dataset, user_test)
 
     separated = separate_by_classes(dataset)
     summaries = dict()
@@ -124,8 +125,8 @@ def summarize_by_class(dataset, labeled_test = None):
 
     # Check if test was given to be encoded. If so return summaries and
     # a new_test. new_test is the same test but encoded.
-    if labeled_test is not None:
-        return summaries , new_test
+    if user_test is not None:
+        return summaries , new_user_test
     else:
         return summaries
 
@@ -166,12 +167,12 @@ def give_predict(summaries, test):
         if best_label is None or probability > best_prob:
             best_prob = probability
             best_label = class_value
-    return best_label
+    return best_label, probabilities
 
 
 def main(): # TODO: figure out how this will work terminal wise
     # Retrieve Data
-    heart_data = pd.read_csv('../data/heart.csv')
+    heart_data = pd.read_csv('data/heart.csv')
     # Test Data for prediction
     test = [60, 1, 0, 130, 283, 0, 0, 108, 1, 1.5, 1, 3, 2]
     model = summarize_by_class(heart_data)
@@ -181,7 +182,7 @@ def main(): # TODO: figure out how this will work terminal wise
     print('Data=%s, Predicted: %s' % (test, label))
 
     # Retrieve data
-    data1 = pd.read_csv("../data/balloons.csv")
+    data1 = pd.read_csv("data/balloons.csv")
     '''
     In cases where there is a test that contains categorical
     data we need to give summarize_by_class a second argument.

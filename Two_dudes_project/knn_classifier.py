@@ -111,7 +111,7 @@ def knn_classifer(train_data, test_data, k, encode_data = False):
 
 def main(): # TODO: Pick up testing here.
     test = ['purple','SMALL','STRETCH','CHILD']
-    data = pd.read_csv('../data/balloons.csv')
+    data = pd.read_csv('data/balloons.csv')
     k = 3
     result, neighbors = knn_classifer(data, test, k, encode_data=True)
 
@@ -125,7 +125,7 @@ def main(): # TODO: Pick up testing here.
     print('\nNearest Neighbour of the datapoints = ', neighbors)
 
     test = [34,1,3,100,202,0,0,174,0,0,2,0,2]
-    data = pd.read_csv('../data/heart.csv')
+    data = pd.read_csv('data/heart.csv')
     k = 2
     result, neighbors = knn_classifer(data, test, k)
     # test
