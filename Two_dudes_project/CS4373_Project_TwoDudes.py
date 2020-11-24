@@ -262,7 +262,7 @@ def decision_tree_menu():
 
     # Give the user an opp to continue with the application
     print("Do you want to perform more decision tree operations? (y / n)")
-    
+
     # Act on the users input
     choice = input().strip()
     if choice == "y":
@@ -276,7 +276,50 @@ def close_app():
 #******************************************************
 # Menu for Bayes Classifier
 def naive_bayes_menu():
-    # Ask for a list to test with the classifier
+    print("Please choose any choice from below -\n")
+    print("(1) Test Accuracy of Naive Bayes Classifier")
+    print("(2) Generate Prediction Using User Input")
+    print("(3) Return to Main")
+
+    choice = int(input())
+
+    choice_dict = {
+        1: evaluate_bayes,
+        2: classify,
+        3: main
+    }
+    choice_dict[choice]()
+
+    # Give the user an opp to continue with the application
+    print("Do you want to perform more decision tree operations? (y / n)")
+
+    # Act on the users input
+    choice = input().strip()
+    if choice == "y":
+        naive_bayes_menu()
+    else:
+        main()
+# End of naive_bayes_menu
+
+def evaluate_bayes():
+    n_folds = 10
+    # Ask user if data set contains categorical data
+    print('\nDoes this data set have categorical data?')
+    categorical_or_not = input('Y|y = yes :: N|n = no\n').upper()
+    if categorical_or_not == 'Y':
+        try:
+            scores = NB.evaluate_bayes_algorithm(X_train, NB.naive_bayes, n_folds, True)
+            print(' Scores: %s ' % scores)
+            print(' Mean Accuracy: %.3f%% ' % (sum(scores) / float(len(scores))))
+        except:
+            print('No division by zero error')
+    else:
+        scores = NB.evaluate_bayes_algorithm(X_train, NB.naive_bayes, n_folds)
+        print(' Scores: %s ' % scores)
+        print(' Mean Accuracy: %.3f%% ' % (sum(scores) / float(len(scores))))
+
+def classify():
+# Ask for a list to test with the classifier
     print('Please enter the test list to classify.')
     print('Pleas enter list seperated by commas e.g. "1,2,3,4,5"\n')
     user_test = [item for item in input('Enter list for test: ').upper().split(',')]
@@ -287,36 +330,68 @@ def naive_bayes_menu():
     # Train the classifier with training data
 
     if(categorical_or_not == 'Y'):
-        model, user_test_cat = NB.summarize_by_class(X_train, user_test)
-        # Make prediction
-        label, probs = NB.give_predict(model, user_test_cat[:-1])
-        print('Data=%s, Predicted: %s\n' % (user_test[:-1], label))
+        try:
+            NB.naive_bayes(X_train, user_test, True)
+        except:
+            print('No division by zero error')
     else:
-        user_test_int = list(map(float, user_test))
-        model = NB.summarize_by_class(X_train)
-        label, probs = NB.give_predict(model, user_test_int)
-        print('Data=%s, Predicted: %s\n' % (user_test, label))
-
-    print('Would you like to see the probablities for the classifier?')
-    check_probs = input('Y|y = y:es :: N|n = no\n').upper()
-    if(check_probs == 'Y'):
-        for x in probs:
-            print(str(x) + ' : ' + str(probs[x]) + '\n')
-        main()
-    else:
-        main()
-# End of naive_bayes_menu
-
+        user_test_int = [list(map(float, user_test))]
+        NB.naive_bayes(X_train, user_test_int)
 #*****************************************************
 # Menu for KNN classifier
 def knn_menu():
+    print("Please choose any choice from below -\n")
+    print("(1) Test Accuracy KNN Classifier")
+    print("(2) Generate Prediction Using User Input")
+    print("(3) Return to Main")
+
+    choice = int(input())
+
+    choice_dict = {
+        1: evaluate_knn,
+        2: classify_knn,
+        3: main
+    }
+    choice_dict[choice]()
+
+    # Give the user an opp to continue with the application
+    print("Do you want to perform more decision tree operations? (y / n)")
+
+    # Act on the users input
+    choice = input().strip()
+    if choice == "y":
+        knn_menu()
+    else:
+        main()
+
+def evaluate_knn():
+    n_folds = 10
+    # Ask how many clusters for knn to use
+    k = int(input('How many clusters would you like:'))
+
+    # Ask user if data set contains categorical data
+    print('\nDoes this data set have categorical data?')
+    categorical_or_not = input('Y|y = yes :: N|n = no\n').upper()
+    if categorical_or_not == 'Y':
+        # try:
+            scores = KC.evaluate_knn(X_train, KC.knn_classifier,k, n_folds, True)
+            print(' Scores: %s ' % scores)
+            print(' Mean Accuracy: %.3f%% ' % (sum(scores) / float(len(scores))))
+        # except:
+        #     print('No division by zero error')
+    else:
+        scores = KC.evaluate_knn(X_train, KC.knn_classifier, k, n_folds)
+        print(' Scores: %s ' % scores)
+        print(' Mean Accuracy: %.3f%% ' % (sum(scores) / float(len(scores))))
+
+def classify_knn():
     # Ask for a list to test with the classifier
     print('Please enter the test list to classify.')
     print('Pleas enter list seperated by commas e.g. "1,2,3,4,5"\n')
     user_test = [item for item in input('Enter list for test: ').upper().split(',')]
 
     # Ask how many clusters for knn to use
-    k  = int(input('How many clusters would you like:' ))
+    k = int(input('How many clusters would you like:'))
 
     # Ask user if data set contains categorical data
     print('\nDoes this data set have categorical data?')
@@ -331,7 +406,8 @@ def knn_menu():
         # Predicted class
         print('\nPredicted Class of the datapoint = ', result)
         # Nearest neighbor
-        print('\nNearest Neighbour of the datapoints = ', neighbors)
+        print('\nNearest Neighbour of the datapoints = \n', neighbors)
+        main()
     else:
         user_test_int = list(map(float, user_test))
         result, neighbors = KC.knn_classifer(X_train, user_test_int, k)
@@ -342,8 +418,9 @@ def knn_menu():
         # Predicted class
         print('\nPredicted Class of the datapoint = ', result)
         # Nearest neighbor
-        print('\nNearest Neighbour of the datapoints = ', neighbors)
-    main()
+        print('\nNearest Neighbour of the datapoints = \n', neighbors)
+        main()
+
 # Main Function for Menu-Driven 
 def main():
     print("Please choose any choice from below -\n")

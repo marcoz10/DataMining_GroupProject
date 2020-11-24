@@ -1,6 +1,8 @@
 # KNN Classifier
 
 # Import for this project file
+from random import randrange
+
 import pandas as pd
 import numpy as np
 import math
@@ -44,7 +46,7 @@ encode_string_columns(dataframe): this function will take dataframe that might c
 contain string as data type and will convert it to a numerical categorical data. This is done
 using a Label Encoder that is include in the sklearn library. 
 '''
-def encode_string_columns(dataframe, labeled_test):
+def encode_string_columns(dataframe, user_test):
     # Create Label Encoder
     labelencoder = LabelEncoder()
 
@@ -52,23 +54,24 @@ def encode_string_columns(dataframe, labeled_test):
     list_of_string_cols = find_string_columns(dataframe)
     # Check if we were given test data the needs to encode
 
-    labeled_test.append(None)  # Adding none to the end to replace target value
     column_names = dataframe.columns.values.tolist()
-    new_row = dict(zip(column_names, labeled_test))
-    # print(new_row)
-    dataframe = dataframe.append(new_row, ignore_index=True)
-    # print(dataframe.tail())
+    frame = pd.DataFrame(user_test, columns=column_names)
+    # print(frame)
+    dataframe = dataframe.append(frame, ignore_index=True)
+
     # Use the list and loop through the columns and encode them
     for col in list_of_string_cols:
         dataframe[col] = labelencoder.fit_transform(dataframe[col])
-
-    new_test = dataframe.iloc[-1, :-1].to_numpy()
+        dataframe[col] = dataframe[col].astype(int)
+    new_user_test = []
+    new_user_test.append(dataframe.iloc[-1, :-1].to_list())
     dataframe = dataframe.iloc[:-1, :]
+    return dataframe, new_user_test
     # print(new_test)
     return dataframe, new_test
 
 
-def knn_classifer(train_data, test_data, k, encode_data = False):
+def knn_classifier(train_data, test_data, k, encode_data = False):
 
     all_distances = {} # Emypy dictionary to store the euclidean distances of the data
 
@@ -108,6 +111,49 @@ def knn_classifer(train_data, test_data, k, encode_data = False):
     sorted_classes = sorted(frequent_classes.items(), key=operator.itemgetter(1), reverse=True)
     return (sorted_classes[0][0], neighbors)
 # End of knn_classifier
+
+def evaluate_knn(dataset, algorithm, k, n_folds, encode = False):
+    folds = cross_validation_split(dataset, n_folds)
+    scores = []
+    for fold in folds:
+        train_set = list(folds)
+        train_set.remove(fold)
+        train_set = sum(train_set, [])
+        test_set = []
+        for row in fold:
+            row_cpy = list(row)
+            test_set.append(row_cpy)
+            row_cpy[-1] = None
+        column_names = dataset.columns.values.tolist()
+        frame = pd.DataFrame(train_set, columns=column_names)
+        if encode == True:
+            predicted = algorithm(frame, test_set,k, True)
+        else:
+            predicted = algorithm(frame, test_set,k)
+        actual = [row[-1] for row in fold]
+        accuracy = calculate_accuracy(actual, predicted)
+        scores.append(accuracy)
+    return scores
+
+def calculate_accuracy(actual, predicted):
+    correct = 0
+    for i in range(len(actual)):
+        if actual[i] == predicted[i]:
+            correct += 1
+    return correct / float(len(actual)) * 100
+
+def cross_validation_split(dataset, n_folds):
+    data_split = []
+    data_copy = dataset.values.tolist()
+    fold_size = int(len(dataset) / n_folds)
+    for f in range(n_folds):
+        fold = []
+        while len(fold) < fold_size:
+            ind = randrange(len(data_copy))
+            fold.append(data_copy.pop(ind))
+        data_split.append(fold)
+    return data_split
+
 
 def main(): # TODO: Pick up testing here.
     test = ['purple','SMALL','STRETCH','CHILD']
