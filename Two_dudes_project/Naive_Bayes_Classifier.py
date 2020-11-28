@@ -1,9 +1,9 @@
 # Imports for this file
+from random import randrange
 import pandas as pd
 from math import sqrt
 from math import exp
 from math import pi
-
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 # Functions
@@ -58,21 +58,22 @@ def encode_string_columns(dataframe,user_test):
     list_of_string_cols = find_string_columns(dataframe)
     # Check if we were given test data the needs to encode
     # Adding none to the end to replace target value
-    user_test.append(None)
+    # for x in user_test:
+    #     x.append(None)
+    print(user_test)
     column_names = dataframe.columns.values.tolist()
-    new_row = dict(zip(column_names,user_test))
-    # print(new_row)
-    dataframe = dataframe.append(new_row, ignore_index= True)
-        # print(dataframe.tail())
+    frame = pd.DataFrame(user_test, columns=column_names)
+    # print(frame)
+    dataframe = dataframe.append(frame, ignore_index= True)
+
     # Use the list and loop through the columns and encode them
     for col in list_of_string_cols:
         dataframe[col] = labelencoder.fit_transform(dataframe[col])
-
-
-    user_test = dataframe.iloc[-1,:-1].to_numpy()
-    dataframe = dataframe.iloc[:-1,:]
-    # print(new_test)
-    return dataframe, user_test
+        dataframe[col] = dataframe[col].astype(int)
+    new_user_test = []
+    new_user_test.append(dataframe.iloc[-1,:-1].to_list())
+    dataframe = dataframe.iloc[:-1, :]
+    return dataframe, new_user_test
 
 # End of function encode_string_columns
 '''
@@ -113,13 +114,12 @@ as dictionary of seperated and summarized classes. If the given a labeled_test p
 it will return a dictionary of seperated and cummarized classes and a encoded test that will 
 be used in the give predict function later on. 
 '''
-def summarize_by_class(dataset, user_test = None ):
+def summarize_by_class(dataset, user_test = None):
     # Check if labeled test is given. If so send it through
     # the encode_string_columns function to encode dataset
     # and test.
     if user_test is not None:
         dataset,new_user_test = encode_string_columns(dataset, user_test)
-
     separated = separate_by_classes(dataset)
     summaries = dict()
     for class_value, rows in separated.items():
@@ -128,6 +128,7 @@ def summarize_by_class(dataset, user_test = None ):
     # Check if test was given to be encoded. If so return summaries and
     # a new_test. new_test is the same test but encoded.
     if user_test is not None:
+        print(summaries)
         return summaries , new_user_test
     else:
         return summaries
@@ -169,72 +170,87 @@ def give_predict(summaries, test):
         if best_label is None or probability > best_prob:
             best_prob = probability
             best_label = class_value
-    return best_label, probabilities
+    return best_label
 
-def get_accuracy(trained_model, X_test, y_test, encode=False):
-    # list to hold the actual results of X_test and a list to hold predicted results
-    actual_res = []
-    predicted_res = [item for sublist in y_test.values for item in sublist]
+# Naive Bayes Algorithm
+def naive_bayes(train, test, encode = False):
+    if encode == True:
+        summarize, test = summarize_by_class(train, test)
+        print(test)
+    else:
+        summarize = summarize_by_class(train)
+    predictions = list()
+    for row in test:
+        output = give_predict(summarize, row)
+        predictions.append(output)
+    print('Data = ' + str(test) + 'Predicted = ' + str(predictions))
+    return(predictions)
 
-    # Check if you need to encode X_test
-    if encode is True:
-        X_test, foo = encode_string_columns(X_test, X_test.iloc[0,:-1])
+def cross_validate_bayes(dataset, n_folds):
+    data_split = []
+    data_copy = dataset.values.tolist()
+    fold_size = int(len(dataset)/n_folds)
+    for f in range(n_folds):
+        fold = []
+        while len(fold) < fold_size:
+            ind = randrange(len(data_copy))
+            fold.append(data_copy.pop(ind))
+        data_split.append(fold)
+    return data_split
 
-    for row in range(len(X_test)):
-        pred_row = give_predict(trained_model, X_test.iloc[row, :-1])
-        actual_res.append(pred_row[0])
-
+def calculate_accuracy_bayes(actual, pred):
     correct = 0
-    for i in range(len(actual_res)):
-        if actual_res[i] == predicted_res[i]:
+    for i in range(len(actual)):
+        if actual[i] == pred[i]:
             correct += 1
-    return correct / float(len(actual_res)) * 100.0
+    return correct / float(len(actual)) * 100
+
+def evaluate_bayes_algorithm(dataset, algorithm, n_folds, encode=False):
+    folds = cross_validate_bayes(dataset, n_folds)
+    scores = []
+    for fold in folds:
+        train_set = list(folds)
+        train_set.remove(fold)
+        train_set = sum(train_set, [])
+        test_set = []
+        for row in fold:
+            row_copy = list(row)
+            test_set.append(row_copy)
+            row_copy[-1] = None
+        column_names = dataset.columns.values.tolist()
+        frame = pd.DataFrame(train_set, columns=column_names)
+        if encode == True:
+            predicted = algorithm(frame,test_set,True)
+        else:
+            predicted = algorithm(frame, test_set)
+        actual = [row[-1] for row in fold]
+        accuracy = calculate_accuracy_bayes(actual,predicted)
+        scores.append(accuracy)
+    return scores
+
 
 def main(): # TODO: figure out how this will work terminal wise
     # Retrieve Data
     heart_data = pd.read_csv('data/heart.csv')
-    # We want to create both training and testing datasets, we will use test_train_split to do this
-    X_train, X_test, y_train, y_test = train_test_split(heart_data,
-        heart_data.iloc[:, -1:], test_size=0.30, random_state=42)
-    print(len(X_test))
-    model = summarize_by_class(X_train)
-    pred = give_predict(model, X_test.iloc[3,:-1])
-    print('Heart Classifier')
-    print('Data=%s, Predicted: %s' % (X_test.iloc[3, :-1].values.tolist(), pred))
-    print('Acutal = %s' % (y_test.iloc[3,0]))
-    # print(X_test)
-    print(get_accuracy(model, X_test, y_test))
+    # Test Data for prediction
+    test = [[60, 1, 0, 130, 283, 0, 0, 108, 1, 1.5, 1, 3, 2]]
+    X_train, X_test, y_train, y_test = train_test_split(heart_data, heart_data.iloc[:, -1:], test_size=0.30, random_state=42)
+    n_folds = 10
 
-    data = pd.read_csv("data/balloons.csv")
-    X_train1, X_test1, y_train1, y_test1 = train_test_split(data,
-            data.iloc[:, -1:], test_size=0.30, random_state=42)
-    model1, test_new = summarize_by_class(X_train1, X_test1.iloc[0, :-1])
-    label1 = give_predict(model1, test_new)
-    print('Ballon Classifier')
-    print('Data=%s, Predicted: %s' % (X_test1.iloc[0, :-1].values.tolist(), label1))
-    print(get_accuracy(model1, X_test1, y_test1, True))
+    scores = evaluate_bayes_algorithm(X_train,naive_bayes, n_folds)
+    print(' Scores: %s ' % scores)
+    print('Accuracy: %.3f%% ' % (sum(scores) / float(len(scores))))
+    naive_bayes(X_train, test)
 
-
-    # # Test Data for prediction
-    # test = [60, 1, 0, 130, 283, 0, 0, 108, 1, 1.5, 1, 3, 2]
-    # model = summarize_by_class(heart_data)
-    # # predict the label
-    # label = give_predict(model, test)
-    # print('Heart Classifier')
-    # print('Data=%s, Predicted: %s' % (test, label))
-    #
     # # Retrieve data
-    # data1 = pd.read_csv("data/balloons.csv")
-    # '''
-    # In cases where there is a test that contains categorical
-    # data we need to give summarize_by_class a second argument.
-    # The argument will be the test data the you like to use agianst
-    # the Bayes prediction.
-    # '''
-    # test1 = ['YeLlOw', 'SMALL', 'DIP', 'CHILD']
-    # model1, test_new = summarize_by_class(data1, test1)
-    # label1 = give_predict(model1, test_new)
-    # print('Ballon Classifier')
-    # print('Data=%s, Predicted: %s' % (test1[:-1], label1))
+    data1 = pd.read_csv("data/balloons.csv")
+    # test1 = [['YeLlOw', 'SMALL', 'DIP', 'CHILD']]
+    X_train, X_test, y_train, y_test = train_test_split(data1, data1.iloc[:, -1:], test_size=0.30,random_state=42)
+    n_folds = 10
+
+    scores = evaluate_bayes_algorithm(X_train,naive_bayes, n_folds, True)
+    print(' Scores: %s ' % scores)
+    print(' Mean Accuracy: %.3f%% ' % (sum(scores) / float(len(scores))))
+    # naive_bayes(X_train, test1, True)
 if __name__ == "__main__":
     main()
