@@ -374,32 +374,39 @@ def make_prediction_knn():
     user_test = [item for item in input('Enter list for test: ').upper().split(',')]
 
     # Ask how many clusters for knn to use
-    k = int(input('\nHow many clusters would you like:'))
+    k = int(input('\nHow many clusters would you like:\n'))
 
     # Ask user if data set contains categorical data
     categorical_or_not = input('\nDoes this data set have categorical data? (y/n)\n').upper()
     # Train the classifier with training data
     if categorical_or_not == 'Y':
-        result, neighbors = kc.knn_classifer(X_train, user_test, k, encode_data=True)
-        # test
-        print('\nTest = ', user_test)
-        # Number of K
-        print('\nK =', k)
-        # Predicted class
-        print('\nPredicted Class of the datapoint = ', result)
-        # Nearest neighbor
-        print('\nNearest Neighbour of the datapoints = \n', neighbors)
+        try:
+            result, neighbors = kc.knn_classifer(X_train, user_test, k, encode_data=True)
+            # test
+            print('\nTest = ', user_test)
+            # Number of K
+            print('\nK =', k)
+            # Predicted class
+            print('\nPredicted Class of the datapoint = ', result)
+            # Nearest neighbor
+            print('\nNearest Neighbour of the datapoints = \n', neighbors)
+        except:
+            print('k clusters out of range\n')
     else:
-        user_test_int = list(map(float, user_test))
-        result, neighbors = kc.knn_classifer(X_train, user_test_int, k)
-        # test
-        print('\nTest = ', user_test)
-        # Number of k
-        print('\nK = ', k)
-        # Predicted class
-        print('\nPredicted Class of the datapoint = ', result)
-        # Nearest neighbor
-        print('\nNearest Neighbour of the datapoints = \n', neighbors)
+        try:
+            user_test_int = list(map(float, user_test))
+            result, neighbors = kc.knn_classifer(X_train, user_test_int, k)
+            # test
+            print('\nTest = ', user_test)
+            # Number of k
+            print('\nK = ', k)
+            # Predicted class
+            print('\nPredicted Class of the datapoint = ', result)
+            # Nearest neighbor
+            print('\nNearest Neighbour of the datapoints = \n', neighbors)
+        except:
+            print('k clusters out of range\n')
+
     # Give the user an opp to continue with the application
     print("Do you want to perform more knn operations? (y / n)")
 
