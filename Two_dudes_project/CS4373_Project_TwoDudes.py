@@ -14,8 +14,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 import sys
 sys.path.insert(1, '..DataMining_GroupProject/Two_dudes_project')
-import Naive_Bayes_Classifier as NB
-import knn_classifier as KC
+import Naive_Bayes_Classifier as nb
+import knn_classifier as kc
 
 # Global Variables
 clf_dt = DecisionTreeClassifier(criterion="entropy")
@@ -273,57 +273,114 @@ def decision_tree_menu():
 def close_app():
     quit()
 
+
+
 #******************************************************
-# Menu for Bayes Classifier
-def naive_bayes_menu():
+def calculate_accuracy_bayes():
+    print('Does this data contain categorical values?')
+    chk_if_cat = input('Y|y for YES :: N|n for NO\n').upper()
+    if chk_if_cat == 'Y':
+        model, foo = nb.summarize_by_class(X_train, X_test.iloc[0, :-1])
+        accuracy_nb = nb.get_accuracy(model, X_test, y_test, True)
+    else:
+        model = nb.summarize_by_class(X_train)
+        accuracy_nb = nb.get_accuracy(model, X_test, y_test)
+
+    print('\nAccuracy of Naive Bayes Model = %s\n' % (accuracy_nb))
+
+
+# End calculate_accuracy_bayes
+
+#******************************************************
+def make_prediction():
     # Ask for a list to test with the classifier
     print('Please enter the test list to classify.')
     print('Pleas enter list seperated by commas e.g. "1,2,3,4,5"\n')
     user_test = [item for item in input('Enter list for test: ').upper().split(',')]
 
     # Ask user if data set contains categorical data
-    print('\nDoes this data set have categorical data?')
-    categorical_or_not = input('Y|y = yes :: N|n = no\n').upper()
-    # Train the classifier with training data
+    categorical_or_not = input('\nDoes this data set have categorical data? (y/n)\n').upper()
 
-    if(categorical_or_not == 'Y'):
-        model, user_test_cat = NB.summarize_by_class(X_train, user_test)
+    # Train the classifier with training data
+    if (categorical_or_not == 'Y'):
+        model, user_test_cat = nb.summarize_by_class(X_train, user_test)
         # Make prediction
-        label, probs = NB.give_predict(model, user_test_cat[:-1])
-        print('Data=%s, Predicted: %s\n' % (user_test[:-1], label))
+        label, probs = nb.give_predict(model, user_test_cat[:-1])
+        print('Data=%s, Predicted: %s\n' % (user_test, label))
     else:
         user_test_int = list(map(float, user_test))
-        model = NB.summarize_by_class(X_train)
-        label, probs = NB.give_predict(model, user_test_int)
+        model = nb.summarize_by_class(X_train)
+        label, probs = nb.give_predict(model, user_test_int)
         print('Data=%s, Predicted: %s\n' % (user_test, label))
 
-    print('Would you like to see the probablities for the classifier?')
-    check_probs = input('Y|y = y:es :: N|n = no\n').upper()
-    if(check_probs == 'Y'):
+    check_probs = input('Would you like to see the probablities for the classifier? (y/n)').upper()
+    if (check_probs == 'Y'):
         for x in probs:
             print(str(x) + ' : ' + str(probs[x]) + '\n')
-        main()
+    else:
+        # Give the user an opp to continue with the application
+        print("Do you want to perform more naive bayes operations? (y / n)")
+
+        # Act on the users input
+        choice = input().strip()
+        if choice == "y":
+            bayes_menu()
+        else:
+            main()
+# End make_prediction
+#******************************************************
+# Menu for Bayes Classifier
+def bayes_menu():
+    print('(1) Test Accuracy')
+    print('(2) Make prediction')
+    print('(3) Return to Main')
+    choice = int(input())
+
+    choice_dict = {
+        1: calculate_accuracy_bayes,
+        2: make_prediction,
+        3: main
+    }
+    choice_dict[choice]()
+
+    # Give the user an opp to continue with the application
+    print("Do you want to perform more naive bayes operations? (y / n)")
+
+    # Act on the users input
+    choice = input().strip()
+    if choice == "y":
+        bayes_menu()
     else:
         main()
-# End of naive_bayes_menu
+# End bayes_menu
 
-#*****************************************************
-# Menu for KNN classifier
-def knn_menu():
+# ********************************************************
+def calculate_accuracy_knn():
+    # Ask if data is categorical
+    encoded = input('Does this data contain categorical values? (y/n)\n').upper()
+
+    if encoded == 'Y':
+        print('\nAccuracy of KNN Model = %s\n' %
+              (kc.get_accuracy_knn(X_train, X_test, y_test, True)))
+    else:
+        print('\nAccuracy of KNN Model = %s\n' %
+              (kc.get_accuracy_knn(X_train, X_test, y_test)))
+
+# ********************************************************
+def make_prediction_knn():
     # Ask for a list to test with the classifier
     print('Please enter the test list to classify.')
-    print('Pleas enter list seperated by commas e.g. "1,2,3,4,5"\n')
+    print('Pleas enter list seperated by commas e.g. "1,2,3,4,5" or "cat, dog, frog"\n')
     user_test = [item for item in input('Enter list for test: ').upper().split(',')]
 
     # Ask how many clusters for knn to use
-    k  = int(input('How many clusters would you like:' ))
+    k = int(input('\nHow many clusters would you like:'))
 
     # Ask user if data set contains categorical data
-    print('\nDoes this data set have categorical data?')
-    categorical_or_not = input('Y|y = yes :: N|n = no\n').upper()
+    categorical_or_not = input('\nDoes this data set have categorical data? (y/n)\n').upper()
     # Train the classifier with training data
     if categorical_or_not == 'Y':
-        result, neighbors = KC.knn_classifer(X_train, user_test, k, encode_data=True)
+        result, neighbors = kc.knn_classifer(X_train, user_test, k, encode_data=True)
         # test
         print('\nTest = ', user_test)
         # Number of K
@@ -331,10 +388,10 @@ def knn_menu():
         # Predicted class
         print('\nPredicted Class of the datapoint = ', result)
         # Nearest neighbor
-        print('\nNearest Neighbour of the datapoints = ', neighbors)
+        print('\nNearest Neighbour of the datapoints = \n', neighbors)
     else:
         user_test_int = list(map(float, user_test))
-        result, neighbors = KC.knn_classifer(X_train, user_test_int, k)
+        result, neighbors = kc.knn_classifer(X_train, user_test_int, k)
         # test
         print('\nTest = ', user_test)
         # Number of k
@@ -342,8 +399,40 @@ def knn_menu():
         # Predicted class
         print('\nPredicted Class of the datapoint = ', result)
         # Nearest neighbor
-        print('\nNearest Neighbour of the datapoints = ', neighbors)
-    main()
+        print('\nNearest Neighbour of the datapoints = \n', neighbors)
+    # Give the user an opp to continue with the application
+    print("Do you want to perform more knn operations? (y / n)")
+
+    # Act on the users input
+    choice = input().strip()
+    if choice == "y":
+        knn_menu()
+    else:
+        main()
+#*********************************************************
+def knn_menu():
+    print('(1) Test Accuracy')
+    print('(2) Make prediction')
+    print('(3) Return to Main')
+    choice = int(input())
+
+    choice_dict = {
+        1: calculate_accuracy_knn,
+        2: make_prediction_knn,
+        3: main
+    }
+    choice_dict[choice]()
+
+    # Give the user an opp to continue with the application
+    print("Do you want to perform more knn operations? (y / n)")
+
+    # Act on the users input
+    choice = input().strip()
+    if choice == "y":
+        knn_menu()
+    else:
+        main()
+# End knn_menu
 # Main Function for Menu-Driven 
 def main():
     print("Please choose any choice from below -\n")
@@ -357,7 +446,7 @@ def main():
     choice_dict = { 
 		1: load_data, 
 		2: decision_tree,
-        3: naive_bayes_menu,
+        3: bayes_menu,
         4: knn_menu,
         5: close_app
 	}

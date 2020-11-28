@@ -5,6 +5,8 @@ import pandas as pd
 import numpy as np
 import math
 import operator
+
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 '''
@@ -109,33 +111,67 @@ def knn_classifer(train_data, test_data, k, encode_data = False):
     return (sorted_classes[0][0], neighbors)
 # End of knn_classifier
 
+def get_accuracy_knn(X_train, X_test, y_test, encoded = False):
+    actual_res = []
+    predicted_res = [item for sublist in y_test.values for item in sublist]
+    # Ask user if the data has categorical values
+    if encoded == True:
+        # Run all the test rows through the classifier and save the results
+        for row in range(len(X_test)):
+            pred_row, foo = knn_classifer(X_train, X_test.iloc[row, :-1],3,True)
+            actual_res.append(pred_row)
+    else:
+        # Run all the test rows through the classifier and save the results
+        for row in range(len(X_test)):
+            pred_row, foo = knn_classifer(X_train, X_test.iloc[row, :-1].values.tolist(), 3)
+            actual_res.append(pred_row)
+    # Take list of results from the classifier and compare them to the perdicted results
+    correct = 0
+    for i in range(len(actual_res)):
+        if actual_res[i] == predicted_res[i]:
+            correct += 1
+    return correct / float(len(actual_res)) * 100.0
+
+
+
+
 def main(): # TODO: Pick up testing here.
-    test = ['purple','SMALL','STRETCH','CHILD']
-    data = pd.read_csv('data/balloons.csv')
-    k = 3
-    result, neighbors = knn_classifer(data, test, k, encode_data=True)
+    # test = ['purple','SMALL','STRETCH','CHILD']
+    # data = pd.read_csv('data/balloons.csv')
+    # k = 3
+    # result, neighbors = knn_classifer(data, test, k, encode_data=True)
+    #
+    # # test
+    # print('\nTest = ' , test)
+    # # Number of K
+    # print('\nK =', k)
+    # # Predicted class
+    # print('\nPredicted Class of the datapoint = ', result)
+    # # Nearest neighbor
+    # print('\nNearest Neighbour of the datapoints = ', neighbors)
+    data = pd.read_csv("data/balloons.csv")
+    X_train1, X_test1, y_train1, y_test1 = train_test_split(data,
+                data.iloc[:, -1:], test_size=0.30, random_state=42)
+    print('\nAccuracy of KNN Model = %s\n' % (get_accuracy_knn(X_train1, X_test1, y_test1, True)))
 
-    # test
-    print('\nTest = ' , test)
-    # Number of K
-    print('\nK =', k)
-    # Predicted class
-    print('\nPredicted Class of the datapoint = ', result)
-    # Nearest neighbor
-    print('\nNearest Neighbour of the datapoints = ', neighbors)
+    data1 = pd.read_csv('data/heart.csv')
+    X_train, X_test, y_train, y_test = train_test_split(data1,
+                            data1.iloc[:, -1:], test_size=0.30, random_state=42)
+    print('\nAccuracy of KNN Model = %s\n' % (get_accuracy_knn(X_train, X_test, y_test)))
 
-    test = [34,1,3,100,202,0,0,174,0,0,2,0,2]
-    data = pd.read_csv('data/heart.csv')
-    k = 2
-    result, neighbors = knn_classifer(data, test, k)
-    # test
-    print('\nTest = ', test)
-    # Number of k
-    print('\nK = ', k)
-    # Predicted class
-    print('\nPredicted Class of the datapoint = ', result)
-    # Nearest neighbor
-    print('\nNearest Neighbour of the datapoints = ', neighbors)
+
+    # test = [34,1,3,100,202,0,0,174,0,0,2,0,2]
+    # data = pd.read_csv('data/heart.csv')
+    # k = 2
+    # result, neighbors = knn_classifer(data, test, k)
+    # # test
+    # print('\nTest = ', test)
+    # # Number of k
+    # print('\nK = ', k)
+    # # Predicted class
+    # print('\nPredicted Class of the datapoint = ', result)
+    # # Nearest neighbor
+    # print('\nNearest Neighbour of the datapoints = ', neighbors)
 
 
 if __name__ == "__main__":

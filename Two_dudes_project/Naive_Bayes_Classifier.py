@@ -3,6 +3,8 @@ import pandas as pd
 from math import sqrt
 from math import exp
 from math import pi
+
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 # Functions
 
@@ -169,30 +171,70 @@ def give_predict(summaries, test):
             best_label = class_value
     return best_label, probabilities
 
+def get_accuracy(trained_model, X_test, y_test, encode=False):
+    # list to hold the actual results of X_test and a list to hold predicted results
+    actual_res = []
+    predicted_res = [item for sublist in y_test.values for item in sublist]
+
+    # Check if you need to encode X_test
+    if encode is True:
+        X_test, foo = encode_string_columns(X_test, X_test.iloc[0,:-1])
+
+    for row in range(len(X_test)):
+        pred_row = give_predict(trained_model, X_test.iloc[row, :-1])
+        actual_res.append(pred_row[0])
+
+    correct = 0
+    for i in range(len(actual_res)):
+        if actual_res[i] == predicted_res[i]:
+            correct += 1
+    return correct / float(len(actual_res)) * 100.0
 
 def main(): # TODO: figure out how this will work terminal wise
     # Retrieve Data
     heart_data = pd.read_csv('data/heart.csv')
-    # Test Data for prediction
-    test = [60, 1, 0, 130, 283, 0, 0, 108, 1, 1.5, 1, 3, 2]
-    model = summarize_by_class(heart_data)
-    # predict the label
-    label = give_predict(model, test)
+    # We want to create both training and testing datasets, we will use test_train_split to do this
+    X_train, X_test, y_train, y_test = train_test_split(heart_data,
+        heart_data.iloc[:, -1:], test_size=0.30, random_state=42)
+    print(len(X_test))
+    model = summarize_by_class(X_train)
+    pred = give_predict(model, X_test.iloc[3,:-1])
     print('Heart Classifier')
-    print('Data=%s, Predicted: %s' % (test, label))
+    print('Data=%s, Predicted: %s' % (X_test.iloc[3, :-1].values.tolist(), pred))
+    print('Acutal = %s' % (y_test.iloc[3,0]))
+    # print(X_test)
+    print(get_accuracy(model, X_test, y_test))
 
-    # Retrieve data
-    data1 = pd.read_csv("data/balloons.csv")
-    '''
-    In cases where there is a test that contains categorical
-    data we need to give summarize_by_class a second argument.
-    The argument will be the test data the you like to use agianst
-    the Bayes prediction. 
-    '''
-    test1 = ['YeLlOw', 'SMALL', 'DIP', 'CHILD']
-    model1, test_new = summarize_by_class(data1, test1)
+    data = pd.read_csv("data/balloons.csv")
+    X_train1, X_test1, y_train1, y_test1 = train_test_split(data,
+            data.iloc[:, -1:], test_size=0.30, random_state=42)
+    model1, test_new = summarize_by_class(X_train1, X_test1.iloc[0, :-1])
     label1 = give_predict(model1, test_new)
     print('Ballon Classifier')
-    print('Data=%s, Predicted: %s' % (test1[:-1], label1))
+    print('Data=%s, Predicted: %s' % (X_test1.iloc[0, :-1].values.tolist(), label1))
+    print(get_accuracy(model1, X_test1, y_test1, True))
+
+
+    # # Test Data for prediction
+    # test = [60, 1, 0, 130, 283, 0, 0, 108, 1, 1.5, 1, 3, 2]
+    # model = summarize_by_class(heart_data)
+    # # predict the label
+    # label = give_predict(model, test)
+    # print('Heart Classifier')
+    # print('Data=%s, Predicted: %s' % (test, label))
+    #
+    # # Retrieve data
+    # data1 = pd.read_csv("data/balloons.csv")
+    # '''
+    # In cases where there is a test that contains categorical
+    # data we need to give summarize_by_class a second argument.
+    # The argument will be the test data the you like to use agianst
+    # the Bayes prediction.
+    # '''
+    # test1 = ['YeLlOw', 'SMALL', 'DIP', 'CHILD']
+    # model1, test_new = summarize_by_class(data1, test1)
+    # label1 = give_predict(model1, test_new)
+    # print('Ballon Classifier')
+    # print('Data=%s, Predicted: %s' % (test1[:-1], label1))
 if __name__ == "__main__":
     main()
