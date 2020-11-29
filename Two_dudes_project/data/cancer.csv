@@ -1,0 +1,48 @@
+Class,age,menopause, tumor-size,node-caps,deg-malig,breast,breast-quad,target
+no-recurrence-events,40-49 years old,premeno,25-29mm,no,malignant,left,left_up,do not irradiate
+no-recurrence-events,50-59 years old,premeno,20-24mm,no,slightly malignant,left,left_low,do not irradiate
+no-recurrence-events,60-69 years old,ge40,25-29mm,no,highly malignant,right,left_up,do not irradiate
+no-recurrence-events,40-49 years old,premeno,40-44mm,no,malignant,right,left_low,do not irradiate
+no-recurrence-events,60-69 years old,ge40,30-34mm,no,malignant,left,left_low,do not irradiate
+no-recurrence-events,50-59 years old,ge40,40-44mm,no,highly malignant,right,left_up,do not irradiate
+no-recurrence-events,50-59 years old,premeno,15-19mm,no,malignant,right,left_low,do not irradiate
+no-recurrence-events,50-59 years old,premeno,10-14mm,no,highly malignant,left,left_low,do not irradiate
+no-recurrence-events,50-59 years old,ge40,10-14mm,no,slightly malignant,right,left_up,do not irradiate
+no-recurrence-events,50-59 years old,ge40,10-14mm,no,slightly malignant,left,left_up,do not irradiate
+no-recurrence-events,30-39 years old,premeno,30-34mm,no,malignant,left,left_up,do not irradiate
+no-recurrence-events,50-59 years old,ge40,0-4mm,no,malignant,left,central,do not irradiate
+no-recurrence-events,50-59 years old,ge40,15-19mm,no,slightly malignant,right,central,do not irradiate
+no-recurrence-events,40-49 years old,premeno,10-14mm,no,malignant,left,left_low,do not irradiate
+no-recurrence-events,40-49 years old,premeno,30-34mm,no,slightly malignant,left,left_low,do not irradiate
+no-recurrence-events,50-59 years old,ge40,20-24mm,no,slightly malignant,right,left_low,do not irradiate
+no-recurrence-events,60-69 years old,ge40,25-29mm,no,malignant,left,left_low,do not irradiate
+no-recurrence-events,60-69 years old,ge40,5-9mm,no,slightly malignant,left,central,do not irradiate
+no-recurrence-events,40-49 years old,premeno,10-14mm,no,malignant,left,left_up,do not irradiate
+no-recurrence-events,50-59 years old,ge40,50-54mm,no,slightly malignant,right,right_up,do not irradiate
+no-recurrence-events,50-59 years old,ge40,30-34mm,no,slightly malignant,left,left_up,do not irradiate
+no-recurrence-events,40-49 years old,premeno,25-29mm,no,malignant,right,left_low,do not irradiate
+no-recurrence-events,50-59 years old,premeno,25-29mm,no,slightly malignant,right,left_up,do not irradiate
+no-recurrence-events,40-49 years old,premeno,20-24mm,no,slightly malignant,right,right_up,do not irradiate
+no-recurrence-events,40-49 years old,premeno,20-24mm,no,slightly malignant,right,left_low,do not irradiate
+no-recurrence-events,50-59 years old,lt40,15-19mm,no,malignant,left,left_low,do not irradiate
+no-recurrence-events,30-39 years old,premeno,20-24mm,no,malignant,left,right_low,do not irradiate
+recurrence-events,40-49 years old,premeno,25-29mm,no,highly malignant,left,right_up,do not irradiate
+recurrence-events,30-39 years old,premeno,30-34mm,no,slightly malignant,right,left_up,do not irradiate
+recurrence-events,60-69 years old,ge40,25-29mm,no,highly malignant,left,right_low,irradiate
+recurrence-events,60-69 years old,ge40,20-24mm,no,highly malignant,right,left_low,do not irradiate
+recurrence-events,30-39 years old,premeno,25-29mm,yes,highly malignant,left,left_low,irradiate
+recurrence-events,40-49 years old,ge40,20-24mm,no,highly malignant,right,left_low,irradiate
+recurrence-events,40-49 years old,premeno,30-34mm,yes,highly malignant,left,left_low,do not irradiate
+recurrence-events,50-59 years old,premeno,30-34mm,no,highly malignant,right,left_up,irradiate
+recurrence-events,60-69 years old,ge40,40-44mm,yes,highly malignant,right,left_low,do not irradiate
+recurrence-events,60-69 years old,ge40,45-49mm,no,slightly malignant,right,right_up,irradiate
+recurrence-events,50-59 years old,premeno,50-54mm,yes,malignant,right,left_up,do not irradiate
+recurrence-events,40-49 years old,premeno,30-34mm,no,malignant,right,left_up,do not irradiate
+recurrence-events,30-39 years old,premeno,30-34mm,no,highly malignant,right,left_up,irradiate
+recurrence-events,70-79 years old,ge40,15-19mm,no,slightly malignant,left,left_low,irradiate
+recurrence-events,60-69 years old,ge40,30-34mm,no,highly malignant,right,left_up,irradiate
+recurrence-events,50-59 years old,premeno,25-29mm,yes,highly malignant,left,left_low,irradiate
+recurrence-events,40-49 years old,premeno,25-29mm,no,malignant,right,left_low,do not irradiate
+recurrence-events,40-49 years old,premeno,25-29mm,no,malignant,right,left_low,do not irradiate
+recurrence-events,30-39 years old,premeno,35-39mm,no,highly malignant,left,left_low,do not irradiate
+recurrence-events,40-49 years old,premeno,20-24mm,yes,malignant,right,right_up,irradiate
