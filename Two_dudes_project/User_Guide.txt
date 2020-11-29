@@ -28,6 +28,8 @@ Test Run:
 
     (1) Load Dataset
     (2) Decision Tree Induction
+    (3) Naive Bayes Classifier
+    (4) KNN Classifier
     (5) Exit the Application
 
 3.  Type: 1
@@ -84,3 +86,32 @@ Test Run:
 
 20. type: 6
     returned to main menu
+
+21. type: 3
+    You will be brought to the Naive Bayes Classifier Menu
+
+22. You will be presented with the Naive Bayes Classifier Menu
+
+    (1) Test Accuracy
+    (2) Make prediction
+    (3) Return to Main
+
+23. type: 1
+    This will test the accuracy of the trained Naive Bayes Classifier against testing data
+
+24. You'll be presented with the results
+    Accuracy of Naive Bayes Model = 66.0
+
+25. Do you want to perform more naive bayes operations? (y / n)
+    You'll be presented with the following menu asking if you want to use the
+    Naive Bayes Classifier again. In my case I will.
+
+26. type: y
+
+27. You'll again be presented with the bayes menu
+
+    (1) Test Accuracy
+    (2) Make prediction
+    (3) Return to Main
+
+28. type: 2
