@@ -115,3 +115,75 @@ Test Run:
     (3) Return to Main
 
 28. type: 2
+    This will launch the Make prediction function
+
+29. You will be met with these following prompts.
+
+Please enter the test list to classify.
+Pleas enter list seperated by commas e.g. "1,2,3,4,5"
+
+Enter list for test:
+
+30. Read the instructions above and enter a response with required
+    information to make a proper prediction. User needs to have knowledge
+    of the dataset they are using for the classifier. Enter all necessary
+    features and leave out the target as follows... e.g. purple, small, dip, child
+    or 12, 23, 45, 89. Separate the values with commas.
+
+    type: list, to, test, out, classification, here
+
+31. The next prompt will pop up.
+    Does this data set have categorical data? (y/n)
+    If categorical is present type y, else n
+    type: y
+
+32. the built in function will display the user's test list and the predicted class
+
+33. You'll be asked if you like to continue with the bayes classifier.
+    type: n
+
+34. You'll be brought back to the main menu again.
+    type: 4
+
+35. You'll be taken to the knn menu
+
+    (1) Test Accuracy
+    (2) Make prediction
+    (3) Return to Main
+
+36. type: 1
+
+37. You will be asked if the dataset contains categorical variables.
+    If yes type y, else type n
+
+    type: y
+
+38. The function will then display the accuracy of the KNN model
+
+39. You will be asked if you like to continue with the KNN classifier
+    type: y
+
+40. You will return to the knn menu
+
+41. type: 2
+
+42. This will take you the menu below...
+
+    Please enter the test list to classify.
+    Pleas enter list seperated by commas e.g. "1,2,3,4,5" or "cat, dog, frog"
+
+    Enter list for test: purple, small, dip, child <<< example list to type in, can be numerical or categorical
+
+43. After typing in your test you will see this next prompt...
+    How many clusters would you like:
+    type: number of cluser <<< has to be an int
+
+44. You will them be prompted.... type y if categorical, n if otherwise
+    Does this data set have categorical data? (y/n)
+    type: y (or) n
+
+45. Function will then display the classification information.
+
+46. Then you will be asked to continue using the knn classifier
+    type: n
+47. type: 5 (quit app)
