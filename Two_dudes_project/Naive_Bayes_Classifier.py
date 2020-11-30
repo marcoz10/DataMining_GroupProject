@@ -137,6 +137,10 @@ calculate_probaility(x, mean, stdev): this function will calculate the
 bayes probability of an event occuring given x, x's mean, and x's stdev 
 '''
 def calculate_probability(x, mean, stdev):
+    if stdev == 0.0 or stdev == 0:
+        stdev = 0.0000001
+    if mean == 0.0 or mean == 0:
+        mean = 0.00000001
     exponent = exp(-((x-mean)**2 / (2 * stdev**2 )))
     return (1 / (sqrt(2 * pi) * stdev)) * exponent
 
