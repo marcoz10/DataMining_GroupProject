@@ -6,6 +6,8 @@ import pandas as pd
 import os
 from os import path
 import numpy as np
+from random import seed
+from random import randrange
 from pprint import pprint
 from sklearn.model_selection import train_test_split
 import pydot
@@ -28,7 +30,37 @@ y_test = pd.DataFrame()
 graph = pydot.Dot(graph_type='graph')
 edges = []
 #-------------------------------
+# Split a dataset into k folds
+def cross_validation_split(dataset, n_folds):
+    dataset_split = list()
+    dataset_copy = list(dataset)
+    fold_size = int(len(dataset) / n_folds)
+    for _ in range(n_folds):
+        fold = list()
+        while len(fold) < fold_size:
+            index = randrange(len(dataset_copy))
+            fold.append(dataset_copy.pop(index))
+        dataset_split.append(fold)
+        return dataset_split
 
+# Evaluate an algorithm using a cross validation split
+def evaluate_algorithm(dataset, algorithm, n_folds, *args):
+    folds = cross_validation_split(dataset, n_folds)
+    scores = list()
+    for fold in folds:
+        train_set = list(folds)
+        train_set.remove(fold)
+        train_set = sum(train_set, [])
+        test_set = list()
+        for row in fold:
+            row_copy = list(row)
+            test_set.append(row_copy)
+            row_copy[-1] = None
+        predicted = algorithm(train_set, test_set, *args)
+        actual = [row[-1] for row in fold]
+        accuracy = DTC.test_accuracy(actual, predicted)
+        scores.append(accuracy)
+    return scores
 
 def draw(parent_name,child_name):
     global graph
@@ -123,9 +155,11 @@ def perform_test():
 # Menu Item for Decision Tree Menu
 def user_class_prediction():
     global tree
-    data = [['middle_aged', 'high', 'nope','excellent','yes']]
-    data = pd.DataFrame(data,columns=['age', 'income','student','credit_rating','target'])
-    queries = data.iloc[:,:-1].to_dict(orient="records")
+    user_test = [item for item in input('Enter list for test: ').split(',')]
+    data = [user_test]
+    cols = X_train.columns.tolist()
+    data = pd.DataFrame(data,columns=cols[:-1])
+    queries = data.to_dict(orient="records")
     result = DTC.predict(queries[0],tree)
     print(result)
 
@@ -133,17 +167,15 @@ def user_class_prediction():
 # Menu Item for Decision Tree Menu
 def built_in_dtclf():
     global X_train, X_test, clf_dt
+    
+    # Since the built in decision tree requires numeric values, let's
+    # encode the categorical variables.
     df_train = X_train.copy()
-    df_train['age'] = pd.Categorical(df_train['age']).codes
-    df_train['income'] = pd.Categorical(df_train['age']).codes
-    df_train['student'] = pd.Categorical(df_train['student']).codes
-    df_train['credit_rating'] = pd.Categorical(df_train['credit_rating']).codes
     df_test = X_train.copy()
-    df_test['age'] = pd.Categorical(df_test['age']).codes
-    df_test['income'] = pd.Categorical(df_test['age']).codes
-    df_test['student'] = pd.Categorical(df_test['student']).codes
-    df_test['credit_rating'] = pd.Categorical(df_test['credit_rating']).codes
-
+    for cols in df_train.columns[:-1]:
+        df_train[cols] = pd.Categorical(df_train[cols]).codes
+        df_test[cols] = pd.Categorical(df_test[cols]).codes
+  
     # Let's copy the classifier 
     y_train = df_train['target'].copy()
     y_test = df_test['target'].copy()
@@ -154,9 +186,8 @@ def built_in_dtclf():
     clf_dt = clf_dt.fit(df_train,y_train)
     y_pred = clf_dt.predict(df_test)
     score = accuracy_score(y_test, y_pred)
+    print("The built-in accuracy is: ", score*100,'%')
     
-    print(score)
-
 # Function to load a global data frame 
 def load_data():
     # Give instructions to the user 
