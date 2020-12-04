@@ -15,6 +15,8 @@ from PIL import Image
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 import sys
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
 sys.path.insert(1, '..DataMining_GroupProject/Two_dudes_project')
 import Naive_Bayes_Classifier as nb
 import knn_classifier as kc
@@ -23,10 +25,10 @@ import Decision_Tree_Classifier as DTC
 # Global Variables
 clf_dt = DecisionTreeClassifier(criterion="entropy")
 df = pd.DataFrame()
-X_train  = pd.DataFrame() 
-X_test = pd.DataFrame() 
-y_train = pd.DataFrame() 
-y_test = pd.DataFrame() 
+X_train  = pd.DataFrame()
+X_test = pd.DataFrame()
+y_train = pd.DataFrame()
+y_test = pd.DataFrame()
 graph = pydot.Dot(graph_type='graph')
 edges = []
 #-------------------------------
@@ -98,29 +100,29 @@ def decision_tree():
 #******************************************************
 # Decision Tree Menu
 def decision_tree_menu():
-    print("Please choose any choice from below -\n") 
-    print("(1) View Graphical Tree") 
-    print("(2) View Text Tree") 
+    print("Please choose any choice from below -\n")
+    print("(1) View Graphical Tree")
+    print("(2) View Text Tree")
     print("(3) Test the Accuracy of the Tree")
     print("(4) Generate a prediction based on a tuple")
     print("(5) Test built in classifier")
     print("(6) Return to Main")
-    
+
     choice = int(input())
-    
+
     choice_dict = {
         1: display_graphical_decision_tree,
-        2: display_text_decision_tree, 
+        2: display_text_decision_tree,
         3: perform_test,
         4: user_class_prediction,
         5: built_in_dtclf,
         6: main
-	} 
+	}
     choice_dict[choice]()
 
     # Give the user an opp to continue with the application
     print("Do you want to perform more decision tree operations? (y / n)")
-    
+
     # Act on the users input
     choice = input().strip()
     if choice == "y":
@@ -167,7 +169,7 @@ def user_class_prediction():
 # Menu Item for Decision Tree Menu
 def built_in_dtclf():
     global X_train, X_test, clf_dt
-    
+
     # Since the built in decision tree requires numeric values, let's
     # encode the categorical variables.
     df_train = X_train.copy()
@@ -175,7 +177,7 @@ def built_in_dtclf():
     for cols in df_train.columns[:-1]:
         df_train[cols] = pd.Categorical(df_train[cols]).codes
         df_test[cols] = pd.Categorical(df_test[cols]).codes
-  
+
     # Let's copy the classifier 
     y_train = df_train['target'].copy()
     y_test = df_test['target'].copy()
@@ -187,18 +189,18 @@ def built_in_dtclf():
     y_pred = clf_dt.predict(df_test)
     score = accuracy_score(y_test, y_pred)
     print("The built-in accuracy is: ", score*100,'%')
-    
+
 # Function to load a global data frame 
 def load_data():
     # Give instructions to the user 
     print("\n\nInput a csv file to load, please include file name and .csv extension")
-    
+
     # Get filename from the user
     file_name = input().strip()
-    
+
     # Let's go ahead and for the filename to be a csv 
     file_name = path.splitext(file_name)[0] + ".csv"
-    
+
     # check to make sure the file exists
     if(path.exists(file_name)):
             df = pd.read_csv(file_name)
@@ -212,21 +214,21 @@ def load_data():
             load_data()
         else:
             exit()
-    
+
     # Give the user an opp to see the contents of the file they loaded
     print("\nWould you like to see the contents of your file?  (y / n)")
     choice = input().strip()
     if choice == "y":
         print(df)
-    
+
     global X_train, X_test, y_train, y_test
-    
+
     # We want to create both training and testing datasets, we will use test_train_split to do this
     X_train, X_test, y_train, y_test = train_test_split(df, df.iloc[:,-1:], test_size=0.30, random_state=42)
-    
+
     # Give the user an opp to continue with the application
     print("Do you want to perform more operations? (y / n)")
-    
+
     # Act on the users input
     choice = input().strip()
     if choice == "y":
@@ -237,28 +239,70 @@ def close_app():
 
 #******************************************************
 def calculate_accuracy_bayes():
-    chk_if_cat = input('Does this data contain categorical values?\n').upper()
+    chk_if_cat = input('Does this data contain categorical data? (y/n)\n').upper()
     if chk_if_cat == 'Y':
         try:
             model, foo = nb.summarize_by_class(X_train, X_test.iloc[0, :-1])
             accuracy_nb = nb.get_accuracy(model, X_test, y_test, True)
-            print('\nAccuracy of Naive Bayes Model = %s\n' % (accuracy_nb))
+            print('\nAccuracy of Naive Bayes Model = %s\n' % (accuracy_nb/100.00))
+            # Use the built in functions
+            df_train = X_train.copy()
+            df_test = X_test.copy()
+            # encode all columns
+            for cols in df_train.columns[:-1]:
+                df_train[cols] = pd.Categorical(df_train[cols]).codes
+                df_test[cols] = pd.Categorical(df_test[cols]).codes
+                # Get y_(train/test)
+            y_train_pred = df_train['target'].copy()
+            y_test_pred = df_test['target'].copy()
+            # Take out classifer from the data set
+            df_train = df_train.drop(['target'], axis=1)
+            df_test = df_test.drop(['target'], axis=1)
+            # Make classifier
+            clf = GaussianNB()
+            clf.fit(df_train, y_train.to_numpy().ravel())
+            # get score
+            score = clf.score(df_test, y_test.to_numpy().ravel())
+            print('The built-in accuracy is = %s\n' % score)
+            # Print out which classifier is better
+            if (float(accuracy_nb)/100.00) > score:
+                print('The accuracy of our model was ' + str(((float(accuracy_nb)/100.00 - score) * 100.00)) +
+                      '% better then the built-in model.\n')
+            elif (float(accuracy_nb)/100.00) == score:
+                print('The accuracy of our model and the built-in model are the same\n')
+            else:
+                print('The accuracy of the built-in model was '+ str(((score - float(accuracy_nb)/100.00) * 100.00)) +
+                      '% better then our model.\n')
         except:
-            print('Error: Problems with calculation')
+            print('Error: Problems with calculation\n')
     else:
         try:
             model = nb.summarize_by_class(X_train)
             accuracy_nb = nb.get_accuracy(model, X_test, y_test)
-            print('\nAccuracy of Naive Bayes Model = %s\n' % (accuracy_nb))
+            print('\nAccuracy of Naive Bayes Model = %s\n' % (accuracy_nb/100.00))
+            # Built in
+            clf = GaussianNB()
+            clf.fit(X_train, y_train.to_numpy().ravel())
+            score = clf.score(X_test, y_test.to_numpy().ravel())
+            print('The built-in accuracy is = %s\n' % score)
+            # Print out which classifier is better
+            if (float(accuracy_nb) / 100.00) > score:
+                print('The accuracy of our model was ' + str(((float(accuracy_nb) / 100.00 - score) * 100.00)) +
+                      '% better then the built-in model.\n')
+            elif (float(accuracy_nb) / 100.00) == score:
+                print('The accuracy of our model and the built-in model are the same\n')
+            else:
+                print(
+                    'The accuracy of the built-in model was ' + str(((score - float(accuracy_nb) / 100.00) * 100.00)) +
+                    '% better then our model.\n')
         except:
-            print('Error: Problems with calculation')
+            print('Error: Problems with calculation\n')
 # End calculate_accuracy_bayes
 
 #******************************************************
 def make_prediction():
     # Ask for a list to test with the classifier
     print('Please enter the test list to classify.')
-    print('Pleas enter list seperated by commas e.g. "1,2,3,4,5"\n')
     user_test = [item for item in input('Enter list for test: ').upper().split(',')]
 
     # Ask user if data set contains categorical data
@@ -268,7 +312,7 @@ def make_prediction():
     if (categorical_or_not == 'Y'):
         try:
             model, user_test_cat = nb.summarize_by_class(X_train, user_test)
-            # Make prediction
+            # Make prediction with our model
             label, probs = nb.give_predict(model, user_test_cat[:-1])
             print('Data=%s, Predicted: %s\n' % (user_test, label))
         except:
@@ -280,7 +324,7 @@ def make_prediction():
             label, probs = nb.give_predict(model, user_test_int)
             print('Data=%s, Predicted: %s\n' % (user_test, label))
         except:
-            print('Error: Problem with calculations.')
+            print('Error: Problem with calculations.\n')
 
     check_probs = input('Would you like to see the probablities for the classifier? (y/n)').upper()
     if (check_probs == 'Y'):
@@ -326,25 +370,64 @@ def bayes_menu():
 # ********************************************************
 def calculate_accuracy_knn():
     # Ask if data is categorical
+    global y_train_
     encoded = input('Does this data contain categorical values? (y/n)\n').upper()
 
     if encoded == 'Y':
         try:
-            print('\nAccuracy of KNN Model = %s\n' %
-              (kc.get_accuracy_knn(X_train, X_test, y_test, True)))
+            accuracy_knn = kc.get_accuracy_knn(X_train, X_test, y_test, True)
+            print('\nAccuracy of KNN Model = %s\n' %(accuracy_knn))
+            # Use the built in functions
+            df_train = X_train.copy()
+            df_test = X_test.copy()
+            # encode all columns
+            for cols in df_train.columns[:-1]:
+                df_train[cols] = pd.Categorical(df_train[cols]).codes
+                df_test[cols] = pd.Categorical(df_test[cols]).codes
+            # Take out classifer from the data set
+            df_train = df_train.drop(['target'], axis=1)
+            df_test = df_test.drop(['target'], axis=1)
+            # Make classifier
+            clf = KNeighborsClassifier()
+            clf.fit(df_train, y_train.to_numpy().ravel())
+            score = clf.score(df_test, y_test.to_numpy().ravel())
+            print('Accuracy of Built-in KNN Model = %s\n' % score)
+            # Print out which classifier is better
+            if (float(accuracy_knn) / 100.00) > score:
+                print('The accuracy of our model was ' + str(((float(accuracy_knn) / 100.00 - score) * 100.00)) +
+                      '% better then the built-in model.\n')
+            elif (float(accuracy_knn) / 100.00) == score:
+                print('The accuracy of our model and the built-in model are the same\n')
+            else:
+                print(
+                    'The accuracy of the built-in model was ' + str(((score - float(accuracy_knn) / 100.00) * 100.00)) +
+                    '% better then our model.\n')
         except:
-            print('Error: Problem with calculation')
+            print('Error: Problem with calculation\n')
     else:
         try:
+            accuracy_knn = kc.get_accuracy_knn(X_train, X_test, y_test)
             print('\nAccuracy of KNN Model = %s\n' %
-              (kc.get_accuracy_knn(X_train, X_test, y_test)))
+              (accuracy_knn/100.00))
+            # Built in
+            clf = KNeighborsClassifier()
+            clf.fit(X_train, y_train.to_numpy().ravel())
+            score = clf.score(X_test,y_test.to_numpy().ravel())
+            print('Accuracy of Built-in KNN Model = %s\n' % score)
+            if (float(accuracy_knn) / 100.00) > score:
+                print('The accuracy of our model was ' + str(((float(accuracy_knn) / 100.00 - score) * 100.00)) +
+                      '% better then the built-in model.\n')
+            elif (float(accuracy_knn) / 100.00) == score:
+                print('The accuracy of our model and the built-in model are the same\n')
+            else:
+                print('The accuracy of the built-in model was ' + str(((score - float(accuracy_knn) / 100.00) * 100.00)) +
+                    '% better then our model.\n')
         except:
-            print('Error: Problem with calculation')
+            print('Error: Problem with calculation\n')
 # ********************************************************
 def make_prediction_knn():
     # Ask for a list to test with the classifier
     print('Please enter the test list to classify.')
-    print('Pleas enter list seperated by commas e.g. "1,2,3,4,5" or "cat, dog, frog"\n')
     user_test = [item for item in input('Enter list for test: ').upper().split(',')]
 
     # Ask how many clusters for knn to use
@@ -423,19 +506,19 @@ def main():
     print('(4) KNN Classifier')
     print("(5) Exit the Application")
     choice = int(input())
-    
-    choice_dict = { 
-		1: load_data, 
+
+    choice_dict = {
+		1: load_data,
 		2: decision_tree,
         3: bayes_menu,
         4: knn_menu,
         5: close_app
 	}
-    
-    choice_dict[choice]() 
+
+    choice_dict[choice]()
 
 os.system('cls')
-if __name__ == "__main__": 
-	print("---------------------- CS4373 Class Project - Classifiers ----------------------") 
+if __name__ == "__main__":
+	print("---------------------- CS4373 Class Project - Classifiers ----------------------")
 
-main() 
+main()

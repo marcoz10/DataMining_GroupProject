@@ -140,7 +140,7 @@ def calculate_probability(x, mean, stdev):
     if stdev == 0.0 or stdev == 0:
         stdev = 0.0000001
     if mean == 0.0 or mean == 0:
-        mean = 0.00000001
+        mean = 0.0000001
     exponent = exp(-((x-mean)**2 / (2 * stdev**2 )))
     return (1 / (sqrt(2 * pi) * stdev)) * exponent
 
